@@ -2,4 +2,3 @@
 
 ## Cours de la LP
 
-## HTML - CSS
