@@ -1,0 +1,61 @@
+header
+ h1
+ h2
+ img
+
+main
+section
+ h2
+ article
+  h3
+  p
+ article
+  h3
+  p
+ article
+  h3
+  p
+
+section
+ h2
+ article
+  h3
+  ul 
+   li
+ article 
+  h3
+  ul
+   li
+ article
+  h3 
+  ul
+   li
+
+section
+ h2
+ img
+ article 
+  h3
+  p
+ img
+ article
+  h3
+  p
+ img
+ article
+  h3
+  p
+  button
+/main
+footer
+ p
+
+
+
+
+
+
+
+
+
+ 

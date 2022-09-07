@@ -1,0 +1,38 @@
+*{
+    font-family: 'Roboto Mono', monospace;
+}
+h1{
+ text-align: center;
+ font-size: 56px;
+
+}
+section {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin: 0 auto;
+}
+section article h2 {
+ text-align: center;
+}
+article {
+    display: flex;
+    flex-direction: column;
+}
+button {
+    align-self: center;
+    padding: 20px;
+    border: none;
+    background-color: blueviolet;
+    border-radius: 8px;
+}
+button a{
+    font-size: 24px;
+    color: aquamarine;
+    text-decoration: none;
+}
+button a:hover{
+    color: bisque;
+}

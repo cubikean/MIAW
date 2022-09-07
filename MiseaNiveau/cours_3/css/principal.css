@@ -1,0 +1,173 @@
+/**** look.css ***/
+body{
+    margin: 0;
+    --couleur-fond-fonce :#315F4A ;
+    --couleur-texte-sur-fond-fonce : #F7F7F7 ;
+    --couleur-texte-sur-fond-clair : #333 ;
+   --couleur-fond-menu-hover : #1F2F1D ;
+    --couleur-fond-menu-actif :#507D60 ;
+   
+    font-family: arial ;
+}
+/*** Règles générales  ***/
+
+
+strong{ font-weight: bold ;}
+
+*, *::before, *::after{ box-sizing: border-box ;}
+h1, h2{
+    color: var(--couleur-texte-sur-fond-fonce);
+}
+
+
+/**** Header ****/
+header{
+    background-image: url(../images/modele.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 70vh;
+    padding: 30px 0;
+}
+header h1{
+    margin-top: 0;
+    font-size: 56px;
+}
+header h1, header h2{
+    text-align: center;
+}
+
+
+
+
+/****** sections **********/
+section h2{
+    font-size: 20px;
+    padding: 20px;
+    background-color: var(--couleur-fond-fonce);
+}
+article h3, article p{
+    padding: 0 30px;
+    margin: 0;
+    text-align: justify;
+}
+article ul {
+    margin-top: 0;
+    list-style-type: circle;
+    padding-left: 80px;
+}
+section article:not(:first-of-type) h3{
+    margin-top: 20px;
+}
+
+article img{
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+}
+article:not(:first-of-type) img{
+    margin-top: 20px;
+}
+#mt {
+    margin-top: 20px;
+}
+
+
+
+
+/*** Références ************/
+
+
+
+
+/**** solutions ******/
+
+
+
+
+
+/*** bouton contact ******/
+.btn{
+    font-size: 18px;
+    padding: 12px;
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    background-color: var(--couleur-fond-fonce);
+    color: var(--couleur-texte-sur-fond-fonce);
+    text-decoration: none;
+    border-radius: 8px;
+    border: none;
+}
+
+
+
+/****** Footer *******/
+footer{
+    /* Positionnement flex pour placer les deux fils du footer côte à côte */  
+    display: flex ;
+    flex-wrap: wrap ;
+    justify-content: space-between ;
+    background-color: var(--couleur-fond-fonce);
+    padding:20px;
+}
+footer a {
+    display: block;
+    color: var(--couleur-texte-sur-fond-fonce);
+    text-decoration: none;
+}
+
+
+
+
+
+/***** PAGE CONTACTS ******/
+/* Ici on indique les spécificités de la page contact
+    on aurait aussi pu créer une feuille de style supplémentaire
+    Dans ce cas, la page contact serait liée à la feuil de style principal.css et contact.css */ 
+
+.contact header{
+    height: 40vh;
+}
+.contact h2{
+    margin-top: 0;
+}
+
+
+
+/**** Coordonnées *****/
+
+.contact ul{
+    list-style-type: circle;
+}
+.contact li{
+    font-size: 20px;
+    padding: 5px 0;
+}
+.contact section:first-child{
+    height: 30vh;
+}
+
+/***** Carte ****/
+.contact .plan h2{
+    margin-bottom: 0;
+}
+.contact .plan iframe{
+    width: 100%;
+}
+
+
+/*** Formulaire ****/
+.contact .formulaire form {
+    width: 80%;
+    flex-direction: column;
+    display: flex;
+    margin: 20px auto;
+}
+.contact .formulaire form label:last-of-type{
+    padding-top: 20px;
+}
+
+
+

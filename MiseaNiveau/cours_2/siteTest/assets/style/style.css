@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+}
+p{
+    border: 4px solid slateblue;
+    font-size: 24px;
+    padding: 10px;
+}
+h1 {
+    width: fit-content;
+    margin: auto;
+}
+header {
+    background-color: plum;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: aquamarine;
+}
+nav ul {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav ul li a{ 
+    text-decoration: none;
+    margin: 0 30px;
+    color: aqua;   
+    background-color: brown;
+    padding: 10px;
+    border-radius: 8px;
+    transition: all ease-in-out .4s;
+}
+nav ul li a:hover {
+    transition: all ease-in-out .4s;
+    background-color: blanchedalmond;
+    color: blue;
+}
