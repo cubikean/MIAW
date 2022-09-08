@@ -45,7 +45,7 @@ nav, section{
     }
 }
 @media screen and (min-width: 768px) {
-    .article_container{
+    .container{
         display: flex;
         align-items: center;
         justify-content: space-between;
