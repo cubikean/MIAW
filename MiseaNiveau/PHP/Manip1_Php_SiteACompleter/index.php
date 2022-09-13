@@ -13,8 +13,8 @@
 
 <body>
     <?php
-        include("elements/menu.html") ;
-    ?>
+include("elements/menu.html") ;
+?>
     
     <main>
         <header>
