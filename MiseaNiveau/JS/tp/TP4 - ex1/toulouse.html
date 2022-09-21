@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>défibrillateurs Toulouse</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+      integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+      crossorigin=""
+    />
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script
+      src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+      integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+      crossorigin=""
+    ></script>
+    <style>
+        body{
+            margin: 0;
+        }
+      #map {
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div id="map"></div>
+    </main>
+
+    <script>
+      let url = "https://data.toulouse-metropole.fr/api/records/1.0/search/?dataset=defibrillateurs&q=&rows=50&facet=id";
+      const map = L.map("map").setView([43.60, 1.433333], 13);
+
+      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution:
+          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      }).addTo(map);
+
+
+      fetch(url)
+        .then((response) => response.json())
+
+        .then((data) => {
+          console.log(data);
+          let records = data.records;
+          records.forEach((item) => {
+            let coordinates = item.geometry.coordinates
+            let adresse = item.fields.adresse;
+            L.marker([coordinates[1], coordinates[0]]).addTo(map).bindPopup(adresse);
+
+          });
+        })
+
+        .catch((err) => {
+          console.log(err.message);
+        });
+
+      
+
+     
+      // .openPopup();
+    </script>
+  </body>
+</html>

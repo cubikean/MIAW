@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Galerie">
+
+
+    <!-- Mobile Stuff -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>JS DOM</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/look.css">
+
+</head>
+
+<body>
+    <header>
+        <h1>Galerie</h1>
+    </header>
+    <main>
+        <section id="galerie">
+            <h2>Focus sur ...</h2>
+            <figure>
+                <img src="" alt="" id="grandeImage">
+                <figcaption id="titreImage"></figcaption>
+            </figure>
+            <ul id="vignettes">
+                <li><img src="images/petites/clouds.jpg" alt="Nuages sur les Alpes"></li>
+                <li><img src="images/petites/colorfull.jpg" alt="Lac de montagne"></li>
+                <li><img src="images/petites/melbourne.jpg" alt="Falaises de Melbourne"></li>
+                <li><img src="images/petites/road.jpg" alt="Route des Rocheuses"></li>
+                <li><img src="images/petites/rocks.jpg" alt="Pic"></li>
+                <li><img src="images/petites/viaduc.jpg" alt="Viaduc"></li>
+            </ul>
+        </section>
+        <section class="sujet">
+            <h2>Comportement à obtenir</h2>
+            <p>On veut qu'au survol d'une vignette, l'image survolée apparaisse dans la zone <em>#grandeImage</em>, et que le texte de l'attribut <em>alt</em> de la vignette apparaisse dans la zone <em>#titreImage</em>.</p>
+            <p>La version améliorée permettra d'afficher les images contenues dans le dossier <em>grandes</em>.</p>
+        </section>
+    </main>
+    <footer>La Rochelle Université</footer>
+
+    <script>
+
+        let test = document.querySelectorAll('#vignettes img')
+        test.forEach(item => {
+            item.addEventListener('mouseover', (e)=>{
+                let imageSrc = e.target.src
+                let imageAlt = e.target.alt
+
+
+                let imageSrcSub = imageSrc.substr(0);
+
+                let imageSrcGrande = imageSrcSub.split('petites');
+
+                document.querySelector('#grandeImage').src = imageSrcGrande[0] +'grandes'+imageSrcGrande[1]
+                document.querySelector('#titreImage').innerHTML = imageAlt
+            })
+        });
+
+
+
+    </script>
+
+</body>
+
+</html>

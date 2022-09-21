@@ -51,17 +51,19 @@ header nav{
     z-index: 10 ; /* Pour placer le menu au-dessus des autres éléments */
     position: absolute ; /* Pour créer un calque spécial pour le menu */
     top : 0 ;  /* position en y*/
-    left : -80vw ; /* position en x */
+    left : -100vw ; /* position en x */
     height : 100vh ; /* vh = viewport height. 100vh = toute la hauteur de la fenêtre du navigateur */
     width : 100vw ; /* vw = viewport width. 100vw = toute la largeur de la fenetre du navigateur */
     font-size: 2.5rem ;
     text-align: center ;
      background: #2f2f2f;
     padding : 1.2rem 2rem;
+    transition: all ease-in-out .3s;
 }
 
 nav.ouvert{
     left : 0 ; /* Ramener le décalage du menu à 0 */
+    transition: all ease-in-out .3s;
 }
 
 /**** Icone de fermeture du menu */

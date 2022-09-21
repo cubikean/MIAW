@@ -57,3 +57,10 @@ document.querySelector('#ex5 .control').addEventListener('click', ()=>{
         item.classList.remove('invisible')
     });
 })
+
+// Exercice 6 
+let liexo6 = document.querySelector('#ex6 ul');
+
+liexo6.addEventListener('click', (e)=>{
+    liexo6.appendChild(e.target)
+})

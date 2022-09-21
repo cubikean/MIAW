@@ -1,0 +1,39 @@
+/**** Look.css ********/
+
+body {
+    background-color: #222;
+    color: #DDD;
+    font-family: "Roboto Condensed";
+}
+
+h1 {
+    font-size: 3rem;
+    padding: 2rem 0;
+    color: #EEE;
+}
+
+#vignettes li {
+    cursor: pointer;
+}
+
+#titreImage {
+    color: #AAA;
+}
+
+footer {
+    color: #AAA;
+}
+
+.sujet h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.sujet p {
+    line-height: 1.5;
+}
+
+.sujet em {
+    font-style: italic;
+}

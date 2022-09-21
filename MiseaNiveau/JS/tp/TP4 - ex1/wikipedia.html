@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki ftech</title>
+</head>
+<body>
+    <form action="" method="get">
+        <input id="wiki" type="text">
+        <input type="submit" onclick="submited()" value="go">
+    </form>
+
+    <div id="test"></div>
+
+    <script>
+
+        function submited(){
+            let inputVal = document.querySelector('#wiki').value
+
+        let recherche = "maison"
+        let url = `https://fr.wikipedia.org/w/api.php?action=query&format=json&origin=*&list=search&srlimit=20&srsearch=${inputVal}`
+        fetch(url)
+          .then((response) => response.json())
+  
+          .then((data) => {
+            let ul = document.createElement('ul')
+            console.log(data);
+            let query = data.query.search;
+            query.forEach(item => {
+                let li = document.createElement('li')
+                ul.appendChild(li)
+                li.textContent = item.title
+            });
+            var currentDiv = document.querySelector('#test');
+                document.body.insertBefore(ul, currentDiv);
+          })
+  
+          .catch((err) => {
+            console.log(err.message);
+          });
+
+        }
+        
+  
+        
+      </script>
+    
+</body>
+</html>
