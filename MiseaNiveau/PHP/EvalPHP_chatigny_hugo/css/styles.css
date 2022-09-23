@@ -1,0 +1,95 @@
+html {
+    font-family: calibri;
+}
+
+body {
+    background-color: #EEE;
+}
+
+body>header,
+body>footer {
+    padding: 1em;
+    background-color: indianred;
+    color: white;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+main {
+    padding: 2em;
+    color: #444;
+}
+
+main h2 {
+    border-bottom: #444 solid 1px;
+    margin-bottom: 1em;
+    padding-bottom: 0.4em;
+}
+
+main p {
+    line-height: 2;
+    padding-bottom: 1em;
+}
+
+
+/*** Formulaire ***********/
+
+form fieldset {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 30%;
+    min-width: 7rem;
+}
+
+.champsSaisieExcuse {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.champsSaisieExcuse fieldset {}
+
+input[type="submit"] {
+    margin-top: 1em;
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+ul {
+    margin-left: 2em;
+    list-style-type: circle;
+}
+
+
+/*** table des restaurants ****/
+
+.restaurants th {
+    font-weight: bold;
+    background-color: teal;
+    color: white;
+}
+
+.restaurants th,
+.restaurants td {
+    border: 1px solid #444;
+    padding: 0.25rem 0.5rem;
+}
+
+
+/*** Footer ****/
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%
+}

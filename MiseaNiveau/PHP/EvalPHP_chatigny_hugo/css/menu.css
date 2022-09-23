@@ -1,0 +1,24 @@
+.menu.principal {
+    background-color: white;
+}
+
+.menu.principal ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+}
+
+.menu.principal li {}
+
+.menu.principal a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: 0.5s ease-in-out all;
+    padding: 0.5rem 1rem;
+}
+
+.menu.principal a:hover {
+    background-color: lightcoral;
+    color: white;
+}
