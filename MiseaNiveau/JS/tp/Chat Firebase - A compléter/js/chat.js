@@ -38,7 +38,14 @@ form.addEventListener("submit", function (event) {
   // console.log(messageInput);
 
   let message = { auteur: pseudoInput, texte: messageInput };
+  
   BDMessages.push(message);
+  
+  let test = document.querySelectorAll('input')
+  test.forEach(item => {
+    item.value = "";
+  });
+
 });
 
 // Lorsque ce prog se connecte à la BD Firebase
@@ -83,10 +90,9 @@ function removeMessagePage(message){
     console.log('Le message de\'' + deletedPost.auteur + '\' a été supp');
     let li = document.querySelectorAll('li')
     li.forEach(element => {
-        console.log(element.classList)
-        if (element.classList.contains(messageKey)){
+        console.log(element.id)
+        if (element.id === messageKey){
             element.remove()
-            console.log('here')
         }
     });
 }
