@@ -5,8 +5,8 @@ body {
   background: $background-dark;
 }
 
-section{
-    max-width: 1200px;
+section {
+  max-width: 1200px;
 }
 
 header {
@@ -19,17 +19,17 @@ header {
   background-repeat: no-repeat;
   background-size: auto 550px;
 
-  @media screen and (max-width:768px) {
+  @media screen and (max-width: 768px) {
     background-size: auto 300px;
     background-position: bottom;
     height: 900px;
   }
 
-  section{
+  section {
     max-width: 45%;
-    @media screen and (max-width:768px) {
-        max-width: 100%;
-      }
+    @media screen and (max-width: 768px) {
+      max-width: 100%;
+    }
   }
 
   .enver-menu {
@@ -156,165 +156,253 @@ header {
       }
     }
   }
-  .enver-hero{
+  .enver-hero {
     padding-top: 60px;
 
-    h1{
-        margin: 0;
-        font-size: 82px;
-        color: $title-color-light;
-        font-weight: 900;
+    h1 {
+      margin: 0;
+      font-size: 82px;
+      color: $title-color-light;
+      font-weight: 900;
 
-        @media screen and (max-width:768px) {
-            font-size: 42px;
-        }
-        
-    }
-
-    @media screen and (max-width:768px) {
-        background-size: auto 300px;
-        height: 1050px;
+      @media screen and (max-width: 768px) {
+        font-size: 42px;
       }
-
-    p{
-        margin: 60px 0 60px 0;
-        font-size: 20px;
-        color: $text-color-light;
     }
-    
+
+    @media screen and (max-width: 768px) {
+      background-size: auto 300px;
+      height: 1050px;
+    }
+
+    p {
+      margin: 60px 0 60px 0;
+      font-size: 20px;
+      color: $text-color-light;
+    }
   }
 }
 
-#best-choice{
-    padding: 0 20px;
-    margin: 250px auto;
+#best-choice {
+  padding: 0 20px;
+  margin: 250px auto;
 
-    @media screen and (max-width:768px) {
-        margin: 100px auto;
-    }
-    .title-section{
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-        margin: 40px 0 40px 0;
+  @media screen and (max-width: 768px) {
+    margin: 100px auto;
+  }
+  .title-section {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 40px 0 40px 0;
 
-        h2{
-            margin: 0;
-            font-size: 82px;
-            color: $title-color-light;
-            font-weight: 900;
+    h2 {
+      margin: 0;
+      font-size: 82px;
+      color: $title-color-light;
+      font-weight: 900;
 
-            @media screen and (max-width:768px) {
-                font-size: 42px;
-            }
-
-        }
-
-        p{
-            margin: 40px 0 0px 0;
-            font-size: 20px;
-            color: $text-color-light;
-        }
-
-        @media screen and (max-width:768px) {
-            flex-direction: column;
-        }
-
+      @media screen and (max-width: 768px) {
+        font-size: 42px;
+      }
     }
 
-    .video{
-        position: relative;
-
-        img{
-            width: 100%;
-
-            
-        }
-        
-        .btn-play{
-            position: absolute;
-            inset: 0;
-            display: flex;
-            margin: auto;
-            border: none;
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background: $button-color;
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all .4s;
-
-            @media screen and (max-width:768px) {
-                width: 50px;
-                height: 50px;
-            }
-
-            svg{
-                width: 25px;
-                height: auto;
-                margin: auto;
-
-                @media screen and (max-width:768px) {
-                    width: 15px;
-                }
-            }
-        }
-
-        &:hover{
-            .btn-play{
-                opacity: 1;
-                transform: translateY(0px);
-                transition: all .4s;
-            }
-        }
+    p {
+      margin: 40px 0 0px 0;
+      font-size: 20px;
+      color: $text-color-light;
     }
 
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  .video {
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+
+    .btn-play {
+      @include btn-play();
+    }
+
+    &:hover {
+      .btn-play {
+        opacity: 1;
+        transform: translateY(0px);
+        transition: all 0.4s;
+      }
+    }
+  }
 }
 
-#service{
-    padding: 0 20px;
-    margin: 250px auto;
+#service {
+  padding: 0 20px;
+  margin: 250px auto;
 
-    @media screen and (max-width:768px) {
-        margin: 100px auto;
+  @media screen and (max-width: 768px) {
+    margin: 100px auto;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 82px;
+    color: $title-color-light;
+    font-weight: 900;
+    width: 80%;
+    margin: 0 auto;
+
+    background-image: url("../images/triangles.png"), url("../images/add-1.png");
+    background-size: 60px, 60px;
+    background-repeat: no-repeat;
+    background-position: left center, bottom right;
+
+    @media screen and (max-width: 768px) {
+      font-size: 42px;
+      width: 100%;
     }
+  }
 
-    h2{
-        text-align: center;
-        font-size: 82px;
-        color: $title-color-light;
-        font-weight: 900;
-        width: 80%;
-        margin: 0 auto;
+  .card-container {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 60px 20px;
+    gap: 60px 20px;
+    width: 100%;
 
-        background-image: url('../images/triangles.png'), url('../images/add-1.png');
-        background-size: 60px,60px;
-        background-repeat: no-repeat;
-        background-position: left center, bottom right ;
+    .single-card {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 10px;
+      gap: 20px;
+      transition: all 0.4s;
 
-        @media screen and (max-width:768px) {
-            font-size: 42px;
-            width: 100%;
-        }
-
-    }
-
-    .card-container{
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        grid-gap: 60px 20px;
-        gap: 60px 20px;
+      img {
         width: 100%;
+        max-width: 60px;
+      }
 
-        @media screen and (max-width:768px) {
-            grid-gap: 20px;
-            gap: 20px;
-            grid-template-columns: repeat(2,1fr);
-        }
-        
+      h3 {
+        font-size: 22px;
+        color: $title-color-light;
+        margin: 0;
+        text-align: center;
+      }
+
+      p {
+        font-size: 18px;
+        color: $text-color-light;
+        margin: 0;
+        text-align: center;
+      }
+
+      &:hover {
+        transform: translateY(-20px);
+        transition: all 0.4s;
+      }
+      &:hover[data-color="blue"] {
+        background: rgba($color: $blue-icon, $alpha: 0.05);
+        border-radius: 5px;
+      }
+      &:hover[data-color="red"] {
+        background: rgba($color: $red-icon, $alpha: 0.05);
+        border-radius: 5px;
+      }
+      &:hover[data-color="yellow"] {
+        background: rgba($color: $yellow-icon, $alpha: 0.05);
+        border-radius: 5px;
+      }
     }
 
+    @media screen and (max-width: 768px) {
+      gap: 20px;
+      row-gap: 40px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+#portfolio {
+  padding: 0 20px;
+  margin: 250px auto;
+
+  @media screen and (max-width: 768px) {
+    margin: 100px auto;
+  }
+
+  h2 {
+    font-size: 82px;
+    color: $title-color-light;
+    font-weight: 900;
+
+    background-image: url("../images/circles-1.png");
+    background-size: 60px;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+
+    @media screen and (max-width: 768px) {
+      font-size: 42px;
+      width: 100%;
+    }
+  }
+
+  .portfolio-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 400px;
+
+    img:nth-child(1) {
+      align-self: flex-start;
+    }
+    img:nth-child(2) {
+      align-self: center;
+    }
+    img:nth-child(3) {
+      align-self: flex-end;
+    }
+
+    @media screen and (max-width: 768px) {
+      height: 300px;
+      img {
+        position: absolute;
+        inset: 0;
+        width: 80%;
+        margin: auto;
+        opacity: 1;
+        transition: all 1s;
+      }
+    }
+  }
+  .portfolio-controller {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
+    .btn-play {
+      @include btn-play();
+      position: relative;
+      opacity: 1;
+      margin: inherit;
+
+      svg{
+        width: 25px
+      }
+
+      @media screen and (min-width: 768px) {
+        display: none;
+      }
+
+    }
+
+  }
 }
 
 .btn {

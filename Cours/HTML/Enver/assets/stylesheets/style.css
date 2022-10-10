@@ -245,6 +245,9 @@ header .enver-hero p {
     width: 15px;
   }
 }
+#best-choice .video .btn-play:hover {
+  cursor: pointer;
+}
 #best-choice .video:hover .btn-play {
   opacity: 1;
   transform: translateY(0px);
@@ -279,17 +282,162 @@ header .enver-hero p {
   }
 }
 #service .card-container {
+  margin-top: 60px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 60px 20px;
   gap: 60px 20px;
   width: 100%;
 }
+#service .card-container .single-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  gap: 20px;
+  transition: all 0.4s;
+}
+#service .card-container .single-card img {
+  width: 100%;
+  max-width: 60px;
+}
+#service .card-container .single-card h3 {
+  font-size: 22px;
+  color: #FFFFFF;
+  margin: 0;
+  text-align: center;
+}
+#service .card-container .single-card p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7019607843);
+  margin: 0;
+  text-align: center;
+}
+#service .card-container .single-card:hover {
+  transform: translateY(-20px);
+  transition: all 0.4s;
+}
+#service .card-container .single-card:hover[data-color=blue] {
+  background: rgba(84, 84, 212, 0.05);
+  border-radius: 5px;
+}
+#service .card-container .single-card:hover[data-color=red] {
+  background: rgba(240, 64, 55, 0.05);
+  border-radius: 5px;
+}
+#service .card-container .single-card:hover[data-color=yellow] {
+  background: rgba(254, 220, 90, 0.05);
+  border-radius: 5px;
+}
 @media screen and (max-width: 768px) {
   #service .card-container {
-    grid-gap: 20px;
     gap: 20px;
+    row-gap: 40px;
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+#portfolio {
+  padding: 0 20px;
+  margin: 250px auto;
+}
+@media screen and (max-width: 768px) {
+  #portfolio {
+    margin: 100px auto;
+  }
+}
+#portfolio h2 {
+  font-size: 82px;
+  color: #FFFFFF;
+  font-weight: 900;
+  background-image: url("../images/circles-1.png");
+  background-size: 60px;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+@media screen and (max-width: 768px) {
+  #portfolio h2 {
+    font-size: 42px;
+    width: 100%;
+  }
+}
+#portfolio .portfolio-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 400px;
+}
+#portfolio .portfolio-container img:nth-child(1) {
+  align-self: flex-start;
+}
+#portfolio .portfolio-container img:nth-child(2) {
+  align-self: center;
+}
+#portfolio .portfolio-container img:nth-child(3) {
+  align-self: flex-end;
+}
+@media screen and (max-width: 768px) {
+  #portfolio .portfolio-container {
+    height: 300px;
+  }
+  #portfolio .portfolio-container img {
+    position: absolute;
+    inset: 0;
+    width: 80%;
+    margin: auto;
+    opacity: 1;
+    transition: all 1s;
+  }
+}
+#portfolio .portfolio-controller {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+#portfolio .portfolio-controller .btn-play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  margin: auto;
+  border: none;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #5454D4;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.4s;
+  position: relative;
+  opacity: 1;
+  margin: inherit;
+}
+@media screen and (max-width: 768px) {
+  #portfolio .portfolio-controller .btn-play {
+    width: 50px;
+    height: 50px;
+  }
+}
+#portfolio .portfolio-controller .btn-play svg {
+  width: 25px;
+  height: auto;
+  margin: auto;
+}
+@media screen and (max-width: 768px) {
+  #portfolio .portfolio-controller .btn-play svg {
+    width: 15px;
+  }
+}
+#portfolio .portfolio-controller .btn-play:hover {
+  cursor: pointer;
+}
+#portfolio .portfolio-controller .btn-play svg {
+  width: 25px;
+}
+@media screen and (min-width: 768px) {
+  #portfolio .portfolio-controller .btn-play {
+    display: none;
   }
 }
 

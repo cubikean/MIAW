@@ -26,6 +26,40 @@
   }
 }
 
+
+@mixin btn-play{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  margin: auto;
+  border: none;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: $button-color;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all .4s;
+
+  @media screen and (max-width:768px) {
+      width: 50px;
+      height: 50px;
+  }
+
+  svg{
+      width: 25px;
+      height: auto;
+      margin: auto;
+
+      @media screen and (max-width:768px) {
+          width: 15px;
+      }
+  }
+  &:hover{
+    cursor: pointer;
+  }
+}
+
 @mixin blue-shape {
   background: linear-gradient(
     180deg,
