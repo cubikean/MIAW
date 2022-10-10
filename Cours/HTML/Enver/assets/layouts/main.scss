@@ -1,0 +1,10 @@
+*{
+    font-family: 'Roboto Mono', monospace;
+}
+h1{
+    color: $button-color;
+}
+
+.btn{
+    @include btn()
+}

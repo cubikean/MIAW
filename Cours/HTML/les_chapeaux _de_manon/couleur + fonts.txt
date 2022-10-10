@@ -1,0 +1,10 @@
+Google Font Poppins
+https://fonts.google.com/specimen/Poppins?selection.family=Poppins
+<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+
+Couleurs
+#1E4C3D
+#94D1BD
+#F5FFFC
+#A66555
+#D1A194
