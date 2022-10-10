@@ -4,39 +4,102 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./assets/images/icon_enver.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./assets/images/icon_enver.png"
+      type="image/x-icon"
+    />
 
     <title>Enver - Digital Agency Website</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet"/>
-    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- <link rel="stylesheet" href="./assets/stylesheets/reset.css" /> -->
     <link rel="stylesheet" href="./assets/stylesheets/style.css" />
   </head>
   <body>
     <header>
-        <nav>
-            <img src="./assets/images/icon_enver.png" alt="">
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </nav>
+      <nav class="enver-menu">
+        <img src="./assets/images/logo.svg" alt="" />
+        <ul class="enver-menu_desk">
+          <li class="menu--active"><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Our Project</a></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+        <button class="enver-menu_contact">Contact us</button>
+        <button class="enver-menu_toggler">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+      <section class="enver-hero">
+        <h1>Build Your Awesome Platform</h1>
+        <p>
+          Enver studio is a digital studio that offers several services such as
+          UI/UX Design to developers, we will provide the best service for those
+          of you who use our services.
+        </p>
+        <button class="btn">Our Services</button>
+      </section>
     </header>
 
+    <section id="best-choice">
+      <div class="title-section">
+        <h2>Why Enver Is The Best Choice ?</h2>
+        <p>
+          Watch this one minute video so you understand why you should use our services!
+        </p>
+      </div>
+      <div class="video">
+      <img src="assets/images/cover-video.png" alt="">
+      <button class="btn-play">
+        <svg width="20" height="22" viewBox="0 0 20 22" fill="none"><path d="M19.74 10.565L0.766135 0.0652675C0.60735 -0.0226937 0.412567 -0.0216833 0.254751 0.0679202C0.0969347 0.157524 -9.82103e-05 0.322198 7.4594e-08 0.500257V21.4997C-9.82103e-05 21.6778 0.0969347 21.8425 0.254751 21.9321C0.412567 22.0217 0.60735 22.0227 0.766135 21.9347L19.74 11.435C19.9007 11.3462 20 11.1801 20 11C20 10.8199 19.9007 10.6538 19.74 10.565Z" fill="white"></path></svg>
+      </button>
+    </div>
+    </section>
 
+    <section id="service">
+      <h2>The Service We Provide For You</h2>
+      <div class="card-container">
+        <div>
+          <img src="assets/images/Icon-dev.png" alt="">
+          <h3>Development</h3>
+          <p>Create a platform with the best and coolest quality from us.</p>
+        </div>
+        <div>
+          <img src="" alt="">
+          <h3></h3>
+          <p></p>
+        </div>
+        <div>
+          <img src="" alt="">
+          <h3></h3>
+          <p></p>
+        </div>
+        <div>
+          <img src="" alt="">
+          <h3></h3>
+          <p></p>
+        </div>
+        <div>
+          <img src="" alt="">
+          <h3></h3>
+          <p></p>
+        </div>
+        <div>
+          <img src="" alt="">
+          <h3></h3>
+          <p></p>
+        </div>
+      </div>
+    </section>
 
-
-    <h1>coucou</h1>
-    <div class="btn">Our Services</div>
-    <div class="picto"><img src="./assets/images/Icon-dev.png" alt=""></div>
-    <div class="picto"><img src="./assets/images/Icon-graphik.png" alt=""></div>
-    <div class="picto"><img src="./assets/images/Icon-motion.png" alt=""></div>
-    <div class="picto"><img src="./assets/images/Icon-photo.png" alt=""></div>
-    <div class="picto"><img src="./assets/images/Icon-ux-ui.png" alt=""></div>
-    <div class="picto"><img src="./assets/images/Icon-video.png" alt=""></div>
   </body>
 </html>

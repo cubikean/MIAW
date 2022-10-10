@@ -1,10 +1,322 @@
-*{
-    font-family: 'Roboto Mono', monospace;
+* {
+  font-family: "Nunito Sans", monospace;
 }
-h1{
-    color: $button-color;
+body {
+  background: $background-dark;
 }
 
-.btn{
-    @include btn()
+section{
+    max-width: 1200px;
+}
+
+header {
+  max-width: 1200px;
+  height: 700px;
+  padding: 0 20px;
+  margin: 0 auto;
+  background-image: url("../images/background-section-banner.png");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: auto 550px;
+
+  @media screen and (max-width:768px) {
+    background-size: auto 300px;
+    background-position: bottom;
+    height: 900px;
+  }
+
+  section{
+    max-width: 45%;
+    @media screen and (max-width:768px) {
+        max-width: 100%;
+      }
+  }
+
+  .enver-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 40px;
+
+    .enver-menu_desk {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      list-style: none;
+      padding: 0px;
+      gap: 40px;
+      transition: all 0.3s;
+
+      li {
+        position: relative;
+
+        a {
+          color: $text-color-light;
+          font-size: 16.875px;
+          text-decoration: none;
+          font-weight: 400;
+          transition: all 0.3s;
+
+          &:hover {
+            color: $text-color-blue;
+            transition: all 0.3s;
+          }
+        }
+
+        &.menu--active {
+          a {
+            color: $text-color-blue;
+            font-weight: 600;
+          }
+          &::before {
+            width: 70%;
+          }
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          background: $text-color-blue;
+          height: 1px;
+          width: 0px;
+          transition: all 0.3s;
+        }
+
+        &:hover {
+          transition: all 0.3s;
+
+          &::before {
+            width: 70%;
+          }
+        }
+      }
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    .enver-menu_contact {
+      // display: none;
+      border: 1px solid $background-light;
+      border-radius: 5px;
+      background: transparent;
+      color: $title-color-light;
+      transition: all 0.3s;
+      width: fit-content;
+      padding: 10px 40px;
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+
+      &:hover {
+        background: $background-light;
+        transition: all 0.3s;
+      }
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    .enver-menu_toggler {
+      padding: 0;
+      border: none;
+      background: transparent;
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+      gap: 4px;
+      width: 24px;
+
+      span {
+        height: 1px;
+        border-radius: 2px;
+        background: $background-light;
+        transition: all 0.3s;
+
+        &:nth-child(1) {
+          width: 100%;
+        }
+
+        &:nth-child(2) {
+          width: 80%;
+        }
+
+        &:nth-child(3) {
+          width: 60%;
+        }
+      }
+
+      @media screen and (min-width: 768px) {
+        display: none;
+      }
+    }
+  }
+  .enver-hero{
+    padding-top: 60px;
+
+    h1{
+        margin: 0;
+        font-size: 82px;
+        color: $title-color-light;
+        font-weight: 900;
+
+        @media screen and (max-width:768px) {
+            font-size: 42px;
+        }
+        
+    }
+
+    @media screen and (max-width:768px) {
+        background-size: auto 300px;
+        height: 1050px;
+      }
+
+    p{
+        margin: 60px 0 60px 0;
+        font-size: 20px;
+        color: $text-color-light;
+    }
+    
+  }
+}
+
+#best-choice{
+    padding: 0 20px;
+    margin: 250px auto;
+
+    @media screen and (max-width:768px) {
+        margin: 100px auto;
+    }
+    .title-section{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin: 40px 0 40px 0;
+
+        h2{
+            margin: 0;
+            font-size: 82px;
+            color: $title-color-light;
+            font-weight: 900;
+
+            @media screen and (max-width:768px) {
+                font-size: 42px;
+            }
+
+        }
+
+        p{
+            margin: 40px 0 0px 0;
+            font-size: 20px;
+            color: $text-color-light;
+        }
+
+        @media screen and (max-width:768px) {
+            flex-direction: column;
+        }
+
+    }
+
+    .video{
+        position: relative;
+
+        img{
+            width: 100%;
+
+            
+        }
+        
+        .btn-play{
+            position: absolute;
+            inset: 0;
+            display: flex;
+            margin: auto;
+            border: none;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: $button-color;
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all .4s;
+
+            @media screen and (max-width:768px) {
+                width: 50px;
+                height: 50px;
+            }
+
+            svg{
+                width: 25px;
+                height: auto;
+                margin: auto;
+
+                @media screen and (max-width:768px) {
+                    width: 15px;
+                }
+            }
+        }
+
+        &:hover{
+            .btn-play{
+                opacity: 1;
+                transform: translateY(0px);
+                transition: all .4s;
+            }
+        }
+    }
+
+}
+
+#service{
+    padding: 0 20px;
+    margin: 250px auto;
+
+    @media screen and (max-width:768px) {
+        margin: 100px auto;
+    }
+
+    h2{
+        text-align: center;
+        font-size: 82px;
+        color: $title-color-light;
+        font-weight: 900;
+        width: 80%;
+        margin: 0 auto;
+
+        background-image: url('../images/triangles.png'), url('../images/add-1.png');
+        background-size: 60px,60px;
+        background-repeat: no-repeat;
+        background-position: left center, bottom right ;
+
+        @media screen and (max-width:768px) {
+            font-size: 42px;
+            width: 100%;
+        }
+
+    }
+
+    .card-container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 60px 20px;
+        gap: 60px 20px;
+        width: 100%;
+
+        @media screen and (max-width:768px) {
+            grid-gap: 20px;
+            gap: 20px;
+            grid-template-columns: repeat(2,1fr);
+        }
+        
+    }
+
+}
+
+.btn {
+  @include btn();
 }
