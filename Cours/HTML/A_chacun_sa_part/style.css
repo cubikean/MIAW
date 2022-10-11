@@ -1,0 +1,253 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+header{
+    margin-bottom: 100px;
+    min-height: 100vh;
+}
+header figure{
+    text-align: center;
+    margin: 150px 0;
+}
+header figure img{
+    width: 50%;
+}
+header ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+    gap: 12px;
+    list-style-type: none;
+}
+
+header ul li {
+    background-color: #e8b408;
+    padding: 10px 20px;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+    border-radius: 40px;
+    width: 40%;
+    font-size: 1.5rem;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+    font-size: 1.5rem;
+}   
+
+#partage{
+
+    background-image: url(./images/content/photo.png);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    min-height: 400px;
+}
+
+#partage h1{
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+#partage a{
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+    font-size: 1.2rem;
+    background-color: #c4374c98;
+    text-align: center;
+    min-width: 140px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+
+}
+
+
+#bienvenue{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #e8b408;
+    padding: 50px;
+    padding-bottom: 100px;
+}
+#bienvenue h2,#bienvenue p{
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+#bienvenue h2 {
+    margin: 20px 0;
+    font-size: 2rem;
+}
+
+#question{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 30px;
+    gap: 30px;
+}
+#question h2{
+    text-align: center;
+    color: #981739;
+    font-size: 2rem;
+}
+#question article {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+#question article figure img{
+    width: 100%;
+}
+#question article figure{
+    width: 100%;
+    margin: 0;
+}
+#question div{
+    width: 100%;
+}
+#question h3{
+    margin: 0;
+    color: #981739;
+    position: relative;
+}
+#question h3::before{
+    content: "";
+    width: 40%;
+    height: 1px;
+    background-color: #981739;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+
+}
+
+#comment-ca-marche{
+    min-height: 80vh;
+    background-image: url('./images/design/bg1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+#comment-ca-marche h2{
+    margin-top: 150px;
+    color: white;
+    font-size: 2rem;
+}
+
+#valeur {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #981739;
+    padding: 50px;
+    padding-bottom: 100px;
+}
+#valeur h2, #valeur h3, #valeur p{
+    color: white;
+    text-align: center;
+    position: relative;
+
+}
+#valeur h2{
+    font-size: 3rem;
+}
+#valeur h3::before{
+    content: "";
+    width: 40%;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+}
+
+#essaie{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url('./images/design/bg2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    gap: 100px;
+}
+#essaie h2{
+    color: white;
+    font-size: 3rem;
+}
+#essaie a {
+    text-decoration: none;
+    display: block;
+    color: white;
+    font-weight: 900;
+    font-size: 1.2rem;
+    background-color: #c4374c98;
+    text-align: center;
+    min-width: 140px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+
+#actu {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url('./images/design/bg3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#actu h2{
+    color: white;
+}
+#actu a {
+    background-color: #e8b408;
+    padding: 10px 20px;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+    border-radius: 40px;
+    width: 40%;
+    font-size: 1.5rem;
+}
