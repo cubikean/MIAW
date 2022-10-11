@@ -3,6 +3,7 @@
 }
 body {
   background: $background-dark;
+  margin: 0;
 }
 
 section {
@@ -115,6 +116,7 @@ header {
       &:hover {
         background: $background-light;
         transition: all 0.3s;
+        color: $title-color-dark;
       }
 
       @media screen and (max-width: 768px) {
@@ -385,23 +387,122 @@ header {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    
+
     .btn-play {
       @include btn-play();
       position: relative;
       opacity: 1;
       margin: inherit;
 
-      svg{
-        width: 25px
+      svg {
+        width: 25px;
       }
 
       @media screen and (min-width: 768px) {
         display: none;
       }
-
     }
+  }
+}
 
+#contact {
+  background-color: #1b1b1d;
+  max-width: 100%;
+  .background-contact {
+    padding: 100px 20px;
+    margin: 250px auto;
+    margin-bottom: 100px;
+    max-width: 1200px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    background-image: url("../images/add-1.png");
+    background-size: 60px;
+    background-repeat: no-repeat;
+    background-position: top right;
+
+    @media screen and (max-width: 768px) {
+      margin: 100px auto;
+    }
+  }
+
+  h2 {
+    font-size: 82px;
+    color: $title-color-light;
+    font-weight: 900;
+
+    width: 80%;
+
+    @media screen and (max-width: 768px) {
+      font-size: 42px;
+      width: 100%;
+    }
+  }
+
+  .btn {
+    padding: 12px 40px;
+    &::before {
+      display: none;
+    }
+  }
+}
+
+footer {
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 100px auto;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 40px;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    flex-direction: column;
+}
+
+  .enver-menu_footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    flex-direction: row;
+    padding: 0px;
+    gap: 40px;
+    transition: all 0.3s;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+  }
+
+    li {
+      position: relative;
+
+      a {
+        color: $text-color-light;
+        font-size: 16.875px;
+        text-decoration: none;
+        font-weight: 400;
+        transition: all 0.3s;
+
+        &:hover {
+          color: $text-color-blue;
+          transition: all 0.3s;
+        }
+      }
+    }
+  }
+  span{
+    color: $text-color-light;
+    font-size: 16.875px;
+    text-decoration: none;
+    font-weight: 400;
   }
 }
 

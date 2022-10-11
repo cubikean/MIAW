@@ -6,6 +6,7 @@
 
 body {
   background: #19191b;
+  margin: 0;
 }
 
 section {
@@ -111,6 +112,7 @@ header .enver-menu .enver-menu_contact {
 header .enver-menu .enver-menu_contact:hover {
   background: #FFFFFF;
   transition: all 0.3s;
+  color: #000000;
 }
 @media screen and (max-width: 768px) {
   header .enver-menu .enver-menu_contact {
@@ -439,6 +441,102 @@ header .enver-hero p {
   #portfolio .portfolio-controller .btn-play {
     display: none;
   }
+}
+
+#contact {
+  background-color: #1b1b1d;
+  max-width: 100%;
+}
+#contact .background-contact {
+  padding: 100px 20px;
+  margin: 250px auto;
+  margin-bottom: 100px;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url("../images/add-1.png");
+  background-size: 60px;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+@media screen and (max-width: 768px) {
+  #contact .background-contact {
+    margin: 100px auto;
+  }
+}
+#contact h2 {
+  font-size: 82px;
+  color: #FFFFFF;
+  font-weight: 900;
+  width: 80%;
+}
+@media screen and (max-width: 768px) {
+  #contact h2 {
+    font-size: 42px;
+    width: 100%;
+  }
+}
+#contact .btn {
+  padding: 12px 40px;
+}
+#contact .btn::before {
+  display: none;
+}
+
+footer {
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 100px auto;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 40px;
+}
+@media screen and (max-width: 768px) {
+  footer {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    flex-direction: column;
+  }
+}
+footer .enver-menu_footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  flex-direction: row;
+  padding: 0px;
+  gap: 40px;
+  transition: all 0.3s;
+}
+@media screen and (max-width: 768px) {
+  footer .enver-menu_footer {
+    flex-direction: column;
+  }
+}
+footer .enver-menu_footer li {
+  position: relative;
+}
+footer .enver-menu_footer li a {
+  color: rgba(255, 255, 255, 0.7019607843);
+  font-size: 16.875px;
+  text-decoration: none;
+  font-weight: 400;
+  transition: all 0.3s;
+}
+footer .enver-menu_footer li a:hover {
+  color: #5454D4;
+  transition: all 0.3s;
+}
+footer span {
+  color: rgba(255, 255, 255, 0.7019607843);
+  font-size: 16.875px;
+  text-decoration: none;
+  font-weight: 400;
 }
 
 .btn {
