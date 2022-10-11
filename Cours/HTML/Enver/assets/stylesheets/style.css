@@ -10,6 +10,10 @@ body {
   overflow-x: hidden;
 }
 
+main {
+  overflow-x: hidden;
+}
+
 section {
   max-width: 1200px;
 }
