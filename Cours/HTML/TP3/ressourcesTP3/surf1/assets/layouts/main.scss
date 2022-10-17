@@ -3,6 +3,10 @@ h1,h2,h3,h4,h5,h6{
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
 }
+
+img{
+  width: 100%;
+}
 header{
   height: 100vh;
   display: flex;
@@ -11,42 +15,41 @@ header{
   flex-direction: column;
   max-width: 1200px;
   margin-inline: auto;
-}
-
-section{
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-
-  article{
-    width: 30%;
-    transition: all .4s;
-    
-    
-    img{
-      width: 100%;
-    }
-
-    p{
-      font-family: 'Raleway', sans-serif;
-      padding: 20px;
-      font-size: 1.4rem;
-      color: $gris-texte;
-      line-height: 1.6rem;
+  section{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  
+    article{
+      width: 30%;
       transition: all .4s;
-    }
-    &:hover{
-      cursor: pointer;
-      box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.2);
-      transition: all .4s;
-
+      
+      
+      
+  
       p{
-        color: $bleu-texte;
-      transition: all .4s;
-    }
+        font-family: 'Raleway', sans-serif;
+        padding: 20px;
+        font-size: 1.4rem;
+        color: $gris-texte;
+        line-height: 1.6rem;
+        transition: all .4s;
+      }
+      &:hover{
+        cursor: pointer;
+        box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.2);
+        transition: all .4s;
+  
+        p{
+          color: $bleu-texte;
+        transition: all .4s;
+      }
+      }
     }
   }
 }
+
+
 
 .top{
   display: flex;
@@ -70,3 +73,79 @@ section{
   @include btn();
 }
 
+main{
+  max-width: 1200px;
+  margin-inline: auto;
+
+  .cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    left: 60px;
+
+    .card{
+      width: 100%;
+      box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.2);
+      background-color: white;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 350px;
+      
+      img{
+        width: 150px;
+      }
+
+      h2{
+        margin: 1rem 0;
+        font-size: 1.6rem;
+        color: #00b0ff;
+      }
+      hr{
+        width: 20%;
+      }
+      h3,p{
+        font-size: 1rem;
+        color: rgb(141, 141, 141);
+      }
+      p{
+        font-family: 'Raleway', sans-serif;
+
+      }
+
+      &.colored{
+        background-color: #00b0ff;
+
+        h2,h3,p{
+          color: white;
+        }
+      }
+      &:nth-child(2){
+        position: relative;
+        top: 40px;
+        right: 40px;
+        z-index: 2;
+      }
+      &:nth-child(3){
+        position: relative;
+        right: 80px;
+        z-index: 0;
+      }
+      &:nth-child(4){
+        position: relative;
+        top: 40px;
+        z-index: 2;
+        right: 120px;
+      }
+    }
+    
+  }
+}
+
+
+.spacer{
+  min-height: 40vh;
+}

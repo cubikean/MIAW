@@ -5,6 +5,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 
+img {
+  width: 100%;
+}
+
 header {
   height: 100vh;
   display: flex;
@@ -14,20 +18,16 @@ header {
   max-width: 1200px;
   margin-inline: auto;
 }
-
-section {
+header section {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
 }
-section article {
+header section article {
   width: 30%;
   transition: all 0.4s;
 }
-section article img {
-  width: 100%;
-}
-section article p {
+header section article p {
   font-family: "Raleway", sans-serif;
   padding: 20px;
   font-size: 1.4rem;
@@ -35,12 +35,12 @@ section article p {
   line-height: 1.6rem;
   transition: all 0.4s;
 }
-section article:hover {
+header section article:hover {
   cursor: pointer;
   box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.2);
   transition: all 0.4s;
 }
-section article:hover p {
+header section article:hover p {
   color: #0022ff;
   transition: all 0.4s;
 }
@@ -68,6 +68,74 @@ section article:hover p {
   color: white;
   padding: 20px;
   border: none;
+}
+
+main {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+main .cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  left: 60px;
+}
+main .cards .card {
+  width: 100%;
+  box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 350px;
+}
+main .cards .card img {
+  width: 150px;
+}
+main .cards .card h2 {
+  margin: 1rem 0;
+  font-size: 1.6rem;
+  color: #00b0ff;
+}
+main .cards .card hr {
+  width: 20%;
+}
+main .cards .card h3, main .cards .card p {
+  font-size: 1rem;
+  color: rgb(141, 141, 141);
+}
+main .cards .card p {
+  font-family: "Raleway", sans-serif;
+}
+main .cards .card.colored {
+  background-color: #00b0ff;
+}
+main .cards .card.colored h2, main .cards .card.colored h3, main .cards .card.colored p {
+  color: white;
+}
+main .cards .card:nth-child(2) {
+  position: relative;
+  top: 40px;
+  right: 40px;
+  z-index: 2;
+}
+main .cards .card:nth-child(3) {
+  position: relative;
+  right: 80px;
+  z-index: 0;
+}
+main .cards .card:nth-child(4) {
+  position: relative;
+  top: 40px;
+  z-index: 2;
+  right: 120px;
+}
+
+.spacer {
+  min-height: 40vh;
 }
 
 /*# sourceMappingURL=style.css.map */
