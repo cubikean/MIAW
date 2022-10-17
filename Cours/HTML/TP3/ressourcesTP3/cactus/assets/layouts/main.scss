@@ -1,0 +1,41 @@
+h1,h2,h3,h4,h5,h6,span,p{
+  font-family: 'Fira Sans', sans-serif;
+}
+header{
+  background-color: $bleu;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.container-top{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $vert;
+  padding: 20px 0;
+  width: 100%;
+}
+h1{
+  color: $bleu;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+h1 span {
+  color: $blanc;
+}
+h2 {
+  color: $blanc;
+  font-size: 5rem;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+h2 span {
+  color: $vert;
+}
+
+.fa-chevron-down{
+  font-size: 4rem;
+  color: $vert;
+}
