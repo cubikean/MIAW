@@ -1,0 +1,49 @@
+h1,h2,h3,h4,h5,h6,li,ul,p{
+  font-family: 'Raleway', sans-serif;
+  // font-weight: bold;
+  color: $text;
+}
+
+header{
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  background-image: url('../images/enpied.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: calc(100% + 150px);
+
+  section{
+  width: 100%;
+  background-color: $back-legende;
+    padding: 40px;
+    margin: 20px;
+    position: relative;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+
+    img{
+      position: absolute;
+      top: -70px;
+      left: 40px;
+      width: 100px;
+      border-radius: 50%;
+    }
+
+    h1{
+      font-size: 2rem;
+      margin: 20px 0;
+    }
+
+    li{
+      margin: 20px 0;
+      font-size: 1.2rem;
+    }
+    
+    p{
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+    }
+
+  }
+}

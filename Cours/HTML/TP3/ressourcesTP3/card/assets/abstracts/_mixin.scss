@@ -1,0 +1,8 @@
+@mixin btn {
+    background-color: $bleu-bouton;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: white;
+    padding: 20px;
+    border: none;
+}
