@@ -1,0 +1,146 @@
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Roboto', sans-serif;
+
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: 'Noto sans', sans-serif;
+  background-color: $couleur-fond;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #67b0d6;
+  height: 10vh;
+  padding: 1vh 5vw;
+
+  .burger{
+    align-self: flex-start;
+    margin-right: 2rem;
+    font-size: 2rem;
+  }
+  .title {
+    flex: 1 1 0%;
+
+    h1{
+      color: #F8F8F8;
+      font-size: 1.2rem;
+    }
+  }
+  .list{
+    display: flex;
+    align-items: center;
+    li{
+      font-size: 1.4rem;
+      &:first-child{
+        margin-right: 1.2rem;
+      }
+    }
+  }
+
+}
+
+
+
+section.new-collection {
+  background-image: url('../../img/index/new-collection.png');
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 30vh;
+  background-color: $couleur-fond;
+
+  h2{
+    color: #323c3f;
+    margin-left: 52%;
+    font-weight: 400;
+    font-size: 1.8rem;
+    padding-top: 5vh;
+  }
+  h3{
+    color: #a6a6ad;
+    margin-left: 52%;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.8;
+  }
+  .btn {
+    @include btn();
+    padding-bottom: 5vh;
+    padding-right: 5vw;
+  }
+}
+
+section.search-form{
+  form{
+    width: 96%;
+    padding: 5vw 1vh;
+    [type=text] {
+      @include input-text()
+     }
+     
+  }
+}
+
+main{
+  padding: 0 10px;
+section.popular-products{
+  h2{
+    margin: 5vh 0;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    letter-spacing: 4px;
+    font-weight: 800;
+    text-align: center;
+    position: relative;
+
+    &::before{
+      content: "";
+      position: absolute;
+      height: 3px;
+      width: 15%;
+      background-color: #ccc;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &::after{
+      content: "";
+      position: absolute;
+      height: 3px;
+      width: 15%;
+      background-color: #ccc;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  .products{
+    margin-top: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    .product{
+      @include product();
+    }
+  }
+  .loading{
+    text-align: center;
+    display: block;
+    margin: 5vh 0;
+  }
+  .btn-more{
+    @include btn-more();
+  }
+}
+
+}
