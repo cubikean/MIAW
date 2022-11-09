@@ -8,6 +8,19 @@ h1, h2, h3, h4, h5, h6, p {
   box-sizing: border-box;
 }
 
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #141414;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 20px;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -94,7 +107,6 @@ header .header-nav_burger_label .fa-xmark {
   display: none;
 }
 header .hero {
-  width: 100vw;
   background-color: #39a1b7;
 }
 header .hero_container {
@@ -156,9 +168,14 @@ main .image-list_custom {
   align-items: center;
   justify-content: center;
   background-color: #5b0f9f;
-  height: auto;
+  height: 80vw;
   align-self: stretch;
   width: 100vw;
+}
+@media screen and (min-width: 640px) {
+  main .image-list_custom {
+    height: auto;
+  }
 }
 main .image-list_custom i {
   font-size: 2rem;
