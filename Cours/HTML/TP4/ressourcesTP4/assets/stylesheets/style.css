@@ -14,6 +14,10 @@ body {
   background-color: #e8e8e8;
 }
 
+img {
+  max-width: 100%;
+}
+
 header {
   display: flex;
   align-items: center;
@@ -313,6 +317,238 @@ section.categorys .loading {
   display: block;
   margin: 5vh 0;
   width: 100%;
+}
+
+body.products .btn {
+  text-align: right;
+}
+body.products .btn a {
+  display: inline-block;
+  margin-top: 2vh;
+  padding: 1.5rem 1.5rem;
+  border-radius: 5px;
+  background-color: #f6846a;
+  color: #f8f8f8;
+  text-align: center;
+  text-transform: uppercase;
+}
+body.products .btn a {
+  padding: 1rem 1.5rem;
+}
+body.products .btn-more {
+  text-align: center;
+}
+body.products .btn-more a {
+  display: inline-block;
+  margin-top: 2vh;
+  padding: 1.5rem 3rem;
+  border-radius: 5px;
+  background-color: #323c3f;
+  color: #f8f8f8;
+  text-align: center;
+  text-transform: uppercase;
+}
+body.products .btn-more a {
+  padding: 1rem 1.5rem;
+}
+body.products header {
+  background-color: #38474f;
+}
+body.products nav {
+  height: auto;
+  background-color: #38474f;
+  padding-bottom: 1rem;
+}
+body.products nav p {
+  flex: 1 1 50%;
+}
+body.products nav p a {
+  width: -webkit-fill-available;
+  font-size: 0.8rem;
+  margin: 0 1rem;
+}
+body.products main {
+  padding: 1rem;
+}
+body.products main section {
+  margin-top: 1rem;
+}
+body.products main section article {
+  background-color: #fff;
+  border-radius: 8px;
+}
+body.products main section article .article_description {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem;
+}
+body.products main section article .article_description h2 {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+body.products main section article .article_description p a {
+  margin: 0;
+  background-color: #bfbfc4;
+}
+body.products main .description {
+  padding: 1.4rem;
+  background-color: #fff;
+  border-radius: 8px;
+}
+body.products main .description .description_item {
+  display: flex;
+  align-items: center;
+}
+body.products main .description .description_item .fa-plus {
+  font-size: 1.4rem;
+}
+body.products main .description .description_item h2 {
+  margin-left: 2rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+body.products main .couleurs {
+  margin-bottom: 2rem;
+  padding: 1.4rem;
+  background-color: #fff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+body.products main .couleurs h2 {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+body.products main .couleurs h2:first-child::before {
+  content: url("../../img/product/icon.png");
+  margin-right: 1rem;
+  position: relative;
+}
+body.products main .couleurs h2:last-of-type::before {
+  content: url("../../img/product/hanger.png");
+  margin-right: 1rem;
+  position: relative;
+}
+body.products main .couleurs .couleurs_block {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  gap: 20px;
+}
+body.products main .couleurs .couleurs_block p {
+  padding: 1.6rem;
+  border-radius: 6px;
+}
+body.products main .couleurs .couleurs_block p i {
+  display: none;
+}
+body.products main .couleurs .couleurs_block .couleurs_block_pink {
+  background-color: #f0c9ce;
+}
+body.products main .couleurs .couleurs_block .couleurs_block_magenta {
+  background-color: #af687a;
+}
+body.products main .couleurs .couleurs_block .couleurs_block_gray {
+  background-color: #87a6b2;
+}
+body.products main .couleurs .couleurs_block .active {
+  position: relative;
+}
+body.products main .couleurs .couleurs_block .active i {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8rem;
+  filter: invert(1);
+}
+body.products main .couleurs hr {
+  width: 80%;
+  margin: 1.6rem 0;
+}
+body.products main .couleurs .couleurs_size {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  gap: 20px;
+}
+body.products main .couleurs .couleurs_size p {
+  padding: 1.2rem;
+  border-radius: 6px;
+  min-width: 1rem;
+  text-align: center;
+  background-color: #dadade;
+}
+body.products main .couleurs .couleurs_size .active {
+  background-color: #67b0d6;
+  color: white;
+}
+body.products main .btn-more a {
+  width: 50%;
+  max-width: 300px;
+  text-transform: inherit;
+}
+body.products main .share {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+body.products main .share h2 {
+  font-weight: bold;
+  position: relative;
+  padding: 2rem 0;
+}
+body.products main .share h2::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: 50%;
+  left: 100px;
+  transform: translateY(-50%);
+  background-color: #ccc;
+}
+body.products main .share .share_social {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+body.products main .share .share_social .share_social_item {
+  display: flex;
+  align-items: center;
+}
+body.products main .share .share_social .share_social_item p {
+  min-width: 50px;
+  min-height: 50px;
+  text-align: center;
+  border-radius: 50%;
+}
+body.products main .share .share_social .share_social_item p .fa-brands {
+  color: white;
+  padding: 1rem;
+}
+body.products main .share .share_social .share_social_item .twitter {
+  background-color: #00acee;
+}
+body.products main .share .share_social .share_social_item .facebook {
+  background-color: #3b5998;
+}
+body.products main .share .share_social .share_social_item .pinterest {
+  background-color: #c8232C;
+}
+body.products main .share .share_social .share_social_item .share_social_item_value {
+  background-image: url("../../img/product/base.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=style.css.map */
