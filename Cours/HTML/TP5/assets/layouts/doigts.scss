@@ -1,0 +1,54 @@
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Roboto', sans-serif;
+
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: 'Noto sans', sans-serif;
+  background-color: $couleur-fond;
+}
+
+section{
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../../assets/images/doigt/5.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+
+  @media screen and (max-width:1200px) {
+    background-image: url("../../assets/images/doigt/5.jpg");
+  }
+  
+  @media screen and (max-width:1200px) and (min-width:992px) {
+    background-image: url("../../assets/images/doigt/4.jpg");
+    
+  }
+  
+  @media screen and (max-width:992px) and (min-width:768px) {
+    background-image: url("../../assets/images/doigt/3.jpg");
+    
+  }
+  
+  @media screen and (max-width:768px) and (min-width:544px) {
+    background-image: url("../../assets/images/doigt/2.jpg");
+    
+  }
+  
+  @media screen and (max-width:544px) {
+    background-image: url("../../assets/images/doigt/1.jpg");
+  }
+
+}
+
+// ◦ largeur de l'écran supérieure à 1200px : affichage de l'image à 5 doigts
+// ◦ largeur de l'écran comprise entre 1200px et 992px : affichage de l'image à 4 doigts
+// ◦ largeur de l'écran comprise entre 992et 768px : affichage de l'image à 3 doigts
+// ◦ largeur de l'écran comprise entre 768 et 544px : affichage de l'image à 2 doigts
+// ◦ largeur de l'écran inférieure à 544px : affichage de l'image à 1 doigt
+
+
