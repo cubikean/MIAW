@@ -1,0 +1,8 @@
+@mixin shadow {
+    box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+@mixin card-hover($param){
+    transform: translateY($param);
+    box-shadow: 0 20px 20px -15px rgba(0, 0, 0, 0.3); 
+}
