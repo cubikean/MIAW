@@ -1,5 +1,6 @@
 /* Abstract
    ========================================================================= */
+   @import 'abstracts/reset';
    @import 'abstracts/variables';
    @import 'abstracts/mixin';
    
@@ -15,7 +16,4 @@
    
 //    /* Layouts
 //       ========================================================================= */
-   // @import 'layouts/doigts';
-   // @import 'layouts/main';
-   @import 'layouts/appollo';
-   // @import 'layouts/advice';
+   @import 'layouts/main';

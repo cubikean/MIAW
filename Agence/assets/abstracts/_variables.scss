@@ -1,1 +1,17 @@
-$couleur-fond : #fff;
+$blue : #273253;
+$red : #ED5C4D;
+$beige : #F4E9DA;
+$yellow : #FBBE4B;
+$white : #FFFFFF;
+$black : #000000;
+$gray : #8795A1;
+
+@font-face {
+    font-family: 'Gilroy-Light';
+    src: url('../fonts/Gilroy-Light.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: 'Gilroy-ExtraBold';
+    src: url('../fonts/Gilroy-ExtraBold.woff2') format("woff2");
+}

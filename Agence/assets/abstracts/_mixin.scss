@@ -1,83 +1,72 @@
-@mixin shadow {
-  box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.2);
-}
-
-@mixin card-hover($param) {
-  transform: translateY($param);
-  box-shadow: 0 20px 20px -15px rgba(0, 0, 0, 0.3);
-}
-
-@mixin default-section {
-  position: relative;
-  background-color: #efefef;
-  min-height: 90vh;
+@mixin cookies-banner {
+  background-color: $white;
+  border-radius: 8px;
+  padding: 36px 24px 24px 24px;
   display: flex;
-  align-items: center;
-  margin-bottom: 50px;
-}
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 12px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  max-width: 300px;
 
-@mixin title() {
-  width: fit-content;
-  font-size: 4rem;
-  font-weight: 100;
-  margin-bottom: 1rem;
-  & strong {
-    font-weight: bold;
+  &::before{
+    content: url('../images/cookies.svg');
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 60px;
+    height: auto;
+    transform: translate(-50%, -50%);   
+  }
+
+  &_text{
+    font-size: 1rem;
+    color: $black;
+    font-family: 'Gilroy-Light';
+    line-height: 1.2rem;
+  }
+  
+  &_links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    &_more{
+      color: $black;
+      font-size: 1rem;
+      text-decoration: none;      
+      font-family: 'Gilroy-ExtraBold';
+  }
+
+    .btn{
+      @include btn();
+    }
+    
+    
+
   }
 }
 
-@mixin text() {
-  font-size: 1rem;
-  font-style: italic;
-  line-height: 1.4rem;
-  margin-bottom: 1rem;
-}
-
-@mixin letter($param) {
-  content: attr(data-letter);
-  font-size: 130vh;
-  height: 100%;
-  overflow: hidden;
-  background-blend-mode: difference;
-  color: #e3e3e3;
-  position: absolute;
-  top: 0px;
-  left: 0vw;
-  z-index: 0;
-  line-height: 0.66;
-  opacity: 0.45;
-}
-
-@mixin background-section($url, $posX, $posY, $covering) {
-  z-index: 1;
+@mixin btn {
   position: relative;
-  min-height: 90vh;
-  background-image: url($url);
-  background-repeat: no-repeat;
-  background-position-x: $posX;
-  background-position-y: $posY;
-  background-size: $covering;
-  display: flex;
-  align-items: center;
-  margin-bottom: 50px;
-}
-
-@mixin arrow($deg) {
-  background-color: white;
-  width: 50px;
-  height: 50px;
-  position: relative;
+  background-color: $yellow;
+  border-radius: 50px;
+  padding: 12px 36px;
   display: flex;
   align-items: center;
   justify-content: center;
-  &:hover {
-    cursor: pointer;
-  }
-  &::before {
-    content: "\f054";
-    color: black;
-    font: var(--fa-font-solid);
-    font-size: 2rem;
-    transform: rotate($deg);
+  color: $white;
+  text-decoration: none;
+  font-family: 'Gilroy-ExtraBold';
+  transition: all .3s ease-in-out;
+
+  &:hover{
+    color: $yellow;
+    background-color: transparent;
+    outline: 2px solid $yellow;
   }
 }
