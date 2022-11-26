@@ -1,0 +1,17 @@
+/*
+* Theme Name: MyWiki Enfant
+* Template: mywiki
+*/
+
+#footer{background: #eee !important}
+.covid{
+background: red;
+    color: #fff;
+    font-weight: bold;
+    padding: 20px 0;
+    text-align: center;}
+
+.header-text{
+
+font-family: 'Dancing Script', cursive;
+}
