@@ -7,7 +7,7 @@
   justify-content: space-between;
   flex-direction: column;
   gap: 12px;
-  position: absolute;
+  position: fixed;
   right: 20px;
   bottom: 20px;
   max-width: 300px;
@@ -62,11 +62,91 @@
   color: $white;
   text-decoration: none;
   font-family: 'Gilroy-ExtraBold';
+  font-size: 20px;
   transition: all .3s ease-in-out;
+  width: fit-content;
 
   &:hover{
     color: $yellow;
     background-color: transparent;
     outline: 2px solid $yellow;
+    cursor: pointer;
   }
+}
+
+@mixin title {
+  font-size: 62px;
+  text-transform: uppercase;
+  font-family: "Gilroy-ExtraBold";
+  width: fit-content;
+  position: relative;
+  margin-bottom: 3rem;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    width: 50%;
+    height: 6px;
+    border-radius: 100vw;
+    background-color: $yellow;
+    transform: translateX(-50%)
+  }
+}
+
+@mixin text {
+  font-size: 24px;
+  font-family: "Gilroy-Light";
+  margin-bottom: 2rem;
+  width: 50%;
+  text-align: center;
+}
+
+@mixin form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+    margin: 0 auto;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    @media (max-width: 1200px){
+        width: 80%;
+    }
+
+    input{
+        @media (min-width: 1200px){
+            &:nth-child(1), &:nth-child(2){
+                width: calc(50% - 50px);
+            }
+        }
+    }
+    
+    input, textarea{
+        font-size: 20px;
+        font-family: 'Gilroy-Light';
+        padding: 20px;
+        border: none;
+        border-radius: 10px;
+        background-color: $form;
+        color: $black;
+        width: 100%;
+
+        &:focus-visible{
+            outline: none;
+        }
+
+        @media (max-width: 1200px){
+            width: 100%;
+        }
+    }
+    textarea{
+        height: 160px;
+        resize: vertical;
+    }
+    input[type='submit']{
+        margin-inline: auto;
+        @include btn();
+    }
 }

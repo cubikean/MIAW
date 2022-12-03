@@ -1,6 +1,278 @@
-body{
-    background-color: $beige;
+body {
+  background-color: $beige;
 }
-.cookies-banner{
-    @include cookies-banner();
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background: $yellow;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+img {
+  max-width: 100%;
+}
+
+header {
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    width: 90%;
+    margin-inline: auto;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url(../images/shape.svg);
+      background-size: contain;
+      background-position: top right;
+      background-repeat: no-repeat;
+      width: -webkit-fill-available;
+      height: 100vh;
+      z-index: -1;
+    }
+
+    &_left {
+      flex: 1 1 50%;
+      &_title {
+        font-size: 62px;
+        text-transform: uppercase;
+        font-family: "Gilroy-ExtraBold";
+        width: fit-content;
+        position: relative;
+        margin-bottom: 3rem;
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -20px;
+          left: 0;
+          width: 50%;
+          height: 6px;
+          border-radius: 100vw;
+          background-color: $yellow;
+        }
+      }
+      &_text {
+        font-size: 24px;
+        font-family: "Gilroy-Light";
+        margin-bottom: 2rem;
+      }
+      &_btn {
+        @include btn();
+      }
+    }
+    &_right {
+      flex: 1 1 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 50%;
+      }
+    }
+  }
+}
+main {
+    overflow: hidden;
+  .agence {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 15rem;
+
+    &_title {
+      @include title();
+    }
+    &_text {
+      @include text();
+    }
+    &-container {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-evenly;
+      &_shape {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        &_image {
+          width: 100%;
+          pointer-events: none;
+          user-select: none;
+        }
+        &:nth-child(3) img {
+          transform: rotate(220deg);
+        }
+        &:nth-child(4) img {
+          transform: rotate(-80deg);
+        }
+        &_name {
+          font-size: 32px;
+          font-family: "Gilroy-ExtraBold";
+          margin-bottom: 0.5rem;
+          text-transform: uppercase;
+        }
+        &_status {
+          font-size: 28px;
+          font-family: "Gilroy-Light";
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+  .idee {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 15rem;
+
+    &_title {
+      @include title();
+    }
+    &_text {
+      @include text();
+    }
+    &_btn {
+      @include btn();
+    }
+  }
+
+  .services {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 15rem;
+
+    &_title {
+      @include title();
+    }
+    &_text {
+      @include text();
+    }
+
+    &-container {
+      display: flex;
+      justify-content: space-evenly;
+      gap: 80px;
+      margin-top: 3rem;
+      &_bloc {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: $red;
+        border-radius: 8px;
+        position: relative;
+        &_image {
+          width: 150px;
+          padding: 2rem;
+          pointer-events: none;
+          user-select: none;
+          transition: all 0.3s ease-in-out;
+        }
+        &:nth-child(1):before {
+          content: "";
+          background-image: url(../images/shape_box.svg);
+          background-size: contain;
+          background-repeat: no-repeat;
+          position: absolute;
+          bottom: 0px;
+          left: 0px;
+          width: 300px;
+          height: 100%;
+          z-index: -1;
+          transform: translate(-20%, 30%);
+        }
+        &:nth-child(3):before {
+          content: "";
+          background-image: url(../images/shape_box.svg);
+          background-size: contain;
+          background-repeat: no-repeat;
+          position: absolute;
+          bottom: 0px;
+          left: 0px;
+          width: 300px;
+          height: 100%;
+          z-index: -1;
+          transform: translate(-10%, -30%) rotate(180deg);
+        }
+        &:hover {
+          img {
+            filter: invert(1);
+          }
+        }
+      }
+    }
+  }
+
+  .stack {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 15rem;
+
+    &_title {
+      @include title();
+    }
+    &_text {
+      @include text();
+    }
+
+    &-container {
+      display: flex;
+      justify-content: space-evenly;
+      gap: 80px;
+      margin-top: 3rem;
+      &_bloc {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 8px;
+        position: relative;
+        &_image {
+          width: 150px;
+          padding: 2rem;
+          pointer-events: none;
+          user-select: none;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+
+  .contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url(../images/shape_contact.svg);
+    background-size: cover;
+    background-position: center 400px;
+    background-repeat: no-repeat;
+
+    &_title {
+      @include title();
+    }
+    &_text {
+      @include text();
+    }
+
+    form{
+        @include form();
+    }
+  }
+}
+
+.cookies-banner {
+  @include cookies-banner();
 }

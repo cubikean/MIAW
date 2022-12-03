@@ -26,13 +26,132 @@
 
 
     <link rel="stylesheet" href="./assets/stylesheets/style.css">
+    <script src="./assets/js/popup.js" defer></script>
 </head>
 <body>
     <header>
-        <nav></nav>
+        <section class="hero">
+            <div class="hero_left">
+                <h2 class="hero_left_title">Digitélior</h2>
+                <p class="hero_left_text">
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                </p>
+                <div class="hero_left_btn"> Découvrir</div>
+            </div>
+            <div class="hero_right">
+                <img src="./assets/images/Group.png" alt="">
+            </div>
+        </section>
+
     </header>
 
-    <main></main>
+    <main>
+        <section class="agence">
+            <h2 class="agence_title">l'agence</h2>
+            <p class="agence_text">
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            </p>
+            <div class="agence-container">
+                <div class="agence-container_shape">
+                    <img class="agence-container_shape_image" src="./assets/images/shape_blue.svg" alt="">
+                    <h3 class="agence-container_shape_name">clément</h3>
+                    <h4 class="agence-container_shape_status">Développeur</h4>
+                </div>
+                <div class="agence-container_shape">
+                    <img class="agence-container_shape_image" src="./assets/images/shape_yellow.svg" alt="">
+                    <h3 class="agence-container_shape_name">margaux</h3>
+                    <h4 class="agence-container_shape_status">designeuse</h4>
+                </div>
+                <div class="agence-container_shape">
+                    <img class="agence-container_shape_image" src="./assets/images/shape_blue.svg" alt="">
+                    <h3 class="agence-container_shape_name">valentin</h3>
+                    <h4 class="agence-container_shape_status">Développeur</h4>
+                </div>
+                <div class="agence-container_shape">
+                    <img class="agence-container_shape_image" src="./assets/images/shape_yellow.svg" alt="">
+                    <h3 class="agence-container_shape_name">hugo</h3>
+                    <h4 class="agence-container_shape_status">designer</h4>
+                </div>
+            </div>
+        </section>
+
+        <section class="idee">
+            <h2 class="idee_title">vous avez une idée ?</h2>
+            <p class="idee_text">
+                Vous avez déjà une idée pour votre site web, n’hésitez pas à nous contacter en nous donnant le plus d’informations possible !
+            </p>
+            <div class="idee_btn">Nous contacter</div>
+        </section>
+
+        <section class="services">
+            <h2 class="services_title">nos services</h2>
+            <p class="services_text">
+                Digitélior, c’est une agence de communication pleine d’idées portée par des professionnels du design graphique et du développement web, passionnés par leur métier
+            </p>
+
+            <div class="services-container">
+                <div class="services-container_bloc">
+                    <img class="services-container_bloc_image" src="./assets/images/icon_dev.png" alt="">
+                </div>
+                <div class="services-container_bloc">
+                    <img class="services-container_bloc_image" src="./assets/images/icon_design.png" alt="">
+                </div>
+                <div class="services-container_bloc">
+                    <img class="services-container_bloc_image" src="./assets/images/icon_seo.png" alt="">
+                </div>
+                
+            </div>
+
+        </section>
+
+        <section class="stack">
+            <h2 class="stack_title">notre stack</h2>
+            <p class="stack_text">
+                Digitélior saura jongler entre ses compétences et vos exigences, en s’appuyant sur son expérience dans le développement et la communication print et web.
+            </p>
+
+            <div class="stack-container">
+                <div class="stack-container_bloc">
+                    <img class="stack-container_bloc_image" src="./assets/images/carbon_logo-react.png" alt="">
+                </div>
+                <div class="stack-container_bloc">
+                    <img class="stack-container_bloc_image" src="./assets/images/mdi_angular.png" alt="">
+                </div>
+                <div class="stack-container_bloc">
+                    <img class="stack-container_bloc_image" src="./assets/images/mdi_vuejs.png" alt="">
+                </div>
+                <div class="stack-container_bloc">
+                    <img class="stack-container_bloc_image" src="./assets/images/WordPress.png" alt="">
+                </div>
+                
+            </div>
+
+        </section>
+
+        <section class="contact">
+            <h2 class="contact_title">contact</h2>
+            <p class="contact_text">
+                Hésitez pas à nous contacter !
+            </p>
+
+
+            <form name="contact" method="post">
+                <input type="text" id="contact_nom" name="nom" required="required" placeholder="Votre nom">
+                <input type="text" id="contact_prenom" name="prenom" required="required" placeholder="Votre prénom">
+                <input type="text" id="contact_objet" name="objet" required="required" placeholder="Objet">
+                <input type="email" id="contact_email" name="email" required="required" placeholder="Votre E-mail">
+                <textarea id="contact_message" name="message" placeholder="Votre message"></textarea>
+                <input type="submit" value="Nous contacter">
+    
+                            
+            
+                    
+    
+        
+       
+            
+        </section>
+    </main>
 
     <footer></footer>
 
@@ -40,7 +159,7 @@
         <p class="cookies-banner_text">Nous nous soucions de vos données et nous aimerions utiliser des cookies pour améliorer votre expérience.</p>
         <div class="cookies-banner_links">
             <a href="#" class="cookies-banner_links_more">En savoir plus</a>
-            <a href="#" class="btn">OK</a>
+            <a href="#" class="btn close-btn">OK</a>
         </div>
     </div>
 

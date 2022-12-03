@@ -66,6 +66,461 @@ body {
   background-color: #F4E9DA;
 }
 
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FBBE4B;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+img {
+  max-width: 100%;
+}
+
+header .hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  width: 90%;
+  margin-inline: auto;
+}
+header .hero::before {
+  content: "";
+  position: absolute;
+  background-image: url(../images/shape.svg);
+  background-size: contain;
+  background-position: top right;
+  background-repeat: no-repeat;
+  width: -webkit-fill-available;
+  height: 100vh;
+  z-index: -1;
+}
+header .hero_left {
+  flex: 1 1 50%;
+}
+header .hero_left_title {
+  font-size: 62px;
+  text-transform: uppercase;
+  font-family: "Gilroy-ExtraBold";
+  width: fit-content;
+  position: relative;
+  margin-bottom: 3rem;
+}
+header .hero_left_title::before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 50%;
+  height: 6px;
+  border-radius: 100vw;
+  background-color: #FBBE4B;
+}
+header .hero_left_text {
+  font-size: 24px;
+  font-family: "Gilroy-Light";
+  margin-bottom: 2rem;
+}
+header .hero_left_btn {
+  position: relative;
+  background-color: #FBBE4B;
+  border-radius: 50px;
+  padding: 12px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: "Gilroy-ExtraBold";
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+  width: fit-content;
+}
+header .hero_left_btn:hover {
+  color: #FBBE4B;
+  background-color: transparent;
+  outline: 2px solid #FBBE4B;
+  cursor: pointer;
+}
+header .hero_right {
+  flex: 1 1 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .hero_right img {
+  width: 50%;
+}
+
+main {
+  overflow: hidden;
+}
+main .agence {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 15rem;
+}
+main .agence_title {
+  font-size: 62px;
+  text-transform: uppercase;
+  font-family: "Gilroy-ExtraBold";
+  width: fit-content;
+  position: relative;
+  margin-bottom: 3rem;
+}
+main .agence_title::before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  width: 50%;
+  height: 6px;
+  border-radius: 100vw;
+  background-color: #FBBE4B;
+  transform: translateX(-50%);
+}
+main .agence_text {
+  font-size: 24px;
+  font-family: "Gilroy-Light";
+  margin-bottom: 2rem;
+  width: 50%;
+  text-align: center;
+}
+main .agence-container {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-evenly;
+}
+main .agence-container_shape {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main .agence-container_shape_image {
+  width: 100%;
+  pointer-events: none;
+  user-select: none;
+}
+main .agence-container_shape:nth-child(3) img {
+  transform: rotate(220deg);
+}
+main .agence-container_shape:nth-child(4) img {
+  transform: rotate(-80deg);
+}
+main .agence-container_shape_name {
+  font-size: 32px;
+  font-family: "Gilroy-ExtraBold";
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+main .agence-container_shape_status {
+  font-size: 28px;
+  font-family: "Gilroy-Light";
+  margin-bottom: 0.5rem;
+}
+main .idee {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 15rem;
+}
+main .idee_title {
+  font-size: 62px;
+  text-transform: uppercase;
+  font-family: "Gilroy-ExtraBold";
+  width: fit-content;
+  position: relative;
+  margin-bottom: 3rem;
+}
+main .idee_title::before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  width: 50%;
+  height: 6px;
+  border-radius: 100vw;
+  background-color: #FBBE4B;
+  transform: translateX(-50%);
+}
+main .idee_text {
+  font-size: 24px;
+  font-family: "Gilroy-Light";
+  margin-bottom: 2rem;
+  width: 50%;
+  text-align: center;
+}
+main .idee_btn {
+  position: relative;
+  background-color: #FBBE4B;
+  border-radius: 50px;
+  padding: 12px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: "Gilroy-ExtraBold";
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+  width: fit-content;
+}
+main .idee_btn:hover {
+  color: #FBBE4B;
+  background-color: transparent;
+  outline: 2px solid #FBBE4B;
+  cursor: pointer;
+}
+main .services {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 15rem;
+}
+main .services_title {
+  font-size: 62px;
+  text-transform: uppercase;
+  font-family: "Gilroy-ExtraBold";
+  width: fit-content;
+  position: relative;
+  margin-bottom: 3rem;
+}
+main .services_title::before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  width: 50%;
+  height: 6px;
+  border-radius: 100vw;
+  background-color: #FBBE4B;
+  transform: translateX(-50%);
+}
+main .services_text {
+  font-size: 24px;
+  font-family: "Gilroy-Light";
+  margin-bottom: 2rem;
+  width: 50%;
+  text-align: center;
+}
+main .services-container {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 80px;
+  margin-top: 3rem;
+}
+main .services-container_bloc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #ED5C4D;
+  border-radius: 8px;
+  position: relative;
+}
+main .services-container_bloc_image {
+  width: 150px;
+  padding: 2rem;
+  pointer-events: none;
+  user-select: none;
+  transition: all 0.3s ease-in-out;
+}
+main .services-container_bloc:nth-child(1):before {
+  content: "";
+  background-image: url(../images/shape_box.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 300px;
+  height: 100%;
+  z-index: -1;
+  transform: translate(-20%, 30%);
+}
+main .services-container_bloc:nth-child(3):before {
+  content: "";
+  background-image: url(../images/shape_box.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 300px;
+  height: 100%;
+  z-index: -1;
+  transform: translate(-10%, -30%) rotate(180deg);
+}
+main .services-container_bloc:hover img {
+  filter: invert(1);
+}
+main .stack {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 15rem;
+}
+main .stack_title {
+  font-size: 62px;
+  text-transform: uppercase;
+  font-family: "Gilroy-ExtraBold";
+  width: fit-content;
+  position: relative;
+  margin-bottom: 3rem;
+}
+main .stack_title::before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  width: 50%;
+  height: 6px;
+  border-radius: 100vw;
+  background-color: #FBBE4B;
+  transform: translateX(-50%);
+}
+main .stack_text {
+  font-size: 24px;
+  font-family: "Gilroy-Light";
+  margin-bottom: 2rem;
+  width: 50%;
+  text-align: center;
+}
+main .stack-container {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 80px;
+  margin-top: 3rem;
+}
+main .stack-container_bloc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 8px;
+  position: relative;
+}
+main .stack-container_bloc_image {
+  width: 150px;
+  padding: 2rem;
+  pointer-events: none;
+  user-select: none;
+  transition: all 0.3s ease-in-out;
+}
+main .contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url(../images/shape_contact.svg);
+  background-size: cover;
+  background-position: center 400px;
+  background-repeat: no-repeat;
+}
+main .contact_title {
+  font-size: 62px;
+  text-transform: uppercase;
+  font-family: "Gilroy-ExtraBold";
+  width: fit-content;
+  position: relative;
+  margin-bottom: 3rem;
+}
+main .contact_title::before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  width: 50%;
+  height: 6px;
+  border-radius: 100vw;
+  background-color: #FBBE4B;
+  transform: translateX(-50%);
+}
+main .contact_text {
+  font-size: 24px;
+  font-family: "Gilroy-Light";
+  margin-bottom: 2rem;
+  width: 50%;
+  text-align: center;
+}
+main .contact form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 40%;
+  margin: 0 auto;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+@media (max-width: 1200px) {
+  main .contact form {
+    width: 80%;
+  }
+}
+@media (min-width: 1200px) {
+  main .contact form input:nth-child(1), main .contact form input:nth-child(2) {
+    width: calc(50% - 50px);
+  }
+}
+main .contact form input, main .contact form textarea {
+  font-size: 20px;
+  font-family: "Gilroy-Light";
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #EADDCC;
+  color: #000000;
+  width: 100%;
+}
+main .contact form input:focus-visible, main .contact form textarea:focus-visible {
+  outline: none;
+}
+@media (max-width: 1200px) {
+  main .contact form input, main .contact form textarea {
+    width: 100%;
+  }
+}
+main .contact form textarea {
+  height: 160px;
+  resize: vertical;
+}
+main .contact form input[type=submit] {
+  margin-inline: auto;
+  position: relative;
+  background-color: #FBBE4B;
+  border-radius: 50px;
+  padding: 12px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: "Gilroy-ExtraBold";
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+  width: fit-content;
+}
+main .contact form input[type=submit]:hover {
+  color: #FBBE4B;
+  background-color: transparent;
+  outline: 2px solid #FBBE4B;
+  cursor: pointer;
+}
+
 .cookies-banner {
   background-color: #FFFFFF;
   border-radius: 8px;
@@ -75,7 +530,7 @@ body {
   justify-content: space-between;
   flex-direction: column;
   gap: 12px;
-  position: absolute;
+  position: fixed;
   right: 20px;
   bottom: 20px;
   max-width: 300px;
@@ -118,12 +573,15 @@ body {
   color: #FFFFFF;
   text-decoration: none;
   font-family: "Gilroy-ExtraBold";
+  font-size: 20px;
   transition: all 0.3s ease-in-out;
+  width: fit-content;
 }
 .cookies-banner_links .btn:hover {
   color: #FBBE4B;
   background-color: transparent;
   outline: 2px solid #FBBE4B;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
