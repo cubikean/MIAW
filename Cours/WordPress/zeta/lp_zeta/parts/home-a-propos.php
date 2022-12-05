@@ -1,5 +1,6 @@
 <?php
-var_dump($id_page_test);
+// var_dump($id_page_test);
+
 $args = array(
     // 'pagename' => 'a-propos',
     'page_id'       => $id_page_test,

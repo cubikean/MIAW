@@ -8,17 +8,31 @@
 			<div class="owl-carousel owl-theme hero_slider">
 
 
+			<!-- Test silder -->
+
+	
+			<?php $args = array(
+				'post_type'  => 'slider',
+				'order'      => 'ASC',
+				'posts_per_page' => '3',
+			
+			);
+
+			$query = new WP_Query( $args );
+
+			while( $query->have_posts() ) : $query->the_post(); ?>
                 <!-- Slider Item -->
-                <div class="owl-item main_slider_item">
-                    <div class="main_slider_item_bg" style="background-image:url(<?= get_stylesheet_directory_uri();?>/assets/images/main_slider_1.jpg)"></div>
+
+			<div class="owl-item main_slider_item">
+                    <div class="main_slider_item_bg" style="background-image:url(<?= get_the_post_thumbnail_url(null, 'full') ?>)"></div>
                     <div class="main_slider_shapes"><img src="<?= get_stylesheet_directory_uri();?>/assets/images/main_slider_shapes.png" alt="" style="width: 100% !important;"></div>
                     <div class="container">
                         <div class="row">
                             <div class="col slider_content_col">
                                 <div class="main_slider_content">
-                                    <h1>Harry Potter</h1>
-                                    <p>Fantastique</p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. </p>
+                                    <h1><?php the_title();?></h1>
+                                    <p><?php the_terms( $post->ID, 'genre', 'Genre : ' ); ?></p>
+                                    <p><?php the_excerpt(); ?></p>
                                     <div class="button discover_button">
                                         <a href="#" class="d-flex flex-row align-items-center justify-content-center">Découvrir<img src="<?= get_stylesheet_directory_uri();?>/assets/images/arrow_right.svg" alt=""></a>
                                     </div>
@@ -27,48 +41,8 @@
                         </div>
                     </div>
                 </div>
-
-				<!-- Slider Item -->
-				<div class="owl-item main_slider_item">
-					<div class="main_slider_item_bg" style="background-image:url(<?= get_stylesheet_directory_uri();?>/assets/images/main_slider_2.jpg)"></div>
-					<div class="main_slider_shapes"><img src="<?= get_stylesheet_directory_uri();?>/assets/images/main_slider_shapes.png" alt="" style="width: 100% !important;"></div>
-					<div class="container">
-						<div class="row">
-							<div class="col slider_content_col">
-								<div class="main_slider_content">
-									<h1>Le Labyrinthe</h1>
-									<p>Science Fiction</p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. </p>
-									<div class="button discover_button">
-										<a href="#" class="d-flex flex-row align-items-center justify-content-center">Découvrir<img src="<?= get_stylesheet_directory_uri();?>/assets/images/arrow_right.svg" alt=""></a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Slider Item -->
-				<div class="owl-item main_slider_item">
-					<div class="main_slider_item_bg" style="background-image:url(<?= get_stylesheet_directory_uri();?>/assets/images/main_slider_3.jpg)"></div>
-					<div class="main_slider_shapes"><img src="<?= get_stylesheet_directory_uri();?>/assets/images/main_slider_shapes.png" alt="" style="width: 100% !important;"></div>
-					<div class="container">
-						<div class="row">
-							<div class="col slider_content_col">
-								<div class="main_slider_content">
-									<h1>Eragon</h1>
-									<p>Fantasy</p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. </p>
-									<div class="button discover_button">
-										<a href="#" class="d-flex flex-row align-items-center justify-content-center">Découvrir<img src="<?= get_stylesheet_directory_uri();?>/assets/images/arrow_right.svg" alt=""></a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
+				<?php endwhile ?>
+           
 			<!-- Slider Dots -->
 
 			<div class="main_slider_dots">
@@ -98,14 +72,27 @@
 		</div>
 	</div>
 
+
+
 	<div class="home_social_container d-flex flex-row justify-content-end align-items-center">
 		<ul class="home_social">
-			<li><a href="#"><i class="fab fa-pinterest trans_300"></i></a></li>
-			<li><a href="#"><i class="fab fa-facebook-f trans_300"></i></a></li>
-			<li><a href="#"><i class="fab fa-twitter trans_300"></i></a></li>
-			<li><a href="#"><i class="fab fa-linkedin-in trans_300"></i></a></li>
+			<?php if (get_field('url_pinterest', 'option') != null): ?>
+				<li><a href="<?php the_field('url_pinterest', 'option');?>"><i class="fab fa-pinterest trans_300"></i></a></li>
+			<?php endif ?>
+			<?php if (get_field('url_facebook', 'option') != null): ?>
+				<li><a href="<?php the_field('url_facebook', 'option');?>"><i class="fab fa-facebook-f trans_300"></i></a></li>
+			<?php endif ?>
+			<?php if (get_field('url_twitter', 'option') != null): ?>
+				<li><a href="<?php the_field('url_twitter', 'option');?>"><i class="fab fa-twitter trans_300"></i></a></li>
+			<?php endif ?>
+			<?php if (get_field('url_linkedin', 'option') != null): ?>
+				<li><a href="<?php the_field('url_linkedin', 'option');?>"><i class="fab fa-linkedin-in trans_300"></i></a></li>
+			<?php endif ?>
 		</ul>
 	</div>
+
+	
+
 
 	<!-- Features -->
 
@@ -178,40 +165,33 @@
 
 						<!-- Testimonials Slider -->
 
+						
+
 						<div class="owl-carousel owl-theme testimonials_slider">
 
-							<!-- Testimonials Item -->
-							<div class="owl-item testimonials_item d-flex flex-column align-items-center justify-content-center text-center">
-								<div class="testimonials_content">
-									<div class="test_user_pic"><img src="<?= get_stylesheet_directory_uri();?>/assets/images/test_user.jpg" alt="https://unsplash.com/@michaeldam"></div>
-									<div class="test_name">maria williams</div>
-									<div class="test_title">Company CEO</div>
-									<div class="test_quote">"</div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum, olor sit amet, consectetur adipiscing eli quam tincidunt venen atis ultrices, est libero olor sit amet, consectetur adipiscing eli mattis ante.</p>
-								</div>
-							</div>
+						<?php $args = array(
+							'post_type'  => 'temoignage',
+							'orderby' => 'title',
+							'order'      => 'ASC',
+							'posts_per_page' => '3',
+						
+						);
 
-							<!-- Testimonials Item -->
-							<div class="owl-item testimonials_item d-flex flex-column align-items-center justify-content-center text-center">
-								<div class="testimonials_content">
-									<div class="test_user_pic"><img src="<?= get_stylesheet_directory_uri();?>/assets/images/test_user.jpg" alt="https://unsplash.com/@michaeldam"></div>
-									<div class="test_name">maria williams</div>
-									<div class="test_title">Company CEO</div>
-									<div class="test_quote">"</div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum, olor sit amet, consectetur adipiscing eli quam tincidunt venen atis ultrices, est libero olor sit amet, consectetur adipiscing eli mattis ante.</p>
-								</div>
-							</div>
+						$query = new WP_Query( $args );
 
-							<!-- Testimonials Item -->
+						while( $query->have_posts() ) : $query->the_post(); ?>
+							<!-- Slider Item -->
+
 							<div class="owl-item testimonials_item d-flex flex-column align-items-center justify-content-center text-center">
 								<div class="testimonials_content">
-									<div class="test_user_pic"><img src="<?= get_stylesheet_directory_uri();?>/assets/images/test_user.jpg" alt="https://unsplash.com/@michaeldam"></div>
-									<div class="test_name">maria williams</div>
-									<div class="test_title">Company CEO</div>
+									<div class="test_user_pic"><img width="100px" height="100px" src="<?= the_field('photo');?>" alt=""></div>
+									<div class="test_name"><?php the_field('nom') ?></div>
+									<div class="test_title"><?php the_field('fonction') ?></div>
 									<div class="test_quote">"</div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum, olor sit amet, consectetur adipiscing eli quam tincidunt venen atis ultrices, est libero olor sit amet, consectetur adipiscing eli mattis ante.</p>
+									<p><?php the_field('temoignage') ?></p>
 								</div>
 							</div>
+							<?php endwhile ?>
 						</div>
 
 					</div>
@@ -273,6 +253,8 @@
 
 		</div>
 	</div>
+
+
 
 
 

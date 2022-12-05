@@ -1,0 +1,568 @@
+/* Abstract
+   ========================================================================= */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: "Roboto", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #141414;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  margin: 2rem;
+  font-family: "Noto sans", sans-serif;
+  background-color: #fff;
+}
+
+header .header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  z-index: 10;
+}
+header .header-nav_list {
+  position: fixed;
+  width: 20vw;
+  padding: 25px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  top: 110px;
+  right: -50%;
+  gap: 20px;
+  transition: all 0.4s ease-in-out;
+  background-color: #141414;
+}
+header .header-nav_link {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: white;
+  width: max-content;
+}
+header .header-nav_burger {
+  display: none;
+}
+header .header-nav_burger:checked ~ ul {
+  display: flex;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+}
+header .header-nav_burger:checked ~ label .fa-xmark {
+  display: block;
+}
+header .header-nav_burger:checked ~ label .fa-bars {
+  display: none;
+}
+header .header-nav_burger_label {
+  color: black;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+header .header-nav_burger_label i {
+  width: 14px;
+}
+header .header-nav_burger_label .fa-xmark {
+  display: none;
+}
+
+main .apollo-template {
+  z-index: 1;
+  position: relative;
+  min-height: 90vh;
+  background-image: url("../images/apollo2/photo1.png");
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: inherit;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+main .apollo-template::before {
+  content: attr(data-letter);
+  font-size: 130vh;
+  height: 100%;
+  overflow: hidden;
+  background-blend-mode: difference;
+  color: #e3e3e3;
+  position: absolute;
+  top: 0px;
+  left: 0vw;
+  z-index: 0;
+  line-height: 0.66;
+  opacity: 0.45;
+}
+main .apollo-template_container {
+  z-index: 1;
+  margin-left: 10vw;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+main .apollo-template_container_title {
+  width: fit-content;
+  font-size: 4rem;
+  font-weight: 100;
+  margin-bottom: 1rem;
+}
+main .apollo-template_container_title strong {
+  font-weight: bold;
+}
+main .apollo-template_container_text {
+  width: 30%;
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.4rem;
+  margin-bottom: 1rem;
+}
+main .apollo-template_container_line {
+  height: 60px;
+  width: 1px;
+  background-color: black;
+}
+main .apollo-name {
+  position: relative;
+  background-color: #efefef;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+main .apollo-name::before {
+  content: attr(data-letter);
+  font-size: 130vh;
+  height: 100%;
+  overflow: hidden;
+  background-blend-mode: difference;
+  color: #e3e3e3;
+  position: absolute;
+  top: 0px;
+  left: 0vw;
+  z-index: 0;
+  line-height: 0.66;
+  opacity: 0.45;
+}
+main .apollo-name_container {
+  z-index: 1;
+  position: relative;
+  min-height: 90vh;
+  background-image: url("../images/apollo2/photo2.png");
+  background-repeat: no-repeat;
+  background-position-x: 5vw;
+  background-position-y: center;
+  background-size: 40vw;
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  z-index: 1;
+  padding-left: 50vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+main .apollo-name_container_title {
+  width: fit-content;
+  font-size: 4rem;
+  font-weight: 100;
+  margin-bottom: 1rem;
+  position: relative;
+  text-indent: 80px;
+}
+main .apollo-name_container_title strong {
+  font-weight: bold;
+}
+main .apollo-name_container_title::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 60px;
+  height: 1px;
+  background-color: black;
+}
+main .apollo-name_container_text {
+  width: 80%;
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.4rem;
+  margin-bottom: 1rem;
+}
+main .apollo-name_container_social {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+main .apollo-name_container_social_single {
+  font-size: 2rem;
+  color: #ccc;
+  transition: all 0.3s ease-in-out;
+}
+main .apollo-name_container_social_single:hover {
+  cursor: pointer;
+  color: initial;
+}
+main .apollo-carousel {
+  position: relative;
+  background-color: #efefef;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  z-index: 1;
+  position: relative;
+  min-height: 90vh;
+  background-image: url("../images/apollo2/photo3.png");
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: inherit;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+main .apollo-carousel::before {
+  content: attr(data-letter);
+  font-size: 130vh;
+  height: 100%;
+  overflow: hidden;
+  background-blend-mode: difference;
+  color: #e3e3e3;
+  position: absolute;
+  top: 0px;
+  left: 0vw;
+  z-index: 0;
+  line-height: 0.66;
+  opacity: 0.45;
+}
+main .apollo-carousel_container {
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+main .apollo-carousel_container_arrow {
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .apollo-carousel_container_arrow:hover {
+  cursor: pointer;
+}
+main .apollo-carousel_container_arrow::before {
+  content: "\f054";
+  color: black;
+  font: var(--fa-font-solid);
+  font-size: 2rem;
+  transform: rotate(180deg);
+}
+main .apollo-carousel_container_arrow:last-of-type {
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .apollo-carousel_container_arrow:last-of-type:hover {
+  cursor: pointer;
+}
+main .apollo-carousel_container_arrow:last-of-type::before {
+  content: "\f054";
+  color: black;
+  font: var(--fa-font-solid);
+  font-size: 2rem;
+  transform: rotate(0deg);
+}
+main .apollo-bridge {
+  position: relative;
+  background-color: #efefef;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+main .apollo-bridge::before {
+  content: attr(data-letter);
+  font-size: 130vh;
+  height: 100%;
+  overflow: hidden;
+  background-blend-mode: difference;
+  color: #e3e3e3;
+  position: absolute;
+  top: 0px;
+  left: 0vw;
+  z-index: 0;
+  line-height: 0.66;
+  opacity: 0.45;
+}
+main .apollo-bridge_container {
+  z-index: 1;
+  position: relative;
+  min-height: 90vh;
+  background-image: url("../images/apollo2/photo4.png");
+  background-repeat: no-repeat;
+  background-position-x: 50vw;
+  background-position-y: center;
+  background-size: 40vw;
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  z-index: 1;
+  padding-left: 10vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+main .apollo-bridge_container_title {
+  width: fit-content;
+  font-size: 4rem;
+  font-weight: 100;
+  margin-bottom: 1rem;
+}
+main .apollo-bridge_container_title strong {
+  font-weight: bold;
+}
+main .apollo-bridge_container_text {
+  width: 30%;
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.4rem;
+  margin-bottom: 1rem;
+}
+main .apollo-bridge_container_line {
+  height: 60px;
+  width: 1px;
+  background-color: black;
+}
+main .apollo-carousel-second {
+  position: relative;
+  background-color: #efefef;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+main .apollo-carousel-second::before {
+  content: attr(data-letter);
+  font-size: 130vh;
+  height: 100%;
+  overflow: hidden;
+  background-blend-mode: difference;
+  color: #e3e3e3;
+  position: absolute;
+  top: 0px;
+  left: 0vw;
+  z-index: 0;
+  line-height: 0.66;
+  opacity: 0.45;
+}
+main .apollo-carousel-second_container {
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+main .apollo-carousel-second_container_image {
+  width: 100%;
+}
+main .apollo-carousel-second_container_image:nth-child(1) {
+  transform: translateX(35px);
+  z-index: 1;
+}
+main .apollo-carousel-second_container_image:nth-child(2) {
+  z-index: 2;
+}
+main .apollo-carousel-second_container_image:nth-child(3) {
+  transform: translateX(-35px);
+  z-index: 1;
+}
+main .apollo-carousel-second_container_arrow {
+  z-index: 10;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+}
+main .apollo-carousel-second_container_arrow_single {
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .apollo-carousel-second_container_arrow_single:hover {
+  cursor: pointer;
+}
+main .apollo-carousel-second_container_arrow_single::before {
+  content: "\f054";
+  color: black;
+  font: var(--fa-font-solid);
+  font-size: 2rem;
+  transform: rotate(180deg);
+}
+main .apollo-carousel-second_container_arrow_single:last-of-type {
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .apollo-carousel-second_container_arrow_single:last-of-type:hover {
+  cursor: pointer;
+}
+main .apollo-carousel-second_container_arrow_single:last-of-type::before {
+  content: "\f054";
+  color: black;
+  font: var(--fa-font-solid);
+  font-size: 2rem;
+  transform: rotate(0deg);
+}
+main .apollo-contact {
+  position: relative;
+  background-color: #efefef;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 5rem;
+}
+main .apollo-contact::before {
+  content: attr(data-letter);
+  font-size: 130vh;
+  height: 100%;
+  overflow: hidden;
+  background-blend-mode: difference;
+  color: #e3e3e3;
+  position: absolute;
+  top: 0px;
+  left: 0vw;
+  z-index: 0;
+  line-height: 0.66;
+  opacity: 0.45;
+}
+main .apollo-contact_container {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main .apollo-contact_container_title {
+  width: fit-content;
+  font-size: 4rem;
+  font-weight: 100;
+  margin-bottom: 1rem;
+}
+main .apollo-contact_container_title strong {
+  font-weight: bold;
+}
+main .apollo-contact_container_text {
+  width: 70%;
+  text-align: center;
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.4rem;
+  margin-bottom: 1rem;
+}
+main .apollo-contact_container_line {
+  height: 60px;
+  width: 1px;
+  background-color: black;
+}
+main .apollo-contact_container_form {
+  margin-top: 5rem;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 500px;
+  gap: 20px;
+}
+main .apollo-contact_container_form input,
+main .apollo-contact_container_form textarea {
+  padding: 0.8rem;
+  background-color: transparent;
+  border: 1px solid black;
+  height: 40px;
+  border-radius: none;
+}
+main .apollo-contact_container_form input::placeholder,
+main .apollo-contact_container_form textarea::placeholder {
+  color: black;
+}
+main .apollo-contact_container_form input[type=email],
+main .apollo-contact_container_form input[type=text] {
+  width: calc(50% - 15px);
+}
+main .apollo-contact_container_form textarea {
+  height: auto;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+main .apollo-contact_container_form input[type=submit] {
+  width: 100%;
+  background-color: #141414;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+main .apollo-contact_container_form input[type=submit]:hover {
+  cursor: pointer;
+  background-color: transparent;
+  color: black;
+}
+
+/*# sourceMappingURL=apollo.css.map */

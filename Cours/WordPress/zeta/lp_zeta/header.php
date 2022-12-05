@@ -85,10 +85,12 @@
             </nav>
             <div class="fs_social_container d-flex flex-row justify-content-end align-items-center">
                 <ul class="fs_social">
-                    <li><a href="#"><i class="fab fa-pinterest trans_300"></i></a></li>
-                    <li><a href="#"><i class="fab fa-facebook-f trans_300"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter trans_300"></i></a></li>
-                    <li><a href="#"><i class="fab fa-linkedin-in trans_300"></i></a></li>
+                
+
+                    <li><a href="<?php the_field('url_pinterest', 'option'); ?>"><i class="fab fa-pinterest trans_300"></i></a></li>
+                    <li><a href="<?php the_field('url_pinterest', 'option'); ?>"><i class="fab fa-facebook-f trans_300"></i></a></li>
+                    <li><a href="<?php the_field('url_pinterest', 'option'); ?>"><i class="fab fa-twitter trans_300"></i></a></li>
+                    <li><a href="<?php the_field('url_pinterest', 'option'); ?>"><i class="fab fa-linkedin-in trans_300"></i></a></li>
                 </ul>
             </div>
         </div>

@@ -1,0 +1,130 @@
+/* Abstract
+   ========================================================================= */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: "Roboto", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #141414;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: "Noto sans", sans-serif;
+  background-color: #fff;
+}
+
+.card-container {
+  margin-inline: auto;
+  max-width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.card {
+  width: calc(50% - 10px);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.2);
+}
+.card:hover {
+  transform: translateY(5px);
+  box-shadow: 0 20px 20px -15px rgba(0, 0, 0, 0.3);
+}
+.card--full {
+  width: 100%;
+}
+.card_image {
+  width: 100%;
+}
+.card_image--boo {
+  border: 4px solid purple;
+}
+.card-main--full {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card-main_header {
+  margin-left: 20px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.card-main_header_title {
+  font-size: 28px;
+  font-weight: bold;
+  border-left: 5px solid saddlebrown;
+  padding-left: 20px;
+}
+.card-main_header_title--right {
+  border-left: 0px;
+  padding-left: 0;
+  border-right: 5px solid saddlebrown;
+  padding-right: 20px;
+}
+.card-main_header_sub {
+  font-size: 18px;
+  font-weight: 100;
+  border-left: 5px solid saddlebrown;
+  padding-left: 20px;
+}
+.card-main_header_sub--right {
+  border-left: 0px;
+  padding-left: 0;
+  border-right: 5px solid saddlebrown;
+  padding-right: 20px;
+}
+.card-main_header_text {
+  margin-top: 1rem;
+  font-size: 20px;
+}
+.card-main_header--right {
+  text-align: right;
+  align-items: flex-end;
+  padding-right: 20px;
+}
+.card-footer {
+  padding: 20px;
+  font-size: 20px;
+  border-top: 1px solid #ccc;
+}
+.card-footer--right {
+  text-align: right;
+}
+.card-footer--full {
+  text-align: center;
+}
+
+/*# sourceMappingURL=card.css.map */
