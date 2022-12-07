@@ -1,0 +1,58 @@
+header,
+nav,
+section,
+aside,
+footer {
+  border: 1px solid black;
+}
+
+body {
+  max-width: 60rem;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "header menu"
+    "primo primo"
+    "secundo secundo"
+    "aside aside"
+    "footer footer";
+  gap: 1rem;
+}
+@media screen and (min-width:40rem) {
+  body{
+    grid-template-columns: minmax(7rem, 1fr) 1fr 1fr;
+    grid-template-areas:
+    "menu header header"
+    "menu primo secundo"
+    "menu aside aside"
+    "footer footer footer";
+  }
+}
+@media screen and (min-width:50rem) {
+  body{
+    grid-template-columns: minmax(7rem, 1fr) 1fr 1fr 1fr;
+    grid-template-areas:
+    "menu header header aside"
+    "menu primo secundo aside"
+    "footer footer footer footer";
+  }
+}
+header {
+  grid-area: header;
+}
+nav {
+  grid-area: menu;
+}
+.primo {
+  grid-area: primo;
+}
+.secundo {
+  grid-area: secundo;
+}
+aside {
+  grid-area: aside;
+}
+footer {
+  grid-area: footer;
+}
