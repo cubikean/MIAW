@@ -60,6 +60,7 @@ header {
         font-size: 24px;
         font-family: "Gilroy-Light";
         margin-bottom: 2rem;
+        width: 80%;
       }
       &_btn {
         @include btn();
@@ -131,6 +132,16 @@ main {
     justify-content: center;
     flex-direction: column;
     margin-bottom: 15rem;
+    position: relative;
+
+    &::before{
+      content: url(../images/shape_line_1.svg);
+      position: absolute;
+      top: -50%;
+      right: 0;
+      transform: translateY(-50%);
+    }
+    
 
     &_title {
       @include title();
@@ -218,6 +229,14 @@ main {
     justify-content: center;
     flex-direction: column;
     margin-bottom: 15rem;
+    position: relative;
+
+    &::before{
+      content: url(../images/shape_line_2.svg);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
 
     &_title {
       @include title();

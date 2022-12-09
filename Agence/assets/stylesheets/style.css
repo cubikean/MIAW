@@ -127,6 +127,7 @@ header .hero_left_text {
   font-size: 24px;
   font-family: "Gilroy-Light";
   margin-bottom: 2rem;
+  width: 80%;
 }
 header .hero_left_btn {
   position: relative;
@@ -234,6 +235,14 @@ main .idee {
   justify-content: center;
   flex-direction: column;
   margin-bottom: 15rem;
+  position: relative;
+}
+main .idee::before {
+  content: url(../images/shape_line_1.svg);
+  position: absolute;
+  top: -50%;
+  right: 0;
+  transform: translateY(-50%);
 }
 main .idee_title {
   font-size: 62px;
@@ -372,6 +381,13 @@ main .stack {
   justify-content: center;
   flex-direction: column;
   margin-bottom: 15rem;
+  position: relative;
+}
+main .stack::before {
+  content: url(../images/shape_line_2.svg);
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 main .stack_title {
   font-size: 62px;
