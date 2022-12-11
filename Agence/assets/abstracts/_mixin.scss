@@ -81,6 +81,7 @@
   width: fit-content;
   position: relative;
   margin-bottom: 3rem;
+  text-align: center;
   &::before {
     content: "";
     position: absolute;
@@ -92,6 +93,12 @@
     background-color: $yellow;
     transform: translateX(-50%)
   }
+  @media screen and (max-width:1440px) {
+    font-size: 48px;
+  }
+  @media screen and (max-width:768px) {
+    font-size: 36px;
+  }
 }
 
 @mixin text {
@@ -100,6 +107,15 @@
   margin-bottom: 2rem;
   width: 50%;
   text-align: center;
+
+  @media screen and (max-width:1440px) {
+    width: 70%;
+  }
+  @media screen and (max-width:768px) {
+    font-size: 20px;
+    width: 80%;
+  }
+ 
 }
 
 @mixin form {
