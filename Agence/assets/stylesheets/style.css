@@ -175,6 +175,7 @@ header .hero_left_subtitle {
   width: 70%;
   position: relative;
   margin-bottom: 3rem;
+  line-height: 1.2;
 }
 @media screen and (max-width: 1440px) {
   header .hero_left_subtitle {
@@ -186,17 +187,7 @@ header .hero_left_text {
   font-size: 24px;
   font-family: "Gilroy-Light";
   margin-bottom: 2rem;
-  width: 70%;
-}
-@media screen and (max-width: 1440px) {
-  header .hero_left_text {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 768px) {
-  header .hero_left_text {
-    font-size: 20px;
-  }
+  line-height: 1.2;
 }
 header .hero_left_btn {
   position: relative;
@@ -236,6 +227,44 @@ header .hero_right img {
 @media screen and (max-width: 768px) {
   header .hero_right img {
     width: 80%;
+  }
+}
+
+.loader {
+  width: 100%;
+  height: 100%;
+  background-color: #F4E9DA;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@keyframes loaderGoTop {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-300%);
+  }
+}
+.loader img {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 50%;
+  transform: translate(50%, -50%);
+}
+@keyframes loader {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .loader img {
+    width: 100%;
+    transform: translate(0%, -50%);
   }
 }
 
@@ -290,6 +319,7 @@ main .agence_text {
   margin-bottom: 2rem;
   width: 50%;
   text-align: center;
+  line-height: 1.2;
 }
 @media screen and (max-width: 1440px) {
   main .agence_text {
@@ -369,35 +399,17 @@ main .idee {
   margin-bottom: 15rem;
   position: relative;
 }
-<<<<<<< HEAD
-=======
-@media screen and (max-width: 768px) {
-  main .idee {
-    margin-bottom: 8rem;
-  }
-}
->>>>>>> dce1de4b74427f04554739b733c01884af54595d
 main .idee::before {
   content: url(../images/shape_line_1.svg);
   position: absolute;
   top: -50%;
   right: 0;
-<<<<<<< HEAD
   transform: translateY(-50%);
-=======
-  z-index: -1;
-  transform: translateY(-50%);
-}
-@media screen and (max-width: 1440px) {
-  main .idee::before {
-    width: 150px;
-  }
 }
 @media screen and (max-width: 768px) {
   main .idee::before {
     content: "";
   }
->>>>>>> dce1de4b74427f04554739b733c01884af54595d
 }
 main .idee_title {
   font-size: 62px;
@@ -435,6 +447,7 @@ main .idee_text {
   margin-bottom: 2rem;
   width: 50%;
   text-align: center;
+  line-height: 1.2;
 }
 @media screen and (max-width: 1440px) {
   main .idee_text {
@@ -516,6 +529,7 @@ main .services_text {
   margin-bottom: 2rem;
   width: 50%;
   text-align: center;
+  line-height: 1.2;
 }
 @media screen and (max-width: 1440px) {
   main .services_text {
@@ -548,11 +562,19 @@ main .services-container_bloc {
   background-color: #ED5C4D;
   border-radius: 8px;
   position: relative;
+  flex: 1 1 33%;
 }
 @media screen and (max-width: 768px) {
   main .services-container_bloc {
     flex: 1 1 auto;
   }
+}
+main .services-container_bloc_title {
+  font-size: 24px;
+  font-family: "Gilroy-light";
+  margin: 2rem;
+  text-align: center;
+  color: white;
 }
 main .services-container_bloc_image {
   width: 150px;
@@ -598,38 +620,16 @@ main .stack {
   margin-bottom: 15rem;
   position: relative;
 }
-<<<<<<< HEAD
-=======
-@media screen and (max-width: 768px) {
-  main .stack {
-    margin-bottom: 8rem;
-  }
-}
->>>>>>> dce1de4b74427f04554739b733c01884af54595d
 main .stack::before {
   content: url(../images/shape_line_2.svg);
   position: absolute;
   bottom: 0;
   left: 0;
-<<<<<<< HEAD
-=======
-  z-index: -1;
-}
-@media screen and (max-width: 1440px) {
-  main .stack::before {
-    left: -150px;
-  }
-}
-@media screen and (max-width: 1024px) {
-  main .stack::before {
-    left: -300px;
-  }
 }
 @media screen and (max-width: 768px) {
   main .stack::before {
     content: "";
   }
->>>>>>> dce1de4b74427f04554739b733c01884af54595d
 }
 main .stack_title {
   font-size: 62px;
@@ -667,6 +667,7 @@ main .stack_text {
   margin-bottom: 2rem;
   width: 50%;
   text-align: center;
+  line-height: 1.2;
 }
 @media screen and (max-width: 1440px) {
   main .stack_text {
@@ -763,6 +764,7 @@ main .contact_text {
   margin-bottom: 2rem;
   width: 50%;
   text-align: center;
+  line-height: 1.2;
 }
 @media screen and (max-width: 1440px) {
   main .contact_text {
