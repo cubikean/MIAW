@@ -1,0 +1,23 @@
+/******** Mes réglages habituels **********/
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+}
+
+em {
+    font-style: italic;
+}
+
+strong {
+    font-weight: bold;
+}
+
+img {
+    max-width: 100%;
+}

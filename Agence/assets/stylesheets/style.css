@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Abstract
    ========================================================================= */
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -266,6 +267,40 @@ header .hero_right img {
     width: 100%;
     transform: translate(0%, -50%);
   }
+}
+
+.mailBox {
+  width: fit-content;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+.mailBox p {
+  color: white;
+  font-family: "Gilroy-Light";
+  background-color: #07c258;
+  padding: 12px 24px;
+}
+.mailBox #closeMailBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Gilroy-Light";
+  color: white;
+  background-color: #198146;
+  height: min-content;
+  padding: 0 14px;
+}
+.mailBox #closeMailBox::after {
+  display: inline-block;
+  content: "×";
+  font-size: 40px;
+}
+.mailBox #closeMailBox:hover {
+  cursor: pointer;
 }
 
 main {

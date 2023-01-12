@@ -51,6 +51,11 @@
         <img src="./assets/images/Logo.svg" alt="Logo du site">
     </div>
 
+    <div id="mailBox" class="mailBox">
+        <p>Votre message à bien été envoyé</p>
+        <div id="closeMailBox"></div>
+    </div>
+
     <main>
         <section class="agence">
             <h2 class="agence_title">l'agence</h2>
@@ -145,13 +150,14 @@
             </p>
 
 
-            <form name="contact" method="post">
+            <form name="contact" method="post" action="/sendMail.php">
                 <input type="text" id="contact_nom" name="nom" required="required" placeholder="Votre nom">
                 <input type="text" id="contact_prenom" name="prenom" required="required" placeholder="Votre prénom">
                 <input type="text" id="contact_objet" name="objet" required="required" placeholder="Objet">
                 <input type="email" id="contact_email" name="email" required="required" placeholder="Votre E-mail">
                 <textarea id="contact_message" name="message" placeholder="Votre message"></textarea>
                 <input type="submit" value="Nous contacter">
+            </form>
     
                             
             

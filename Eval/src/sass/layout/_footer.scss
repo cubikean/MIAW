@@ -1,0 +1,51 @@
+@use '../helpers/colors' as *;
+@use '../helpers/breakpoints' as *;
+
+/**************** Footer ************************************/
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 24px;
+    padding: 32px;
+    @media screen and (min-width: 1024px) {
+        width: 70%;
+        margin-top: 5rem;
+        margin-bottom: 3rem;
+        margin-left: 10%;
+        flex-direction: row;
+        align-items: center;
+    }
+
+  
+    // Titre du footer
+    &-title{
+        font-size: 24px;
+        font-weight: 700;
+        color: $primary-500;
+        font-family: 'Abhaya Libre', serif;
+
+    }
+    // Liste du footer (mention leageles, politique de conf)
+    &-list{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 24px;
+        @media screen and (min-width: 1024px) {
+            flex-direction: row;
+            order: -1;
+        }
+        a{
+
+        color: $primary-400;
+        font-size: 20px;
+    }
+    }
+    
+    &-credentials{
+        color: $primary-400;
+        font-size: 20px;
+    }
+}   

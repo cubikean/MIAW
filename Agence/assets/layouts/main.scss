@@ -161,6 +161,43 @@ header {
     
   }
 }
+
+.mailBox{
+  width: fit-content;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  
+
+  & p{
+    color: white;
+    font-family: "Gilroy-Light";
+    background-color: #07c258;
+  padding: 12px 24px;
+  }
+  & #closeMailBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Gilroy-Light";
+    color: white;
+    background-color: #198146;
+    height: min-content;
+    padding: 0 14px;
+    &::after{
+      display: inline-block;
+  content: "\00d7"; 
+  font-size: 40px;
+
+    }
+    &:hover{
+      cursor: pointer;
+    }
+}
+}
 main {
     overflow: hidden;
   .agence {

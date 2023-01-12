@@ -1,0 +1,45 @@
+@use "../helpers/colors" as *;
+
+.btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid $primary-200;
+  padding: 10px 16px; // 12px 26px desk
+  font-family: 'Abhaya Libre', serif;
+  font-weight: 700;
+  font-size: 16px; //20px desk
+  @media screen and (min-width: 1024px) {
+    font-size: 20px;
+    padding: 12px 26px;
+  }
+  color: $primary-600;
+  text-align: center;
+  text-decoration: none;
+  background: transparent;
+  transition: all .2s ease-in-out;
+  &:hover{
+    cursor: pointer;
+    background: $primary-200;
+
+  }
+  &:focus-visible{
+    outline: none;
+  }
+  a{
+    text-decoration: none;
+      color: $primary-600;
+  }
+}
+.btn--green{
+    border: 1px solid $secondary-200;
+    color: $secondary-600;
+    &:hover{
+        background: $secondary-200;
+    
+      }
+      a{
+          color: $secondary-600;
+      }
+}

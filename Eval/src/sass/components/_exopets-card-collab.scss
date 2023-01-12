@@ -1,0 +1,49 @@
+@use '../helpers/colors' as *;
+@use '../helpers/breakpoints' as *;
+@use '../helpers/functions' as *;
+
+// Style des cards collaborateurs
+
+.card-collab{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: $white;
+    border-radius: 4px;
+    gap: 16px;
+    margin-bottom: 24px;
+
+    &_img{
+        max-width: 100px;
+        min-width: 100px;
+        @media screen and (min-width: 1024px) {
+            max-width: 140px;
+            min-width: 140px;
+          }
+    }
+    &_info{
+        display: flex;
+        flex-direction: column;
+        &_title{
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 4px;
+            font-family: 'Abhaya Libre', serif;
+        }
+        &_subtitle{
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 16px;
+            color: $secondary-600;
+            @media screen and (min-width: 1024px) {
+                font-size: 18px;
+              }
+        }
+        &_text{
+            font-size: 14px;
+            @media screen and (min-width: 1024px) {
+                font-size: 16px;
+              }
+        }
+    }
+}

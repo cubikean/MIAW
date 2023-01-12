@@ -1,0 +1,41 @@
+@use '../helpers/colors' as *;
+@use '../helpers/breakpoints' as *;
+@use '../helpers/functions' as *;
+
+// Style du formulaire
+
+form{
+    padding: 16px;
+    background-color: $white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    border-radius: 4px;
+    box-shadow: $shadow;
+
+    
+
+    input[name="Nom"],input[name="Prenom"]{
+        width: calc(50% - 10px);
+    }
+
+    input, textarea{
+        width: 100%;
+        background-color: $white;
+        border: 1px solid #D3D3D3;
+        padding: 10px 16px;
+        border-radius: 4px;
+        &:focus-visible{
+            outline: none;
+        }
+    }
+    textarea{
+        resize: vertical;
+    }
+    .btn{
+        width: 100%;
+    }
+
+
+}

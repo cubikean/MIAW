@@ -1,0 +1,251 @@
+@use "../helpers/colors" as *;
+@use "../base/mixin" as *;
+
+/********* Contenu principal ***/
+
+// changement de la taille du main en desktop
+@media screen and (min-width: 1024px) {
+  main {
+    max-width: 70%;
+    margin-left: 10%;
+    margin-top: 100px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+    .pre-footer {
+     display: flex;
+     justify-content: space-between;
+  background-color: $secondary-200;
+  padding: 50px 80px;
+    border-radius: 16px;
+     &-sub{
+        width: 50%;
+        gap: 50px;
+        display: flex;
+        flex-direction: column;
+     }
+    }
+  }
+  
+
+// section hero
+.hero {
+  padding: 32px;
+  &::before{
+    content: url(../assets/img/back_vert.png);
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -2;
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 50px 80px;
+    height: 70vh;
+    &::before{
+        content:url(../assets/img/lapin.png);
+        position: absolute;
+        top: 10%;
+        right: 30%;
+        z-index: -2;
+        filter: drop-shadow(0px 0px 60px $secondary-200);
+      }
+    &::after{
+        content: url(../assets/img/pattes.png);
+        position: absolute;
+        bottom: 0;
+        transform: translateY(-50%);
+        left: 20%;
+        z-index: -2;
+    }
+  }
+  
+
+  &-title {
+    @media screen and (min-width: 1024px) {
+        font-size: 42px;
+        width: 60%;
+    }
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+  &-subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 24px;
+    @media screen and (min-width: 1024px) {
+        font-size: 26px;
+        width: 60%;
+        margin-bottom: 5rem;
+    }
+  }
+
+  &_btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media screen and (min-width: 1024px) {
+        justify-content: flex-start;
+    }
+    gap: 30px;
+  }
+}
+
+// section prestation
+
+.prestation {
+  background-color: $secondary-200;
+  padding: 32px;
+  @media screen and (min-width: 1024px) {
+    padding: 50px 80px;
+    border-radius: 16px;
+  }
+  &-card-container {
+    display: grid;
+    // récupération de la valeur nb-cards pour changer le nombre de colonnes du grid dynamiquement (ref : JS pour récuperer le nombre d'enfants)
+    grid-template-columns: repeat(var(--nb-cards), 1fr);
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    padding: 6px;
+    gap: 17px;
+    @media screen and (min-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+
+      }
+  }
+  &-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    @media screen and (min-width: 1024px) {
+        font-size: 32px;
+      }
+  }
+}
+
+// section collaborateurs
+.collaborateurs {
+  background-color: $white;
+  padding: 32px;
+
+  @media screen and (min-width: 1024px) {
+    padding: 50px 80px;
+    border-radius: 16px;
+  }
+
+  &-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 32px;
+    @media screen and (min-width: 1024px) {
+        font-size: 32px;
+      }
+  }
+  &-card-container{
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        gap: 80px;
+    }
+  }
+}
+
+// section contact, coordonnées, urgence, changements des mêmes class
+.contact,
+.coordonees,
+.urgence {
+  background-color: $secondary-200; 
+  padding: 32px;
+  @media screen and (min-width: 1024px) {
+    padding: 0;
+  }
+  &-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 32px;
+  }
+}
+.contact,.coordonees{
+    &-title{
+        @media screen and (min-width: 1024px) {
+            font-size: 32px;
+          }
+    }
+}
+// section coordonées
+.coordonees {
+    @media screen and (min-width: 1024px) {
+        width: 50%;
+      }
+  &-map {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    row-gap: 50px;
+
+    @media screen and (min-width: 1024px) {
+       flex-direction: column;
+       align-items: flex-start;
+
+    }
+
+    &_text {
+      &_single {
+        margin-bottom: 1rem;
+      }
+    }
+
+    &_container {
+      border: 1px solid $black;
+      @media screen and (min-width: 1024px) {
+        order: 4; 
+     }
+     iframe{
+        @media screen and (min-width: 1024px) {
+            width: 350px;
+        height: 200px;
+         }
+        
+    }
+     
+    }
+    &-horaires {
+        width: 100%;
+        @media screen and (min-width: 1024px) {
+            width: auto;
+            
+         }
+        &_text {
+        }
+        .underline {
+          text-decoration: underline;
+          margin-bottom: 1rem;
+        }
+      }
+  }
+  
+}
+.urgence {
+  &-title {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  &-text {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .btn {
+    margin: 0 auto;
+    width: fit-content;
+  }
+}
+
+// appel de la mixin des cookies 
+.cookies-banner{
+    @include cookies-banner()
+}
