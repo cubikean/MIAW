@@ -1,0 +1,197 @@
+/******** Mon reset **********/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #666;
+    padding: 0 0rem;
+    background-color: #E5E5E5;
+}
+
+
+/***** Classe génériques ********************************/
+
+.inverse {
+    background-color: #666;
+    color: darkgrey;
+}
+
+.lienSecondaire {
+    text-decoration: none;
+    color: inherit;
+}
+
+.lienSecondaire:hover {
+    background-color: #ddd;
+}
+
+
+/******** HEADER ****************/
+
+.header-principal {
+    padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 -3px 20px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+}
+
+.header-principal h1 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.header-principal h2 {
+    font-size: 1.3rem;
+}
+
+
+/**** Logo ***/
+
+.logo {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+    text-align: center;
+    background-color: #555;
+    color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    z-index: 100;
+    box-shadow: 3px 5px 4px -2px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.clair {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #555;
+    border: 1px solid #555
+}
+
+
+/**** MENU **************************************/
+
+.menu-principal {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 1.5rem 0 1.5rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 5px 4px -2px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+    padding-left: 10px;
+}
+
+.menu-principal__conteneur-lien {
+    display: inline-block;
+}
+
+.menu-principal__lien {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: 10px;
+    transition: 0.5s ease;
+    transition-property: background, color;
+    border-radius: 3px 3px 0 0;
+}
+
+.menu-principal__lien:hover {
+    background-color: darkgrey;
+}
+
+.menu-principal__lien--actuel {
+    background-color: #666;
+    color: #DDD;
+}
+
+
+/********* Contenu principal ***/
+
+.contenu-principal {
+    line-height: 1.3rem;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+.contenu-principal em {
+    font-style: italic;
+}
+
+.contenu-principal strong {
+    font-weight: bold;
+}
+
+.contenu-principal pre {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+/*********** Articles **************************************************/
+
+.article {
+    padding: 0 1rem;
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+
+.article__titre {
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding: 1rem 0 0.5rem 0;
+}
+
+.article__sous-titre {
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding-bottom: 0.3rem;
+    margin-bottom: 0rem;
+}
+
+.article__texte {
+    padding: 0.5rem 0 1rem 0;
+}
+
+.article__liste {
+    list-style-type: disc;
+    list-style-position: outside;
+    padding: 0rem;
+    margin-left: 2rem;
+}
+
+.article__element-de-liste {
+    padding-bottom: 0.5rem;
+}
+
+
+/**************** Footer ************************************/
+
+.footer-principal {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 5px 0 15px 25px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+}
+
+.footer-principal p {
+    padding: 5px 0 0 0;
+}

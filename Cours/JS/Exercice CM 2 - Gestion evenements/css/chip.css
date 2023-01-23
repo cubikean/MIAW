@@ -1,0 +1,23 @@
+.chip {
+    /* Styles externes */
+    margin: 0.5rem;
+}
+
+.chip {
+    /* styles interne */
+    list-style-type: none;
+    display: inline-flex;
+    background-color: rgb(213, 232, 248);
+    line-height: 2rem;
+    user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.chip--selected {
+    background-color: rgb(180, 219, 252);
+}

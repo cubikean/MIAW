@@ -1,0 +1,42 @@
+/*** Bouton ****/
+
+.bouton {
+    /* mise en forme externe à ce composant */
+    margin-bottom: 1rem;
+}
+
+.bouton {
+    /* Mises en forme internes à ce composant */
+    align-items: center;
+    background-clip: padding-box;
+    background-color: #fa6400;
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    min-height: 3rem;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
+    border: none;
+}
+
+.bouton:hover {
+    background-color: #fb8332;
+}
+
+.bouton:active {
+    background-color: #c85000;
+    transform: translate(1px, 1px);
+}

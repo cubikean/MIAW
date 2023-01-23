@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.JS - Démo 1</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="./js/progAppli.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Vue.JS - Démo 1</h1>
+    </header>
+    <main>
+        <section id="monAppli">
+            {{titreEvenement}}
+            <h2>Tenue de soirée : {{tenues[1].style}}</h2>
+            <h3 v-if="accessibleAuxMineurs===1">Majeur</h3>
+            <h3 v-else>Mineur</h3>
+            
+            <ul v-for="invite in lesInvites">
+                <li v-if="invite.genre===1">
+                    {{invite.prenom}}, 
+                    {{invite.nom}}, 
+                    Homme, 
+                    <span v-if="invite.age>=18">Majeur</span>
+                    <span v-else>Mineur</span>
+                </li>
+
+                <li v-else>
+                    {{invite.prenom}}, 
+                    {{invite.nom}}, 
+                    Femme,
+                    <span v-if="invite.age>=18">Majeur</span>
+                    <span v-else>Mineur</span>
+                </li>
+
+                <li v-if="invite.victuailles.length!=0">
+                    <span v-for="victuaille in invite.victuailles">
+                    {{victuaille}},
+                    </span>
+                </li>
+                <li v-else>Ne ramen e rien</li>
+                
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>Programmation Web</p>
+    </footer>
+</body>
+
+</html>

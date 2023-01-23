@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Gestion d'événements JS</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/decors.css">
+    <link rel="stylesheet" href="css/equipe.css">
+    <link rel="stylesheet" href="css/equipier.css">
+    <link rel="stylesheet" href="css/chip.css">
+    <link rel="stylesheet" href="css/bouton.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <script src="./js/script.js" defer></script>
+
+</head>
+
+<body>
+    <a href="index.html" id="le-logo" class="logo clair">Logo</a>
+    <header class="header-principal">
+
+        <h1>Programmation Javascript</h1>
+        <h2>Gestion des énévements</h2>
+    </header>
+    <nav class="menu-principal">
+        <ul class="menu-principal__liste-liens">
+            <li class="menu-principal__conteneur-lien"><a href="index.html" class="menu-principal__lien">Accueil</a></li>
+            <li class="menu-principal__conteneur-lien"><a href="exercice.html" class="menu-principal__lien menu-principal__lien--actuel">Exercices</a></li>
+            <li class="menu-principal__conteneur-lien"><a href="fonctions.html" class="menu-principal__lien">Fonctions</a></li>
+        </ul>
+    </nav>
+
+    <main class="contenu-principal">
+        <article class="article bac-a-sable">
+            <button class="bouton selection">Sélection unique</button>
+            <button class="bouton deselection">Désélectionner tous</button>
+            <ul class="equipe">
+                <li class="equipier" data-nom="Dupré" data-prenom="Jérémy">
+                    <img src="images/teammembers/tm1.png" alt="" class="equipier__image">
+                    <p class="equipier__nom">Dupré</p>
+                </li>
+                <li class="equipier" data-nom="Smith" data-prenom="Ted">
+                    <img src="images/teammembers/tm2.png" alt="" class="equipier__image">
+                    <p class="equipier__nom">Smith</p>
+                </li>
+                <li class="equipier" data-nom="West" data-prenom="James">
+                    <img src="images/teammembers/tm3.png" alt="" class="equipier__image">
+                    <p class="equipier__nom">nom</p>
+                </li>
+
+            </ul>
+        </article>
+
+        <article class="article">
+            <h2 class="article__titre">Equipiers choisis</h2>
+            <ul class="equipiers-choisis article__liste">
+
+            </ul>
+        </article>
+
+
+
+
+
+
+    </main>
+
+    <footer class="footer-principal">
+        <p class="footer-principal__texte">Programmation web</p>
+    </footer>
+
+
+</body>
+
+</html>
