@@ -1,0 +1,55 @@
+.artiste {
+    /*    border : 1px solid #555;*/
+    padding: 0.5rem 0;
+    border-radius: 3px;
+    max-width: 80%;
+    display: flex;
+    text-align: right;
+    background-color: #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.artiste img {
+    width: 4rem;
+    height: 4rem;
+    transform-origin: top;
+    transform: scale(1.5) translateX(25%);
+    align-items: center;
+    position: relative;
+    -webkit-box-shadow: 2px 1px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 1px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 1px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.artiste .artiste-fiche {
+    margin-left: 0rem;
+    padding-left: 0.5rem;
+    width: 7rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 6rem;
+}
+
+.artiste .artiste-nom {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    color: #252525;
+}
+
+.artiste .artiste-nbAbonnes,
+.artiste .artiste-nbConcerts {
+    color: #555;
+    font-size: 0.7rem;
+    margin-bottom: 0.5rem;
+}
+
+.artiste .artiste-nbConcerts {
+    flex: 1;
+}
+
+.artiste .artiste-facebook {
+    color: #555;
+    font-size: 0.7rem;
+    color: RGB(65, 103, 178);
+}

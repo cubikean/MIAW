@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.JS- Exercice n°2</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/produit.css">
+    <script src="https://unpkg.com/vue@3"></script>
+
+
+</head>
+
+<body>
+    <header>
+        <h1>Vue.JS - Exercice n°2</h1>
+    </header>
+    <main id="appliVente">
+        <section class="selectionDuMois">
+            <h2>{{titre}}</h2>
+            <h3>Notre sélection du mois</h3>
+            <ul class="produits">
+                <li v-for="article in lesArticles" class="produit">
+                    
+                    <img :src="'./images/produits/'+ article.numeroArticle +'.jpg'"/>
+                    <section class="produit__details">
+                        <h3>{{article.libelle}}</h3>
+                        <p>{{article.commentaire}}</p>
+
+                    </section>
+
+                    <footer class="produit__footer">
+                        <div class="tarif">{{article.prix}} €</div>
+                        <button @click="placerDansPanier(article)" v-if="article.estDansLePanier === false" class="controle">J'achète !</button>
+                        <button @click="retirerDuPanier(article)" v-else class="controle">J'en veux plus !</button>
+                    </footer>
+                </li>
+            </ul>
+        </section>
+        <section class="panier">
+            <h3>Votre panier</h3>
+
+            <article>
+                <p>Nombre d'articles dans le panier : {{effectifDuPanier}} </p>
+                <p>Contenu du panier : <span v-for="item in panier">{{item.libelle}}, </span></p>
+                <ul>
+
+                </ul>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Initiation à <em>vueJS</em></p>
+    </footer>
+    <script type="text/javascript" src="./js/progAppli.js"></script>
+
+</body>
+
+</html>

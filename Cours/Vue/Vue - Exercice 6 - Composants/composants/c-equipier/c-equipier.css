@@ -1,0 +1,19 @@
+.c-equipier {
+    border-radius: 5px;
+    background-color: #304d6d;
+    display: inline-block;
+    color: #EEE;
+    padding: 1rem;
+    margin: 1rem;
+    transition: all ease 0.2s;
+    z-index: 2;
+}
+
+.c-equipier:hover {
+    box-shadow: 1px 2px 1px #999;
+    background-color: #304d6d;
+    cursor: pointer;
+    /*transform: scale(1.05);*/
+    transform: translateY(-2px);
+    z-index: 3;
+}

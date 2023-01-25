@@ -1,0 +1,21 @@
+.cards{
+    display : flex ;
+    flex-wrap: wrap ;
+    justify-content: flex-start;
+    padding : 1rem ;
+}
+
+.card{
+    flex : 0 0 22% ;
+    font-size: 0.8rem ;
+    margin-right: 1rem ;
+}
+
+.card figcaption{
+    display: flex ;
+    justify-content: space-between ;
+}
+
+.card img{width : 100%; height : calc(100%*9/16); object-fit:cover ;}
+
+.card .aimeroupas{width : 20px;}

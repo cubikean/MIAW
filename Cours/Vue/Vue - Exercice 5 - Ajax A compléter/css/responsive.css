@@ -1,0 +1,7 @@
+@media screen and (min-width:800px){
+    .wrap{max-width: 800px ;}
+    
+    section#haut{
+         background-size: 100%;
+    }
+}

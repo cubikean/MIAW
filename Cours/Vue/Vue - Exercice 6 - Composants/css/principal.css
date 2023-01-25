@@ -1,0 +1,58 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.4em;
+    font-family: 'Roboto', sans-serif;
+    background-color: #5DC5DE;
+    color: #FFF;
+}
+
+body>header {
+    font-size: 2rem;
+    padding: 1.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(130, 160, 188, 0.9);
+    ;
+}
+
+main {
+    margin-top: 6rem;
+    min-height: 50rem;
+    color: #304d6d;
+}
+
+article {
+    margin-bottom: 2rem;
+    padding: 2rem;
+}
+
+main p {
+    padding-bottom: 0.7rem;
+}
+
+article>h2 {
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+.cartes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin-bottom: 2rem;
+    ;
+}

@@ -1,0 +1,192 @@
+    /***** card.css *****/
+    
+
+/*** Organisation des cartes les unes par rapport aux autres */
+    .equipe {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+    
+    
+    
+    .card {
+        /* Capacité à s'agrandir, se rétrécir et "largeur" de base */
+        flex : 0 0 100% ;
+    }
+
+/* ciblage de la dernière carte */
+.card:last-of-type(){
+    
+      
+}
+
+/** Modèle de boîte ***/
+.card,
+    card *,
+    card *:before,
+    card *:after {
+        box-sizing: border-box;
+    }
+
+ /******* card de base ******************/
+    
+    .card {
+        list-style-type: none;
+        position: relative;
+        perspective: 500px;
+        cursor: pointer;
+        margin:1px ;
+    }
+    /****** communs à Front et back ********/
+    
+    .card .front,
+    .card .back {
+        height: 100%;
+        box-sizing: border-box;
+        transition: all 0.5s ease-in-out;
+        backface-visibility: hidden;
+/*        position : relative ;*/
+    }
+    /*** Animation ****/
+    
+    .card .back {
+        transform: rotateY(-180deg) scaleX(0);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    .card:hover {
+        z-index: 5;
+    }
+    
+    .card:hover .front {
+        transform: rotateY(180deg);
+    }
+    
+    .card:hover .back {
+        transform: rotateY(0) scaleX(1);
+    }
+
+
+    /**** FRONT *************/
+    
+    .card .front {
+        text-align: center;
+        padding: 6rem 2rem;
+              background-color:  #304d6d
+    }
+    
+    .card .front h2 {
+        color: #f9f9f9;
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .card .front h3 {
+        color: #dbdbdb;
+        font-weight: 300;
+        font-size: 1.5rem;
+    }
+    
+    .card .front img.portrait {
+        width: 70%;
+        border-radius: 50%;
+        margin-bottom: 2rem;
+    }
+
+.card .front img.recompense {
+        width: 50%;
+        position : absolute ;
+        right : 0 ;
+        top : 0 ;
+    }
+    /************ BACK ****************/
+    
+    .card .back {
+        background-color: #ffffff;
+        text-align: left;
+        padding: 2rem 1.5rem 1rem 1.5rem;
+    }
+    
+    .card .back h2 {
+        color: #0c0c0c;
+        font-size: 2.5rem;
+        margin-bottom: 0rem;
+    }
+    
+    .card .back {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    
+    .card .back h3 {
+        color: #737373;
+        font-weight: 300;
+        font-size: 1.5rem;
+    }
+    
+    .card .back p {
+        color: #2a2a2a;
+        font-weight: 300;
+        font-size: 1.3rem;
+        margin-top: 2rem;
+        line-height: 1.5;
+        flex: 1;
+    }
+    
+    .card .back footer {
+        color: #2a2a2a;
+        font-weight: 300;
+        font-size: 1.2rem;
+        margin-top: 1rem;
+        line-height: 1.5;
+    }
+    
+    .card .back .adresseMail {
+        color: inherit;
+        text-decoration: none;
+        transition: all 0.4s ease-in-out;
+    }
+    
+    .card .back .adresseMail:hover {
+        text-decoration: underline;
+        text-decoration-color: #2a2a2a;
+    }
+    
+    .card .back footer i {
+        margin-right: 0.5rem;
+        color: #F89C1B;
+    }
+    
+    .card .back img {
+        width: 35%;
+        border-radius: 50%;
+        margin-bottom: 2rem;
+    }
+
+    /*** Responsive *******************/
+
+    
+    @media screen and (min-width:430px) and (max-width:529px){
+        .card {
+            flex-basis: 50%
+        }
+    }
+    
+     @media screen and (min-width:530px) and (max-width:629px) {
+        .card {
+            flex-basis: calc(100% / 3);
+        }
+    }
+    
+    @media all and (min-width:630px) {
+        .card {
+            flex-basis: calc(100% / 4);
+        }
+    }
+   

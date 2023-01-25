@@ -1,0 +1,87 @@
+html {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: calibri, sans-serif;
+    margin: 0;
+    background-color: #eee;
+    color: #444;
+}
+
+body>header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 1rem;
+    font-size: 2rem;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+body>header,
+body>footer {
+    background-color: rgb(35, 114, 185);
+    color: #FFF;
+}
+
+
+/************ main *************/
+
+main {
+    padding: 6rem 1rem 5rem 1rem;
+    color: #555
+}
+
+main h2 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+main h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #aaa;
+}
+
+.selectionDuMois {
+    padding-bottom: 2rem;
+}
+
+
+/**** panier ****/
+
+.panier {}
+
+.panier p {
+    padding: 0.5rem
+}
+
+.panier ul {
+    margin-left: 2rem;
+    list-style: circle;
+}
+
+.panier li {
+    padding-bottom: 0.3rem;
+}
+
+
+/********** FOOTER ************/
+
+body>footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    font-size: 1rem;
+    box-shadow: 0 -14px 28px rgba(0, 0, 0, 0.25), 0 -10px 10px rgba(0, 0, 0, 0.22);
+}
+
+body>footer p {
+    padding: 0;
+    margin: 0;
+}

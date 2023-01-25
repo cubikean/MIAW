@@ -1,0 +1,48 @@
+.concerts {
+    padding-top: 1rem;
+}
+
+.concerts h2 {
+    display: block;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    font-weight: normal;
+    color: #222;
+}
+
+.listeConcerts {
+    margin: 0.5rem 0;
+    background-color: #EEE;
+    border-radius: 3px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.concert {
+    background-color: #fff;
+    margin-bottom: 0.3rem;
+    flex: 0 0 13.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.concert:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.concert .date {
+    color: #444;
+    font-size: 0.7rem;
+    margin-bottom: 0.25rem;
+    display: block;
+}
+
+.concert .ville {
+    font-size: 1.5rem;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TP composants VueJS</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/principal.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+   
+    <script src="js/appli.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>TP Composants VueJS</h1>
+    </header>
+
+    <main>
+        <section id="app">
+            <article>
+                <h2>Utilisation d'un composant simple</h2>
+                <p>Placez ici une balise <em>c-date</em> permettant d'inclure le composant <em>c-date</em>.</p>
+                <p>Le balisage de ce composant est défini par un <em>template html</em> décrit dans le fichier <em>c-date.js</em></p>
+                <p>Son comportement est décrit dans ce même fichier.</p>
+                <p>Sa mise en forme est décrite dans le fichier <em>c-date.css</em></p>
+                <p>Pensez à lier ces deux fichiers à la page web.</p>
+                <p>Placez un deuxième composant <em>c-date</em> dans la page.</p>
+                
+                
+            </article>
+            <article>
+                <h2>Utilisation d'un composant possédant une propriété</h2>
+                <p>Observez les <em>data</em> définies dans l'appli vueJS de cette page.</p>
+                <p>Placez ici un composant <em>c-equipier</em> permettant d'afficher les informations concernant le capitaine.</p>
+                
+                
+                <p>Observez la description de ce composant dans le fichier <em>c-equipier.js</em></p>
+                <p>Ce composant utilise les informations d'une personne qu'on lui fournit grâce à un attribut <em>:personne="nom de la variable contenant une personne"</em>.</p>
+                <p>Ajoutez un second composant <em>c-equipier</em> pour afficher les informations du premier embre d'équipage</p>
+                
+                
+                <p>Finalement, remplacez ces deux composants par une boucle permettant de générer les composants <em>c-equipier</em> pour l'ensemble des membres de l'équipage.</p>
+                
+                
+                
+            </article>
+
+            <article>
+                <h2>Utilisation d'un composant possédant plusieurs propriétés</h2>
+                <p>Observez la description du composant <em>c-card</em>.</p>
+                <p>Dans la section qui suit, placez deux <em>c-card</em> permettant d'afficher deux personnes de l'équipage. Le chemin vers l'image de la personne à afficher sera fourni par la fonction <em>srcImagePersonne</em> définie dans <em>appli.js</em></p>
+                <section class="cartes">
+                  
+                    
+                    
+                </section>
+                <p>Dans la section qui suit, placez une boucle permettant d'afficher toutes les personnes de l'équipage sous la forme de composants <em>c-card</em>.</p>
+                <section class="cartes">
+                  
+                    
+                    
+                </section>
+            </article>
+
+            <article class="interactions">
+                <h2>Synthèse</h2>
+                <p>Dans cet article on veut obtenir le résultat suivant : </p>
+                <ul>
+                    <li>Tous les membres de l'équipage sont affichés sous la forme de composatns <em>equipier</em>.</li>
+                    <li>Lorsqu'on survole un <em>equipier</em>, un composant <em>c-card</em> permet d'afficher les informations de l'équipier survolé.</li>
+                </ul>
+                <p>Observez le fichier <em>c-equipier.js</em> et notez qu'au survol d'un <em>c-equipier</em>, la fonction <em>selectionner</em> est exécutée, ce qui permet au composant d'émettre l'événement "selection". Lors de l'utilisation d'un <em>c-equipier</em> il est donc possible de mettre en place une réaction à cet événement avec <em>@selection="..."</em>. Cet événement devra déclencher l'éxécution de la fonction <em>mettreLeFocusSur</em>...</p>
+                <ul>
+                    <!-- Affichez ici tous les équipiers -->
+                
+                </ul>
+                
+            </article>  
+            <!-- Affichez le c-card de la personne possédant le focus -->
+            
+            
+            
+        </section>
+    </main>
+
+</body>
+
+</html>

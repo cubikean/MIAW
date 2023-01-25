@@ -1,0 +1,282 @@
+*{box-sizing: border-box ;}
+
+body{
+        
+       font-family: 'Roboto', sans-serif;
+        font-size : 100% ;
+        font-weight: 700 ;
+    background-color:rgba(195,212,232,0.5); 
+    overflow-x: hidden ;
+    
+}
+
+#principal{
+    display: flex ;
+    flex-direction: column ;height : 100vh ;
+}
+main{flex : 1;}
+
+h1, h2{text-transform: uppercase ; font-size: 48px ;}
+
+a{text-decoration: none ; color : #DDD ;}
+a:hover, a:visited, a:active{color : #fff ;}
+
+.wrap{ width : 100%; margin: auto ; }
+
+
+header.titresPrincipaux{ 
+    position : fixed ;
+    top:0; left : 0 ;
+    width : 100% ;
+    z-index : 1000 ;
+    }
+/*******************************/
+/********* Menu ****************/
+/*******************************/
+
+
+
+
+header.titresPrincipaux li {display : inline-block; margin : 0 5px ;text-transform: uppercase ; vertical-align:middle;
+    padding : 0  ;
+
+}
+
+
+
+header.titresPrincipaux li a.home{display : block ;}
+
+/**** Formulaire de recherche ******/
+.rechercher{display: inline; }
+
+.rechercher input[type=text], .rechercher input[type=submit]{
+    font-size: 0.7rem; text-transform: none ;
+    padding: 0.5rem 0.4rem ;
+   border : #EEE solid 1px ;
+    
+}
+
+.rechercher input[type=text]{
+    border-bottom-left-radius: 20px ;
+    border-top-left-radius: 20px ;
+    
+    width :6rem ;
+    color : #EEE ;
+    background-color: rgba(80,80,80,0.4) ; 
+}
+
+.rechercher input[type=submit]{
+     border-bottom-right-radius: 20px ;
+    border-top-right-radius: 20px ;
+    color :rgba(80,80,80,1) ;
+    background-color: #EEE  ; 
+    cursor: pointer ;
+    
+}
+
+/**** / Formulaire ********/
+
+header.titresPrincipaux li:hover{background-color: rgba(26,30,45,0.4) ;}
+
+
+header.titresPrincipaux .home{padding : 10px ;line-height : 30px ;font-size: 2em ; font-family: 'Roboto Condensed', sans-serif; }
+header.titresPrincipaux .home span{display :block; font-size: 0.35em ; letter-spacing: 0.5em; font-family: 'Roboto', sans-serif;}
+
+
+/**** Choix du thème ****************/
+header.titresPrincipaux select.choixTheme{
+    float : right ;
+    border : none;
+    padding : 5px ;
+    font-family: 'Roboto', sans-serif; 
+}
+
+
+
+/*******************************/
+/*********** Cookies  **********/
+/*******************************/
+.avertissementCookie{ overflow : hidden ;   font-weight: normal ; clear : both ;}
+.avertissementCookie p , .avertissementCookie button { float : left; margin : 20px ;}
+
+.avertissementCookie button{ font-family: 'Roboto', sans-serif; }
+/*******************************/
+/***** Section du haut *********/
+/*******************************/
+section#haut{
+    clear : both ;
+    background-image: url('../img/vinyl_1680.jpg') ;
+    box-sizing: border-box;
+    background-repeat: no-repeat ;
+    background-size: cover ;
+    padding : 100px 30px 10px 30px 
+}
+
+section#haut h2{font-size: 70px; font-family: 'Roboto Condensed', sans-serif;}
+
+section#haut h2 span{display : block; letter-spacing: 0.5em; font-family: 'Roboto', sans-serif;font-size: 0.35em ; padding-left : 3px;}
+
+section#haut h1{ margin-left : 2px ;margin-top : 20px ;font-size: 20px; font-family: 'Muli', sans-serif; line-height: 1.2 ; }
+
+
+/***************************/
+/****** Classement *********/
+/***************************/
+
+body main {  padding : 0.5rem 0.7rem ; }
+
+
+/************************************/
+/******* Formulaire de recherche ****/
+/************************************/
+form.recherche {position :relative ;}
+.recherche label{ position : absolute ;display : block ;}
+
+input#motsCles, .recherche input[type="submit"]{
+    margin-top : 20px ;
+    padding : 5px ;
+    border : none ;
+    border-radius: 3px ;
+    font-family: 'Roboto', sans-serif;
+    background-color:#EEE ;
+    color : rgba(26,30,45,1) ;
+}
+
+.recherche input[type="submit"]:hover{background-color: rgba(26,30,45,0.5) ; color : rgba(215,111,22,1) ;}
+
+.recherche input[type="submit"]:active{background-color: rgba(26,30,45,1) ; color : rgba(215,111,22,1) ; border : none ;}
+/******** Titre de gauche ****/
+
+body main header{padding : 0px 0px ; color : #151515; margin-bottom: 0.5rem ;}
+body main h2, body main h3{display : inline-block ;}
+body main header h2{text-transform: none ; font-size: 1.5rem ; font-weight: normal ;}
+body main h3{ padding : 10px 0 ; font-size: 1.5em ; text-transform: uppercase ; font-weight: normal ;}
+
+body main  #classement{margin-top : 30px ;}
+
+body main  #classement li{    margin-bottom : 20px ;
+}
+
+#classement figure{position : relative ; width : 100% ; height : 100px; overflow: hidden ; }
+
+#classement li img{width : 100% ; border-radius: 5px ;}
+
+#classement li figcaption{
+    position : absolute ; bottom : 0 ; left : 0 ;
+    z-index : 10 ;
+    width : 100% ;
+    padding : 5px 0 ; 
+      transition: ease 0.5s all ;
+}
+
+
+#classement .nom{text-transform:capitalize ; margin-bottom : 2px ; padding :0px  10px 0px 10px; transition:inherit ;  }
+#classement .stat{text-transform:capitalize ; font-size: 0.7em;padding : 0px 10px  ;  transition: ease 0.5s all  ; overflow : hidden ; height : 0px ; box-sizing: border-box ; }
+
+#classement li:hover figcaption .stat, body>article main #classement li.active .stat{
+ padding-top : 5px ;
+height : 15px ;
+}
+
+
+/****** Plage active ****/
+body main  #classement li.active figure{height : 95px ;} 
+
+body main  #classement li.active .nom{letter-spacing: 0.2em ;  }
+
+
+/***** Goutière **************/
+main #classement{margin-right : 20px ;}
+aside{margin-left : 70px ;}
+
+/****************************/
+/******* focussedArtist  *****/
+/****************************/
+
+aside{max-width : 430px ; min-width : 400px ;}
+
+aside{   padding : 25px 30px ;}
+
+/****** Pésentation de l'artiste sélectionné ***/
+
+.focussedArtist ul{overflow: hidden;   
+    font-size : 1.3em ;
+}
+
+
+
+.focussedArtist  .presentation .artiste{
+   font-family :'Muli', sans-serif;
+    font-size : 1.7em ; margin-bottom : 25px ; 
+}
+
+.focussedArtist  .presentation .chapeau{
+    font-size : 0.8em ;
+    padding : 5px 0 5px 2px ;
+}
+
+.focussedArtist img  {width : 130px ; height : 130px; border-radius: 50% ;  }
+
+.focussedArtist .image{transition: all 3s linear;}
+
+.focussedArtist .image:hover{ -ms-transform: rotate(360deg); /* IE 9 */
+    -webkit-transform: rotate(360deg); /* Safari */
+    transform: rotate(360deg);}
+
+/*** Cercles ****/
+.focussedArtist .image{position :relative ; }
+
+.focussedArtist .image:before, .focussedArtist .image::after{
+    position : absolute ;
+     border-radius: 50% ; content : " " ;
+    width : 0px ; height:0px;
+}
+
+.focussedArtist .image:before{
+   z-index: 10;  padding : 20px ; 
+    top : 49px ; left : 47px ;  
+  
+}
+.focussedArtist .image::after{
+  z-index: 10;  padding : 5px ;
+  top : 64px ; left : 62px ;    
+}
+/********* / Cercles *********************/
+
+
+.focussedArtist .presentation li{float : left ;}
+
+.focussedArtist  .presentation .infos{margin-left: 25px ;}
+
+
+
+
+.focussedArtist .presentation .nbFans,  .focussedArtist .presentation .nbEcoutes{ font-size : 1em ;  margin-bottom : 10px ;   padding-left : 10px ;}
+
+.focussedArtist a:hover{text-decoration: underline;}
+
+.nb{}
+
+/********************************************************/
+/***** Liste des meilleurs titres d'un artiste **********/
+/********************************************************/
+.focussedArtist h3{ margin-left : 0px ;}
+
+.meilleursTitres{ margin-left : 0px ;
+    padding : 10px ; list-style-type: decimal ;list-style-position: inside ;}
+
+.meilleursTitres h4{
+    text-transform: uppercase ; padding : 10px 0 ;}
+
+.meilleursTitres h4, .meilleursTitres p.nbFans, .meilleursTitres p.nbAuditeurs
+{display: inline-block;}
+
+.meilleursTitres p.nbFans, .meilleursTitres p.nbAuditeurs{margin-left : 15px ; padding : 0px 0 0 0 ;font-size : 0.9em ; }
+
+/**************************/
+/******* FOOTER ***********/
+/**************************/
+
+
+body footer{clear : both;   font-size: 0.7em ; line-height: 2.3;   }
+body footer p{padding : 0 15px ; text-align: right}

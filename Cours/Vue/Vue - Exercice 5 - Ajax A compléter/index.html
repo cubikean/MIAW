@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <title>Music harvest</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Roboto+Condensed:400,700|Roboto|Noto+Sans|Muli|Amatic+SC:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/artiste.css">
+    <link rel="stylesheet" href="css/concerts.css">
+    <link id="linkTheme" rel="stylesheet" href="css/theme2.css" />
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/axios.min.js"></script>
+    <script src="js/progAppli.js"></script>
+</head>
+
+<body>
+    <div id="appli3">
+        <header class="titresPrincipaux">
+            <nav class="wrap">
+                <ul>
+                    <li><a href="index.html" class="home">Music <span>harvest</span></a></li>
+                    <li>
+                        <form class="rechercher">
+                            <input type="text" name="motcle" placeholder="Rechercher"><input type="submit" value="Go">
+                        </form>
+                </ul>
+            </nav>
+
+        </header>
+        <div id="principal">
+            <section id="haut" class="wrap">
+                <h2>Music <span>harvest</span></h2>
+                <h1>Gathering data from music charts</h1>
+            </section>
+            <main class="wrap">
+                <header>
+                    <h2>Votre artiste</h2>
+                </header>
+
+                <section>
+                    <article class="artiste">
+
+                        <div class="artiste-fiche">
+                            <h2 class="artiste-nom">Nom artiste</h2>
+                            <p class="artiste-nbAbonnes">1 265 214 abonnés</p>
+                            <p class="artiste-nbConcerts">20 concerts à venir</p>
+                            <a class="artiste-facebook">Son Facebook</a>
+                        </div>
+                        <img src="https://s3.amazonaws.com/bit-photos/large/8894594.jpeg" alt="nom artiste" />
+                    </article>
+                    <article class="concerts">
+                        <h2>Prochains concerts</h2>
+                        <ul class="listeConcerts">
+                            <li class="concert">
+                                <span class="date">05/02/2020</span>
+                                <span class="ville">Londres</span>
+                            </li>
+                        </ul>
+                    </article>
+
+                </section>
+            </main>
+
+
+
+
+            <footer class="wrap">
+                <p>Initiation au framework <em>Vue</em></p>
+
+            </footer>
+        </div>
+        <!-- fin du div principal -->
+    </div>
+    <!-- fin de l'appli -->
+</body>
+
+</html>

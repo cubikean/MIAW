@@ -62,5 +62,5 @@ document.querySelector('#ex5 .control').addEventListener('click', ()=>{
 let liexo6 = document.querySelector('#ex6 ul');
 
 liexo6.addEventListener('click', (e)=>{
-    liexo6.appendChild(e.target)
+    liexo6.append(e.target)
 })

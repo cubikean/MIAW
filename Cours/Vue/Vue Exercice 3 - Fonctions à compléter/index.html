@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>TP VueJS Fonctions</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/mediumSize.css">
+    <link rel="stylesheet" href="css/metier.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <script src="js/vue.js"></script>
+
+
+    <script src="js/applifonctions.js"></script>
+</head>
+
+<body>
+    <nav>
+        <a class="actif" href="index.html">Sujet</a>
+
+        <a href="#">Divers</a>
+        <a href="#">Contact</a>
+        <a href="#">Autre</a>
+
+    </nav>
+    <main id="appli">
+        <header>
+            <h1>Initiation à l'écriture de fonctions</h1>
+            <h2>Sujet</h2>
+        </header>
+        <article>
+            <h2>Rappel : afficher des données</h2>
+            <p>Age du capitaine : {{ageCapitaine}} ans</p>
+            <h2>Utiliser une fonction fournie</h2>
+
+            <p>Utilisation d'une fonction à un seul paramètre</p>
+            <p>Voici le résultat calculé par la fonction <em>commentaireAge</em> à qui l'on fournit l'âge du capitaine avec <em>commentaireAge(ageCapitaine)</em> : {{commentaireAge(ageCapitaine)}}</p>
+            <p>Dans un paragraphe, affichez le commentaire concernant l'âge du canonnier.</p>
+
+
+            <p>Utilisation d'une fonction à plusieurs paramètres</p>
+            <p>Dans un paragraphe, placez une phrase qui indique la moyenne d'âge entre le capitaine et son second</p>
+
+            <h2>Création de fonctions utilisant des données simples</h2>
+            <p>Créez une fonction qui fournit l'année de naissance d'une personne en fonction de son âge</p>
+            <p>Utilisez cette fonction pour afficher l'année de naissance du capitaine et celle du maître d'équipage. </p>
+
+            <p>Créez une fonction <em>maximum</em> à qui l'on fournit deux nombres <em>a</em> et <em>b</em>, et qui renvoie le plus grand de ces deux nombres.</p>
+            <p>Utilisez cette fonction pour afficher l'âge du plus vieux mousse.</p>
+            <p>Comment utiliser cette fonction pour obtenir l'âge du plus vieux entre les deux mousses et le capitaine ?</p>
+
+
+            <h2>Traitement de données structurées</h2>
+            <p>Créez une fonction qui calcule le prix au kilo, pour une donnée structurée comme les lots de la section <em>data</em></p>
+
+            <p>Utilisez cette fonction pour afficher le prix au kilo des trois lots.</p>
+            <p>Prix au kilo du lot 1 : ...</p>
+
+
+
+            <p>Créez une fonction <em>prixLigneCommande</em> qui calcule le prix d'une ligne de commande, pour une donnée structurée comme les lignes de commande de la section <em>data</em></p>
+
+            <p>Utilisez cette fonction pour afficher le prix de la première ligne de la commande 1, puis celui de la deuxième ligne de la commande 1.</p>
+            <p>Prix de la première ligne de commande 1 : ...</p>
+
+            <h2>Fonction utilisant une fonction</h2>
+            <p>Créez une fonction qui à partir d'une ligne de commande, génère un texte de la forme : "Pizza 4 fromages 2*15€ = 30€"</p>
+            <p>Le calcul du prix de la ligne de commande sera effectué par la fonction <em>prixLigneCommande</em>.</p>
+            <p>Modifiez la boucle d'affichage afin qu'elle utilise cette fonction.</p>
+
+            <p>Créez la fonction <em>prixMaxAuKg</em> qui reçoit deux lots et qui renvoie le prix du lot le plus cher (au kilo).</p>
+            <p>Utilisez cette fonction pour afficher le prix le plus élevé entre le lot 2 et le lot 4.</p>
+            <p>Prix du plus cher : ...</p>
+            <h2>Fonction renvoyant une donnée structurée</h2>
+            <p>Créez la fonction <em>lotLePlusCher</em> qui reçoit deux lots et qui renvoie celui dont le prix au Kg est le plus élevé.</p>
+            <p>Utilisez cette fonction pour afficher le lot le plus cher entre le lot 2 et le lot 4 ; puis, sans modifier la fonction, cherchez à n'afficher que le nom du produit le plus cher.</p>
+            <p>Article le plus cher : ...</p>
+            <h2>Utilisation d'une fonction dans une boucle</h2>
+            <p>Dans la page web, au-dessous de ce paragraphe, créez la boucle permettant d'afficher le nom de chaque plat de la commande 1, ainsi que la quantité qui a été commandée et le prix unitaire du plat.</p>
+            <p>Complétez la page pour que le prix de la ligne de commande soit également affiché</p>
+
+
+            <h2>Fonction traitant un tableau de données</h2>
+            <p>Créez une fonction qui reçoit un ensemble de lignes de commandes tel que <em>commande1</em>, et qui calcule le prix total de la commande.</p>
+            <p>Utilisez cette fonction pour afficher le prix total de la commande 1 dans la page.</p>
+
+            <p>Créez une boucle d'affichage afin que la page présente le détail et le prix total de chaque commande.</p>
+
+            <h2>Fonctions booléennes</h2>
+            <p>Une fonction booléenne est une fonction qui renvoit <em>true</em> ou <em>false</em>.</p>
+            <p>Ecrivez la fonction <em>estDisponible</em> qui reçoit un lot, et qui renvoie <em>true</em> si le produit est présent en stock, et <em>false</em> dans le cas contraire.</p>
+            <p>Affichez ce résultat pour les 2 premiers lots.</p>
+            <p>Complétez l'affichage précédent : utilisez la fonction <em>estDisponible</em> pour afficher un lot uniquement s'il est présent en stock.</p>
+            <h2>Traitement d'ensembles de données</h2>
+            <p>On veut traiter une donnée structurée comme la variable <em>inventaire1</em>.</p>
+            <p>Ecrivez la fonction <em>nombreDeProduitsDUneCategorie</em> qui reçoit un inventaire et un numéro de catégorie, et qui renvoie le nombre de produits qui figurent dans cette catégorie. Par exemple <em>nombreDeProduitsDUneCategorie(inventaire1, 5)</em>                renverra la valeur 4.</p>
+            <p>Utilisez cette fonction dans la page web.</p>
+            <p>Ecrivez la fonction <em>valeurDuStock</em> qui reçoit un inventaire et qui renvoie le prix total des produits contenus dans l'inventaire.</p>
+            <p>Utilisez cette fonction dans la page web.</p>
+
+            <p>Ecrivez la fonction <em>produitsDUneCategorie</em> qui reçoit un inventaire et un numéro de catégorie, et qui renvoie la liste des produits de l'inventairequi figurent dans cette catégorie. Par exemple <em>produitsDUneCategorie(inventaire1, 5)</em>                renverra la liste des produits de l'inventaire1 dont la catégorie est 5.</p>
+            <p>Utilisez cette fonction dans la page web.</p>
+
+
+
+        </article>
+
+
+    </main>
+    <footer>
+        <p>Initiation à <em>vueJS</em></p>
+        <p><a href="www.univ-larochelle.fr">Université de La Rochelle</a></p>
+    </footer>
+
+</body>
+
+</html>

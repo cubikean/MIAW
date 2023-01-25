@@ -1,0 +1,105 @@
+
+header.titresPrincipaux{ background-color: rgba(26,30,45,0.9) ;   }
+
+header.titresPrincipaux li:hover{background-color: rgba(26,30,45,0.4) ;}
+
+.home {background-color: rgba(26,30,45,0) ;}
+
+header.titresPrincipaux li a:hover{border-bottom : 4px solid rgba(255,111,22,1);}
+
+/**** Choix du thème ****************/
+header.titresPrincipaux select.choixTheme{
+       background-color: transparent;
+    color : #DDF ;
+}
+header.titresPrincipaux select.choixTheme option{ color : rgba(26,30,45,1);}
+
+.choixTheme option[value="2"]{background-color: rgba(255,111,22,1) ;}
+
+
+/*******************************/
+/*********** Cookies  **********/
+/*******************************/
+.avertissementCookie{  background-color: rgba(0,162,255,0.5) ; color : white ;  }
+
+.avertissementCookie button{  background-color: rgba(255,255,255,0.7); color : rgba(26,30,45,0.7); border : 1px solid rgba(26,30,45,0.5);  }
+
+/*******************************/
+/***** Section du haut *********/
+/*******************************/
+
+section#haut h2{ color : white ; }
+
+section#haut h1{ color :#D76F16; }
+
+/***************************/
+/****** Classement *********/
+/***************************/
+
+body main {background-color: rgba(249,111,0,1) ;   color : #05071C ;  }
+
+body main #classement li{   color : #DDF ; }
+
+
+#classement li figcaption{
+    background-color: rgba(26,30,45,0.6) ;
+}
+
+#classement .stat{ color : #AAA ;  }
+
+/****** Plage active ****/
+
+
+body main #classement li.active .nom{ color : #FFF ; }
+body main #classement li.active{ border-bottom: 5px solid rgba(0,162,255,0.8) ;}
+
+/****************************/
+/******* focussedArtist  *****/
+/****************************/
+
+
+aside{
+    background-color: transparent;
+
+   
+}
+
+/****** Présentation de l'artiste sélectionné ***/
+
+.focussedArtist  .presentation .artiste{
+    color :rgba(26,30,45,1) ;
+}
+
+.focussedArtist li, .focussedArtiste a{color :rgba(26,30,45,1) ;}
+.focussedArtist img  { border : 2px solid #666 ;  }
+
+
+/*** Cercles ****/
+
+
+
+.focussedArtist .image:before{
+  background-color: rgba(249,111,0,0.6) ;
+  
+}
+.focussedArtist .image::after{
+ background-color: rgba(0,0,0,0.6) ; 
+}
+/********* / Cercles *********************/
+
+
+.focussedArtist .presentation .nbFans,  .focussedArtist .presentation .nbEcoutes{ color :rgba(26,30,45,0.8) ; }
+
+/********************************************************/
+/***** Liste des meilleurs titres d'un artiste **********/
+/********************************************************/
+.focussedArtist h3{color :rgba(26,30,45,0.8) ;}
+
+.meilleursTitres h4, .meilleursTitres a, .meilleursTitres p.nbFans, .meilleursTitres p.nbAuditeurs
+{color :rgba(26,30,45,0.8) ; }
+
+/**************************/
+/******* FOOTER ***********/
+/**************************/
+
+body footer{ background-color:#1A1E2D ;   color : #DDF ;  }
