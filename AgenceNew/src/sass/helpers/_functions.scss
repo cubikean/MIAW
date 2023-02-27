@@ -1,3 +1,0 @@
-@function flex_basis($nb_elements, $taille_gap) {
-    @return calc((100% - ($nb_elements - 1)*$taille_gap)/$nb_elements)
-}

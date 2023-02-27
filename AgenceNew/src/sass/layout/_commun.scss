@@ -1,27 +1,2 @@
 @use '../helpers/breakpoints' as *;
 @use '../helpers/functions' as *;
-
-/************ commun.scss *****************************
-/*** Permet d'organiser les blocs entre eux 
-/*** Ici on peut préciser tout ce 
-/*** qui est extérieur aux éléments du layout
-/*** et qui sert de base à toutes les pages 
-/*** Par exemple : le menu est sticky,                
-/*** ce n'est pas intrinsèque au menu,                
-/*** ça dépend de ce qui se passe autour **************/
-
-
-/*** Menu *****/
-
-
-/** main content ***/
-
-.contenu-principal {
-    min-height: 100vh;
-}
-
-
-/*** Footer ***/
-
-
-/**** Pour grand écran ***/
