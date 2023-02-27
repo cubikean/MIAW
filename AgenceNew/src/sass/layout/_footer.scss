@@ -1,0 +1,25 @@
+@use '../helpers/colors' as *;
+@use '../helpers/breakpoints' as *;
+
+/**************** Footer ************************************/
+
+.footer-principal {
+    padding: 1rem 2rem;
+    background-color: transparentize($clr-accent-1, 0.15);
+    color: $clr-primary-dark;
+    font-size: 1.5rem;
+}
+
+.footer-principal p {
+    padding: 0 0 0 0;
+    text-align: right;
+}
+
+
+/**** Media queries ****/
+
+@media (min-width:breakpoint("md")) {
+    .footer-principal {
+        position: static;
+    }
+}

@@ -1,0 +1,17 @@
+@use '../helpers/colors' as *;
+.miaw-bouton {
+    font-size: 1.5rem;
+    font-weight: normal;
+    letter-spacing: 1.5px;
+    border-radius: 5px;
+    background-color: transparentize($clr-accent-1-dark, 0.3);
+    backdrop-filter: blur(20px);
+    text-decoration: none;
+    color: $clr-primary;
+    display: block;
+    padding: 1rem;
+    &:hover {
+        letter-spacing: 5px;
+        background-color: transparentize($clr-accent-1-darker, 0.3);
+    }
+}

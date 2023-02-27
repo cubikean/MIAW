@@ -1,0 +1,58 @@
+@use '../helpers/colors' as *;
+
+/*********** Sections et Articles **************************************************/
+
+.contenu-secondaire {
+    background-color: $clr-secondary-light;
+    color: $clr-primary;
+    padding: 3rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.contenu-secondaire section {
+    margin-bottom: 2rem;
+}
+
+.contenu-secondaire article {
+    padding: 0;
+    text-align: justify;
+}
+
+.contenu-secondaire h2 {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contenu-secondaire article h3 {
+    font-weight: bold;
+    font-size: 1.7rem;
+    margin-bottom: 0.5rem;
+}
+
+.contenu-secondaire a {
+    color: $clr-primary;
+}
+
+.contenu-secondaire article ul,
+.contenu-secondaire article ol {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contenu-secondaire article ul {
+    list-style-type: circle;
+}
+
+.contenu-secondaire article ol {
+    list-style-type: decimal;
+}
+
+.contenu-secondaire article li {
+    padding-bottom: 2px;
+}
+
+.contenu-secondaire p {
+    margin-bottom: 1rem;
+}

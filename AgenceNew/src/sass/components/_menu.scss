@@ -1,0 +1,82 @@
+    @use '../helpers/colors'as *;
+    @use '../helpers/breakpoints' as *;
+    /**** MENU **************************************/
+    
+    .menu-principal {
+        padding-bottom: 8rem;
+        padding-inline: clamp(1rem, 15%, 3rem);
+        background-color: transparentize($clr-accent-1, 0.15);
+        color: $clr-primary;
+        /** Liste de liens ***/
+        &__liste-liens {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        /*** Li contenant des liens ***/
+        &__wrapper-lien {
+            flex-basis: 80%;
+            flex-grow: 0;
+            text-align: center;
+        }
+        &__lien {
+            font-size: clamp(1.5rem, 7vw, 10rem);
+            background-color: $clr-accent-1;
+            color: $clr-primary;
+            padding: 2rem;
+            text-decoration: none;
+            letter-spacing: 1px;
+            color: inherit;
+            display: block;
+            transition: 0.3s ease background;
+            border-radius: 3px 3px 0 0;
+        }
+        &__lien:hover,
+        &__lien:focus {
+            background-color: darken($clr-accent-1, 10);
+        }
+        &__lien:active {
+            background-color: darken($clr-accent-1, 30);
+        }
+        &__lien--actif {
+            background-color: darken($clr-accent-1, 20);
+        }
+    }
+    /*** Media queries *******/
+    
+    @media (min-width:breakpoint("md")) {
+        .menu-principal {
+            padding-bottom: 1rem;
+            padding-top: 1rem;
+            &__liste-liens {
+                justify-content: flex-start;
+                gap: 1rem;
+            }
+            &__wrapper-lien {
+                flex-basis: auto;
+            }
+        }
+        .menu-principal a {
+            font-size: 1.5rem;
+            padding: 1rem;
+        }
+    }
+    
+    @media (min-width:breakpoint("lg")) {
+        .menu-principal {
+            &__liste-liens {
+                position: sticky;
+                top: 3rem;
+                left: 0;
+                flex-direction: column;
+            }
+        }
+    }
+    
+    @media (min-width:breakpoint("xl")) {
+        html {
+            padding: 2rem 0;
+        }
+    }

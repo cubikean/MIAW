@@ -1,0 +1,33 @@
+/*** Nommage des couleurs ***/
+
+$blanc: hsla(0, 0%, 90%, 1);
+$noir: hsla(0, 0%, 0%, 1);
+$purple: hsl(263, 56%, 50%);
+$rose :#e14ca9;
+
+/***** Attribution fonctionnelle des couleurs ****/
+
+
+/* Primary ***/
+
+$clr-primary: $blanc;
+$clr-primary-dark:darken($blanc, 10%);
+$clr-primary-darker: darken($blanc, 30%);
+
+/* Secondary ***/
+
+$clr-secondary: $noir;
+$clr-secondary-light:lighten($clr-secondary, 10%);
+$clr-secondary-lighter:lighten($clr-secondary, 20%);
+
+/* Accent-1 *****/
+
+$clr-accent-1: $purple;
+$clr-accent-1-light:lighten($clr-accent-1, 20%);
+$clr-accent-1-lighter:lighten($clr-accent-1, 40%);
+$clr-accent-1-dark:darken($clr-accent-1, 20%);
+$clr-accent-1-darker:darken($clr-accent-1, 30%);
+
+/* Shadows ****/
+
+$shadow: $noir;

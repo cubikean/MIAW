@@ -1,0 +1,15 @@
+@use '../helpers/colors' as *;
+@use '../helpers/breakpoints' as *;
+@use '../helpers/functions' as *;
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: $clr-secondary-lighter;
+    padding: 0 0rem;
+    background-color: $clr-primary-dark;
+    max-width: breakpoint("xl");
+    margin-inline: auto;
+}
+
+html {
+    background-color: transparentize($clr-accent-1, 0.15);
+}
