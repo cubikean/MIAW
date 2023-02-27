@@ -1,0 +1,17 @@
+@use '../helpers/colors'as *;
+@use '../helpers/breakpoints' as *;
+@use '../base/typography' as *;
+
+@mixin btn(){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $Regular;
+    width: fit-content;
+    padding: 20px 20px;
+    color: white;
+    background-color: purple;
+    border-radius: 30px;
+
+}
+    
