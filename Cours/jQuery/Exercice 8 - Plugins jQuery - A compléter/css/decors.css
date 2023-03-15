@@ -1,0 +1,198 @@
+/******** Mon reset **********/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #666;
+    padding: 0 0rem;
+    background-color: #E5E5E5;
+    line-height: 1.2;
+}
+
+
+/***** Classe génériques ********************************/
+
+.inverse {
+    background-color: #666;
+    color: darkgrey;
+}
+
+.lienSecondaire {
+    text-decoration: none;
+    color: inherit;
+}
+
+.lienSecondaire:hover {
+    background-color: #ddd;
+}
+
+
+/******** HEADER ****************/
+
+body>header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 -3px 20px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+}
+
+body>header h1 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+body>header h2 {
+    font-size: 1.3rem;
+}
+
+
+/**** MENU **************************************/
+
+nav {
+    margin: 1rem 1rem 0 1rem;
+    padding-left: 10px;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: 10px;
+    transition: 0.5s ease;
+    transition-property: background, color;
+    border-radius: 3px 3px 0 0;
+}
+
+nav a:hover {
+    background-color: darkgrey;
+}
+
+nav a.actuel {
+    background-color: #666;
+    color: #DDD;
+}
+
+
+/********* Contenu principal ***/
+
+main {
+    padding-bottom: 3rem;
+    padding-top: 10rem;
+    line-height: 1.3rem;
+}
+
+main em {
+    font-style: italic;
+}
+
+main strong {
+    font-weight: bold;
+}
+
+main pre {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+/*********** Articles **************************************************/
+
+article {
+    padding: 0 1rem;
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+article h2 {
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding: 1rem 0 0.5rem 0;
+}
+
+article h3 {
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding-bottom: 0.3rem;
+    margin-bottom: 0rem;
+}
+
+article p {
+    padding: 0.5rem 0 1rem 0;
+}
+
+article ul {
+    list-style-type: disc;
+    list-style-position: outside;
+    padding: 0rem;
+    margin-left: 2rem;
+}
+
+article li {
+    padding-bottom: 0.5rem;
+    line-height: 1.3;
+    ;
+}
+
+ol {
+    list-style-type: decimal;
+    margin-left: 3rem;
+}
+
+ol li {
+    line-height: 2;
+}
+
+
+/******** taches ********************/
+
+.equipiers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: space-between;
+    width: 100%;
+}
+
+
+/**************** Footer ************************************/
+
+body>footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 5px 0 15px 25px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+}
+
+body>footer p {
+    padding: 5px 0 0 0;
+}
+
+
+/*** CARTE ********/
+
+#maCarte {
+    height: 250px;
+}

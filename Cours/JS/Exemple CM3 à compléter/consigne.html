@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS - DOM</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/decors.css">
+    <link rel="stylesheet" href="css/equipier.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+</head>
+
+<body>
+    <header>
+        <h1>Programmation Javascript</h1>
+        <h2>Manipulation du DOM</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Révisions</a></li>
+                <li><a href="consigne.html" class="actuel">Consigne</a></li>
+                <li><a href="exercice.html">Exercice</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <article>
+            <h2>Gestion d'événements</h2>
+            <p>Dans la page <em>exercice</em>, vous trouverez un esemble de cards permettant d'afficher des équipiers.</p>
+            <p>Vous devez reproduire le fonctionnement suivant :</p>
+            <ul>
+                <li>Lorsqu'on clique sur un bouton X, l'équipier concerné est retiré de la page.</li>
+                <li>Lorsqu'on clique sur un bouton +/-, l'image de l'équipier change de taille et pivote, le nom de l'équipier grossit/se réduit, et le symbole porté par le bouton change.</li>
+            </ul>
+            <p>Vous pouvez suivre ce plan :</p>
+            <ol>
+                <li>Rendre tous les boutons X réactifs.</li>
+                <li>Faire en sorte qu'un clic sur un bouton X supprime ce bouton. Vous utiliserez la méthode <em>remove</em> et l'objet <em>event.target</em></li>
+                <li>Faire en sorte qu'un clic sur un bouton X supprime l'équipier concerné. Vous devrez sélectionner un ascendant de la cible du clic.</em>
+                </li>
+                <li>Gérer le bouton - : il doit permettre de modifier la taille du nom de l'équipier en donnant à l'équipier la classe <em>equipier--reduit</em>. Il doit aussi permettre de retourner l'image en lui donnant la classe <em>equipier__image--retourne</em>.</li>
+                <li>Faire en sorte que le contenu du bouton "-" devienne "+" lorsque l'équipier est réduit ... et vice versa of course ;-)</li>
+            </ol>
+        </article>
+
+
+    </main>
+
+    <footer>
+        <p>Programmation Web</p>
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+/*** layout.css ***/
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 2rem;
+    position: relative;
+    height: 100vh;
+    max-width: 600px;
+    margin: auto;
+}
+
+.menu-principal {
+    margin-bottom: 1rem;
+}
+
+.menu-principal ul {
+    display: flex;
+    align-items: flex-end;
+}
+
+.menu-principal a {
+    display: block;
+}
+
+h2 {
+    font-size: 2rem;
+    padding-bottom: 0.5rem;
+}
+
+article {
+    padding: 1rem;
+}
+
+article h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.bouton {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 0.3rem 1rem;
+    padding-right: 1rem;
+    border: solid #EEE 1px;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, padding-right 0.3s ease;
+    user-select: none;
+}
+
+.bouton:hover {
+    background-color: #555;
+    padding-right: 1.5rem;
+}
+
+.footer-principal {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 0.5rem 1rem;
+    text-align: right;
+}

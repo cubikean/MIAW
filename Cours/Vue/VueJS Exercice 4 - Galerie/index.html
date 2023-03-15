@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/card.css">
 
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="./js/progAppli.js" defer></script>
+
 </head>
 
 <body>
@@ -18,20 +21,38 @@
         <main>
             <!-- ARTICLE à fournir ---------------  -->
             <article>
-                <h2>Images Statiques</h2>
+                <h2>{{titreSite}}</h2>
                 <section class="cards">
 
-                    <figure class="card"><img src="images/im1.jpg">
-                        <figcaption><img src="images/likeNon.png" alt="" class="aimeroupas">Alejandro Escamilla </figcaption>
+                    <figure v-for="image in images" class="card"><img :src=image.download_url>
+                        <figcaption v-if="image.jaime === true">
+                            <img src="images/likeOui.png" :alt=resume(image) @click="unlike(image)" class="aimeroupas">
+                            
+                            {{image.author}} </figcaption>
+                        <figcaption v-else>
+                            <img src="images/likeNon.png" :alt=resume(image) @click="like(image)" class="aimeroupas">
+                            
+                            {{image.author}} </figcaption>
                     </figure>
 
-                    <figure class="card"><img src="images/im2.jpg" alt="Photo Paul Jarvis" title="Photo Paul Jarvis">
-                        <figcaption><img src="images/likeNon.png" alt="" class="aimeroupas">Paul Jarvis </figcaption>
-                    </figure>
                 </section>
             </article>
 
             <!-- Fin des ressources fournies --------------- -->
+
+            <article>  
+                <h2>Images likées</h2>
+                <section class="cards">
+
+                    <figure v-for="image in images" class="card">
+                        <div v-if="image.jaime === true ">
+                            <img :src=image.download_url>
+                            <figcaption><img src="images/likeOui.png" :alt=resume(image) @click="unlike(image)" class="aimeroupas">{{image.author}} </figcaption>
+                        </div>
+                    </figure>
+
+                </section>
+            </article>
 
 
         </main>

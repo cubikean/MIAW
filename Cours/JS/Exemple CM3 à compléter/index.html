@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS - DOM</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/decors.css">
+    <link rel="stylesheet" href="css/equipier.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+</head>
+
+<body>
+    <header>
+        <h1>Programmation Javascript</h1>
+        <h2>Manipulation du DOM</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="actuel">Révisions</a></li>
+                <li><a href="consigne.html">Consigne</a></li>
+                <li><a href="exercice.html">Exercice</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h2>Révisions</h2>
+            <p>Les fichiers html permettent de définir le contenu et la structure des pages web.</p>
+            <p>Les fichiers css permettent de définir la mise en forme des pages web.</p>
+            <p>Un programme javascript permet généralement de définir le comportement des éléments d'une page web.</p>
+            <p>Jusqu'à présent, nous avons vu comment :</p>
+            <ul>
+                <li>Ecrire des instructions javascript dans un fichier <em>.js</em></li>
+                <li><strong>lier un programme javascript à une page web</strong> (avec la balise <em>script</em>)</li>
+                <li>en javascript, <strong>sélectionner des éléments</strong> de la page web (pour les modifier, ou pour les stocker dans une variable et les traiter plus tard)</li>
+                <li>accéder à la <strong>liste des classes</strong> d'un élément de la page web et modifier cette liste</li>
+                <li>accéder au <strong>contenu textuel</strong> d'une balise et le modifier</li>
+                <li>accéder aux <strong>attributs</strong> d'une balise et les modifier</li>
+            </ul>
+            <p>Revoyons rapidement ces points techniques</p>
+            <h3>Mise en place du programme</h3>
+            <p>Nous allons tester ces révisions en écrivant un programme javascript qui manipule la page <em>exercice</em></p>
+            <p>Créez un fichier <em>equipier.js</em> dans le dossier <em>js</em>.</p>
+            <p>Dans ce fichier, placez l'instruction javascript qui affiche "Programme en exécution !"</p>
+            <p>Liez la page <em>exercice</em> au fichier <em>equipier.js</em> en plaçant une balise <em>script</em> dans le <em>head</em> de la page web.</p>
+
+            <h3>Sélection d'éléments</h3>
+            <p>La sélection d'éléments dans la page peut être faite avec :
+                <ul>
+                    <li><em>document.querySelectorAll()</em>, quel paramètre faut-il fournir à cette fonction pour qu'elle fasse son travail ? Utilisez cette technique pour afficher directement tous les équipiers dans la console
+                    </li>
+                    <li><em>document.querySelector()</em>, quel paramètre faut-il fournir à cette fonction pour qu'elle fasse son travail ? Utilisez cette technique pour afficher directement le premier équipier dans la console
+                    </li>
+                </ul>
+                <h3>Manipulation des classes d'un élément</h3>
+                <p>On peut accéder à la liste des classes d'un élément de la page web, avec l'attribut <em>classList</em>.</p>
+                <p>Si la variable <em>element</em> contient un élément de la page web, <em>element.classList</em> est la liste de ses classes.</p>
+                <p>Dans la console, affichez la liste des classes du premier bouton de la page.</p>
+                <p>Il est possible d'ajouter une classe à une liste de classes, avec la fonction (la méthode) <em>add</em>. que l'on utilise de cette manière : <em>element.classList(paramètre)</em>.</p>
+                <p>Quel est le paramètre à fournir à <em>add</em> ?</p>
+                <p>Utilisez cette méthode pour ajouter la classe "equipier--reduit" au premier équipier.</p>
+                <p>Utilisez la <em>remove</em> pour enlever la classe "btn" au premier bouton.</p>
+
+                <h3>Manipuler le contenu textuel des balises</h3>
+                <p>Le contenu textuel de la balise <em>h3</em> qui précède est "Manipuler le contenu textuel des balises".</p>
+                <p>Un programme javascript peut récupérer dans une variable le contenu textuel d'une balise.</p>
+                <p>Si la variable <em>titre</em> contient une balise h3, <em>titre.textContent</em> désigne le contenu textuel de cette balise.</p>
+                <p>Utilisez cette méthode pour placer dans une variable <em>texteGrandTitre</em> le texte du titre principal de la page. Affichez cette donnée dans la console.</p>
+                <p>Un programme peut modifier le contenu textuel d'une balise de cette manière : <em>element.textContent = "Nouveau contenu textuel"</em>.</p>
+                <p>Utilisez cette méthode pour modifier le <em>h2</em> de la page.</p>
+
+                <h3>Manipuler les attributs des balises</h3>
+                <p>Un programme peut récupérer la valeur d'un attribut d'une balise.</p>
+                <p><em>let destinationLien1 = document.querySelector("a").getAttribute("href")</em> permet de stocker dans la variable <em>destinationLien1</em> la valeur de l'attribut <em>href</em> du premier lien de la page.</p>
+                <p>Utilisez cette méthode pour afficher la source de la première image de la page.</p>
+                <p>Un programme peut modifier la valeur d'un attribut d'une balise.</p>
+                <p><em>document.querySelector("a").setAttribute("href", "https://univ-larochelle.fr")</em> permet de modifier l'attribut <em>href</em> du premier lien de la page.</p>
+                <p>Utilisez cette méthode pour afficher l'image "John.jpg" dans la première balise image de la page.</p>
+
+        </article>
+
+
+
+    </main>
+
+    <footer>
+        <p>Programmation Web</p>
+    </footer>
+
+
+</body>
+
+</html>
