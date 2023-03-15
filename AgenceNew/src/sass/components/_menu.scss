@@ -1,3 +1,97 @@
-    @use '../helpers/colors'as *;
-    @use '../helpers/breakpoints' as *;
-    
+@use '../helpers/colors'as *;
+@use '../helpers/breakpoints' as *;
+
+.main-menu{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+
+    &::before{
+        content: "";
+        background-color: #f3dc94;
+        z-index: -1;
+        border-radius: 70px;
+        height: 70px;
+        width: 70px;
+        position: absolute;
+        top: -20px;
+        right: -10px;
+        transition: all ease-in-out .3s;
+    }
+
+    &--active{
+        height: 100vh;
+        overflow: hidden;
+        align-items: flex-start;
+        &::before{
+            content: "";
+            background-color: #f3dc94;
+            z-index: -1;
+            border-radius: 0 0 0 100vw;
+            height: 100vh;
+            width: 130vh;
+            position: absolute;
+            top: -30px;
+            right: -10px;
+        }
+    }
+
+
+    &_logo{
+        display: none;
+    }
+
+
+    &_list{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        &_item{
+
+            &_link{
+
+            }
+        }
+    }
+
+
+    &_toggler{
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        background-color: transparent;
+        flex-direction: column;
+        position: relative;
+        border: none;
+        width: 36px;
+        gap: 4px;
+
+        
+
+
+        @media screen and (min-width:768px) {
+            display: none;
+        }
+
+        &_line{
+            height: 2px;
+            border-radius: 2px;
+            background: $yellow;
+            transition: all 0.3s;
+            &:nth-child(1){
+                width: 100%;
+            }
+            &:nth-child(2){
+                width: 80%;
+            }
+            &:nth-child(3){
+                width: 60%;
+            }
+
+        }
+    }
+}
