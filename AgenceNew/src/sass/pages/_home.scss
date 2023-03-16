@@ -1,7 +1,86 @@
 @use '../helpers/colors' as *;
 @use '../helpers/breakpoints' as *;
 @use '../components/button' as *;
+@use '../components/spacer' as *;
+@use '../components/content' as *;
+@use '../layout/header' as *;
 
-.btn{
-    @include btn();
+main{
+
+  background-image: url(../../assets/img/lines.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1740px;
+
+  .hero {
+    padding: 100px 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 60px;
+  
+    &-content {
+      padding: 0 26px;
+      &_title {
+        position: relative;
+        @include title();
+        transform: translateX(20px) 
+      }
+  
+      &_text {
+        @include text();
+      }
+  
+      .btn {
+        @include btn();
+      }
+    }
+    &-image{
+      padding: 0 26px;
+      width: 100%;
+    }
+  }
+
+  .agency {
+    padding: 35px 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 60px;
+  
+    &-content {
+      padding: 0 26px;
+      &_title {
+        position: relative;
+        @include title();
+        transform: translateX(20px) 
+      }
+  
+      &_text {
+        @include text();
+      }
+  
+    }
+
+    &-draggable{
+     
+        &_card{
+
+            &_name{
+
+            }
+
+            &_status{
+
+            }
+        }
+    }
+  }
+
+  .spacer{
+    @include spacer(100px);
+  }   
+  
 }

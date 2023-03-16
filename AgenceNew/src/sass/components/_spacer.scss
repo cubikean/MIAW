@@ -1,0 +1,12 @@
+@use '../helpers/colors'as *;
+@use '../helpers/breakpoints' as *;
+@use '../base/typography' as *;
+
+
+@mixin spacer($value){
+    min-height: $value;
+    width: 100%;
+    border-top: 2px solid rgba($color:  $yellow, $alpha: .6);
+    border-bottom: 2px solid rgba($color:  $yellow, $alpha: .6);
+    background-color: $white;
+}

@@ -1,12 +1,27 @@
 @use '../helpers/colors'as *;
 @use '../helpers/breakpoints' as *;
+@use '../base/typography' as *;
+@use '../components/content' as *;
+
+@keyframes opacity {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
 
 .main-menu{
 
+    position: fixed;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding: 10px;
+    top: 0;
+    width: 100%;
 
     &::before{
         content: "";
@@ -24,7 +39,8 @@
     &--active{
         height: 100vh;
         overflow: hidden;
-        align-items: flex-start;
+        align-items: center;
+        justify-content: center;
         &::before{
             content: "";
             background-color: #f3dc94;
@@ -36,6 +52,8 @@
             top: -30px;
             right: -10px;
         }
+
+        
     }
 
 
@@ -45,15 +63,31 @@
 
 
     &_list{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+        @media screen and (min-width:768px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;   
+            animation: opacity .25s ease-in-out;
+
+        }
+        display: none;
+        
+        &--active{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;    
+            height: 100%;
+            gap: 30px;
+            animation: opacity .25s ease-in-out;
+        }
+        
 
         &_item{
 
             &_link{
-
+                @include title();
             }
         }
     }
@@ -65,11 +99,12 @@
         justify-content: center;
         background-color: transparent;
         flex-direction: column;
-        position: relative;
+        position: absolute;
+        top: 14px;
+        right: 14px;
         border: none;
         width: 36px;
         gap: 4px;
-
         
 
 

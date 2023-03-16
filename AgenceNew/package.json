@@ -3,7 +3,7 @@
     "version": "0.2.0",
     "description": "Compilateur SASS automatique, création d'une version de production, live-reload",
     "main": "dist/index.html",
-    "author": "Pedro à partir du travail de 5t3ph",
+    "author": "Cubikon",
     "scripts": {
         "copier:assets": "copyfiles -u 1 ./src/assets/**/* dist",
         "copier:js": "copyfiles -u 1 ./src/js/**/* dist",
@@ -15,7 +15,7 @@
         "surveiller:sass": "sass --no-source-map --watch src/sass:dist/css",
         "surveiller": "npm-run-all --parallel surveiller:*",
         "servir": "browser-sync start --server dist --files dist",
-        "construire": "npm-run-all copier --parallel surveiller servir"
+        "build": "npm-run-all copier --parallel surveiller servir"
     },
     "dependencies": {
         "browser-sync": "^2.27.12",
