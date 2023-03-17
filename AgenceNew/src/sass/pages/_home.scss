@@ -24,12 +24,12 @@ main{
       padding: 0 26px;
       &_title {
         position: relative;
-        @include title();
+        @include title(32px);
         transform: translateX(20px) 
       }
   
       &_text {
-        @include text();
+        @include text(18px);
       }
   
       .btn {
@@ -43,7 +43,8 @@ main{
   }
 
   .agency {
-    padding: 35px 0;
+    
+    padding: 35px 25px;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -51,30 +52,168 @@ main{
     gap: 60px;
   
     &-content {
-      padding: 0 26px;
       &_title {
         position: relative;
-        @include title();
+        @include title(32px);
         transform: translateX(20px) 
       }
   
       &_text {
-        @include text();
+        @include text(18px);
       }
   
     }
 
     &-draggable{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      column-gap: 26px;
      
         &_card{
+          flex: 1 1 calc(50% - 26px);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
 
             &_name{
+              @include title(20px);
+              margin-bottom: 0px;
+              margin-top: 6px;
 
             }
 
             &_status{
-
+              @include text(18px);
             }
+        }
+    }
+  }
+
+  .stack {
+    
+    padding: 35px 25px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 60px;
+  
+    &-content {
+      &_title {
+        position: relative;
+        @include title(32px);
+        transform: translateX(20px) 
+      }
+  
+      &_text {
+        @include text(18px);
+      }
+
+      .btn {
+        @include btn();
+      }
+  
+    }
+
+    &-images{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 26px;
+     
+        &_single{
+          flex: 1 1 calc(50% - 26px);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          width: 100%;
+
+          & img{
+            object-fit: contain;
+            max-width: 100px;
+          }
+        }
+    }
+  }
+
+  .realisations {
+    
+    padding: 33px 25px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 60px;
+  
+    &-content {
+      &_title {
+        position: relative;
+        @include title(32px);
+        transform: translateX(20px) 
+      }
+  
+      &_text {
+        @include text(18px);
+      }
+
+      .btn {
+        @include btn();
+      }
+  
+    }
+
+    &-swiper{
+      width: calc(100vw - 50px);
+      height: 450px;
+      padding-bottom: 60px;
+        &-wrapper{
+         
+          .swiper-slide {
+            img{
+              max-height: 300px;
+              object-fit: cover;
+            }
+          }
+        }
+
+        &-pagination{
+
+          & .swiper-pagination-bullet{
+            width: 8px;
+            border-radius: 10px;
+            transition: width .3s ease-in-out;
+          }
+
+          & .swiper-pagination-bullet-active{
+            background: $yellow;
+            width: 30px;
+            border-radius: 10px;
+          }
+        }
+
+        &-buttons{
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          bottom: 0px;
+          .swiper-button-prev{
+            position: relative;
+            &::after{
+              content: url(../../assets/img/arrow_left.svg);
+            }
+          }
+          .swiper-button-next{
+            position: relative;
+            &::after{
+              content: url(../../assets/img/arrow_right.svg);
+            }
+          }
         }
     }
   }

@@ -87,7 +87,7 @@
         &_item{
 
             &_link{
-                @include title();
+                @include title(32px);
             }
         }
     }
