@@ -6,7 +6,7 @@
 @mixin spacer($value){
     min-height: $value;
     width: 100%;
-    border-top: 2px solid rgba($color:  $yellow, $alpha: .6);
-    border-bottom: 2px solid rgba($color:  $yellow, $alpha: .6);
+    border-top: 2px solid rgb(248 234 190);
+    border-bottom: 2px solid rgb(248 234 190);
     background-color: $white;
 }

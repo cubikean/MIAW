@@ -18,10 +18,11 @@
     position: fixed;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     padding: 10px;
     top: 0;
     width: 100%;
+    z-index: 99;
 
     &::before{
         content: "";
@@ -46,7 +47,7 @@
             background-color: #f3dc94;
             z-index: -1;
             border-radius: 0 0 0 100vw;
-            height: 100vh;
+            height: 110vh;
             width: 130vh;
             position: absolute;
             top: -30px;
@@ -58,7 +59,12 @@
 
 
     &_logo{
-        display: none;
+        position: absolute;
+        top: 20px;
+
+        &_single{
+            max-width: 140px;
+        }
     }
 
 
@@ -88,6 +94,7 @@
 
             &_link{
                 @include title(32px);
+                margin-bottom: 0;
             }
         }
     }

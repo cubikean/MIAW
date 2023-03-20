@@ -17,7 +17,9 @@
 
     <header>
         <nav class="main-menu">
-            <img class="main-menu_logo" src="./assets/images/logo.svg">
+            <a class="main-menu_logo" href="/">
+            <img class="main-menu_logo_single" src="./assets/img/logo_dark.svg">
+        </a>
             <ul class="main-menu_list">
                 <li class="main-menu_list_item"><a class="main-menu_list_item_link" href="#">lien 1</a></li>
                 <li class="main-menu_list_item"><a class="main-menu_list_item_link" href="#">lien 2</a></li>
@@ -36,15 +38,9 @@
     
 
     <main>
-<<<<<<< HEAD
-        <section>
-            <div class="btn">Devis</div>
-            <div draggable="true">
-                <p>test</p>
-=======
         <section class="hero">
             <div class="hero-content">
-                <h1 class="hero-content_title" data-letter="U">Une agence digitale & créative</h1>
+                <h1 class="hero-content_title" data-letter="U">Une agence <br> digitale & créative</h1>
                 <p class="hero-content_text">Notre agence spécialisée dans la communication visuelle pour le web. Composée de quatre passionnés du web, Digitélior est là pour accompagner toute demande de création de site.</p>
                 <div class="btn">Devis</div>
             </div>
@@ -63,26 +59,25 @@
             </div>
             <div class="agency-draggable">
                 <div class="agency-draggable_card">
-                    <img class="agency-draggable_card_image" src="assets/img/Rectangle13.svg" alt="">
+                    <img class="agency-draggable_card_image" src="assets/img/clement.png" alt="">
                     <h3 class="agency-draggable_card_name">Clément</h3>
                     <p class="agency-draggable_card_status">Développeur</p>
                 </div>
                 <div class="agency-draggable_card">
-                    <img class="agency-draggable_card_image" src="assets/img/Rectangle14.svg" alt="">
-                    <h3 class="agency-draggable_card_name">Clément</h3>
+                    <img class="agency-draggable_card_image" src="assets/img/margaux.png" alt="">
+                    <h3 class="agency-draggable_card_name">Margaux</h3>
+                    <p class="agency-draggable_card_status">Graphiste</p>
+                </div>
+                <div class="agency-draggable_card">
+                    <img class="agency-draggable_card_image" src="assets/img/valentin.png" alt="">
+                    <h3 class="agency-draggable_card_name">Valentin</h3>
                     <p class="agency-draggable_card_status">Développeur</p>
                 </div>
                 <div class="agency-draggable_card">
-                    <img class="agency-draggable_card_image" src="assets/img/Rectangle15.svg" alt="">
-                    <h3 class="agency-draggable_card_name">Clément</h3>
-                    <p class="agency-draggable_card_status">Développeur</p>
+                    <img class="agency-draggable_card_image" src="assets/img/hugo.png" alt="">
+                    <h3 class="agency-draggable_card_name">Hugo</h3>
+                    <p class="agency-draggable_card_status">Graphiste</p>
                 </div>
-                <div class="agency-draggable_card">
-                    <img class="agency-draggable_card_image" src="assets/img/Rectangle16.svg" alt="">
-                    <h3 class="agency-draggable_card_name">Clément</h3>
-                    <p class="agency-draggable_card_status">Développeur</p>
-                </div>
->>>>>>> 2d9e38765f23985e7b22facaf67110981e6d6a47
             </div>
         </section>
 
@@ -127,13 +122,13 @@
             <div class="realisations-swiper swiper">
                 <div class="realisations-swiper-wrapper swiper-wrapper">
                     <div class="realisations-swiper-wrapper_slide swiper-slide">
-                        <img src="assets/img/projet_1.svg" alt="">
+                        <img src="assets/img/mockup_artechaux.png" alt="">
                     </div>
                     <div class="swiper-slide">
-                        <img src="assets/img/Rectangle13.svg" alt="">
+                        <img src="assets/img/mockup_spacecake.png" alt="">
                     </div>
                     <div class="swiper-slide">
-                        <img src="assets/img/Rectangle15.svg" alt="">
+                        <img src="assets/img/mockup_celine.png" alt="">
                     </div>
                    
                 </div>
@@ -150,10 +145,40 @@
 
         <div class="spacer"></div>
 
+        <section class="idea">
+            <div class="idea-content">
+                <h2 class="idea-content_title" data-letter="V" >Vous avez une idée ?</h2>
+                <p class="idea-content_text">Vous avez déjà une idée pour votre site web, n’hésitez pas à nous contacter en nous donnant le plus d’information possible</p>
+            </div>
+            <div class="idea-form">
+                <form action="">
+                    <input type="text" placeholder="Nom" required>
+                    <input type="text" placeholder="Prénom" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="text" placeholder="Sujet" required>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Votre message"></textarea>
+                    <input class="btn" type="submit" value="Nous contacter">
+                </form>
+            </div>
+        </section>
 
     </main>
 
-    <footer>
+    <footer class="main-footer">
+        <div class="main-footer_nav">
+            <ul class="main-footer_nav_list">
+                <li class="main-footer_nav_list_item"><a href="" class="main-footer_nav_list_item_link">L'agence</a></li>
+                <li class="main-footer_nav_list_item"><a href="" class="main-footer_nav_list_item_link">Nos services</a></li>
+                <li class="main-footer_nav_list_item"><a href="" class="main-footer_nav_list_item_link">Notre stack</a></li>
+                <li class="main-footer_nav_list_item"><a href="" class="main-footer_nav_list_item_link">Contact</a></li>
+            </ul>
+        </div>
+        <div class="main-footer_logo">
+            <img class="main-footer_logo_single" src="./assets/img/logo_white.svg">
+            <p class="main-footer_logo_infos">44 Av. Albert Einstein,
+                17000 La Rochelle</p>
+        </div>
+    
 
     </footer>
 

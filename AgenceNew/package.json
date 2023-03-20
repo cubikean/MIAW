@@ -15,7 +15,11 @@
         "surveiller:sass": "sass --no-source-map --watch src/sass:dist/css",
         "surveiller": "npm-run-all --parallel surveiller:*",
         "servir": "browser-sync start --server dist --files dist",
-        "build": "npm-run-all copier --parallel surveiller servir"
+        "build": "npm-run-all copier --parallel surveiller servir",
+       
+        "surveillerprod:sass": "sass --no-source-map src/sass:dist/css",
+        "surveillerprod": "npm-run-all --parallel surveillerprod:*",
+        "buildprod": "npm-run-all copier --parallel surveillerprod"
     },
     "dependencies": {
         "browser-sync": "^2.27.12",
