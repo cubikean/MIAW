@@ -1,2 +1,6 @@
-@use '../helpers/colors' as *;
-@use '../helpers/breakpoints' as *;
+@use "../helpers/colors" as *;
+@use "../helpers/breakpoints" as *;
+@use "../components/button" as *;
+@use "../components/content" as *;
+@use "../components/spacer" as *;
+

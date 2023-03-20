@@ -3,7 +3,7 @@
     "version": "0.2.0",
     "description": "Compilateur SASS automatique, création d'une version de production, live-reload",
     "main": "dist/index.html",
-    "author": "Pedro à partir du travail de 5t3ph",
+    "author": "Cubikon",
     "scripts": {
         "copier:assets": "copyfiles -u 1 ./src/assets/**/* dist",
         "copier:js": "copyfiles -u 1 ./src/js/**/* dist",

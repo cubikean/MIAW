@@ -10,6 +10,12 @@ html {
     font-size: 14px;
 }
 
+a {
+    display: inline-flex;
+    text-decoration: none;
+    color: initial;
+}
+
 em {
     font-style: italic;
 }
@@ -20,4 +26,5 @@ strong {
 
 img {
     max-width: 100%;
+    width: 100%;
 }
