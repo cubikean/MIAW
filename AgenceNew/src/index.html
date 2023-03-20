@@ -6,8 +6,10 @@
     <meta charset="UTF-8">
     <meta name="description" content="">
     <meta name="keywords" content="">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/styles.css">
     <script src="./assets/js/menu.js" defer></script>
+  
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -61,34 +63,123 @@
             </div>
             <div class="agency-draggable">
                 <div class="agency-draggable_card">
-                    <img class="agency-draggable_card_image" src="../src/assets/img/Rectangle13.svg" alt="">
+                    <img class="agency-draggable_card_image" src="assets/img/Rectangle13.svg" alt="">
                     <h3 class="agency-draggable_card_name">Clément</h3>
                     <p class="agency-draggable_card_status">Développeur</p>
                 </div>
                 <div class="agency-draggable_card">
-                    <img class="agency-draggable_card_image" src="../src/assets/img/Rectangle14.svg" alt="">
+                    <img class="agency-draggable_card_image" src="assets/img/Rectangle14.svg" alt="">
                     <h3 class="agency-draggable_card_name">Clément</h3>
                     <p class="agency-draggable_card_status">Développeur</p>
                 </div>
                 <div class="agency-draggable_card">
-                    <img class="agency-draggable_card_image" src="../src/assets/img/Rectangle15.svg" alt="">
+                    <img class="agency-draggable_card_image" src="assets/img/Rectangle15.svg" alt="">
                     <h3 class="agency-draggable_card_name">Clément</h3>
                     <p class="agency-draggable_card_status">Développeur</p>
                 </div>
                 <div class="agency-draggable_card">
-                    <img class="agency-draggable_card_image" src="../src/assets/img/Rectangle16.svg" alt="">
+                    <img class="agency-draggable_card_image" src="assets/img/Rectangle16.svg" alt="">
                     <h3 class="agency-draggable_card_name">Clément</h3>
                     <p class="agency-draggable_card_status">Développeur</p>
                 </div>
 >>>>>>> 2d9e38765f23985e7b22facaf67110981e6d6a47
             </div>
         </section>
+
+        <div class="spacer"></div>
+
+        <section class="stack">
+            <div class="stack-content">
+                <h2 class="stack-content_title" data-letter="S" >notre stack</h2>
+                <p class="stack-content_text">Digitélior saura jongler entre ses compétences et vos exigences, en s’appuyant sur son expérience dans le développement et la communication print et web.</p>
+                <div class="btn">En savoir plus</div>
+            </div>
+            <div class="stack-images">
+                <div class="stack-images_single">
+                    <img src="assets/img/logo_react.svg" alt="">
+                </div>
+                <div class="stack-images_single">
+                    <img src="assets/img/logo_vuejs.svg" alt="">
+                </div>
+                <div class="stack-images_single">
+                    <img src="assets/img/logo_angular.svg" alt="">
+                </div>
+                <div class="stack-images_single">
+                    <img src="assets/img/logo_wordpress.svg" alt="">
+                </div>
+                <div class="stack-images_single">
+                    <img src="assets/img/logo_symfony.svg" alt="">
+                </div>
+                <div class="stack-images_single">
+                    <img src="assets/img/logo_node.svg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <div class="spacer"></div>
+
+
+        <section class="realisations">
+            <div class="realisations-content">
+                <h2 class="realisations-content_title" data-letter="R" >nos realisations</h2>
+                <p class="realisations-content_text">Digitélior, c’est une agence de communication pleine d’idées portée par des professionnels du design graphique et du développement web, passionnés par leur métier</p>
+            </div>
+            <div class="realisations-swiper swiper">
+                <div class="realisations-swiper-wrapper swiper-wrapper">
+                    <div class="realisations-swiper-wrapper_slide swiper-slide">
+                        <img src="assets/img/projet_1.svg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/Rectangle13.svg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/Rectangle15.svg" alt="">
+                    </div>
+                   
+                </div>
+    
+                <div class="realisations-swiper-pagination swiper-pagination"></div>
+                <div class="realisations-swiper-buttons">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                
+            </div>
+        </section>
+        
+
+        <div class="spacer"></div>
+
+
     </main>
 
     <footer>
 
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.1.1/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            // loop: true,
+            // autoHeight: true,
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            
+            });
+    </script>
+   
 </body>
 
 </html>

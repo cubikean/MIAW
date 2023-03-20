@@ -3,7 +3,7 @@
 @use '../base/typography' as *;
 
 
-@mixin title(){
+@mixin title($size){
     &::before{
         content: attr(data-letter);
         font-size: 150px;
@@ -15,7 +15,7 @@
         z-index: -1;
     }
 
-    font-size: 32px;
+    font-size: $size;
     font-family: $Bold;
     line-height: 1.2;
     color: $black;
@@ -24,8 +24,8 @@
     margin-bottom: 60px;
 }
 
-@mixin text(){
-    font-size: 18px;
+@mixin text($size){
+    font-size: $size;
     font-family: $Regular;
     line-height: 1.2;
     color: $black;
