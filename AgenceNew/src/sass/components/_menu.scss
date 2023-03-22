@@ -85,7 +85,22 @@
 
         &_single{
             max-width: 140px;
+            display: block;
+
             @media screen and (min-width:768px) {
+                max-width: 120px;
+                
+            }
+        }
+        .white{
+            @media screen and (max-width:768px) {
+                display: none;
+            }
+        }
+        .dark{
+            display: none;
+            @media screen and (max-width:768px) {
+                display: block;
                 max-width: 120px;
             }
         }

@@ -1,14 +1,14 @@
 <?php
-if(!isset($_POST['nom']) || !isset($_POST['prenom']) || !isset($_POST['objet']) || !isset($_POST['email']) || !isset($_POST['message'])){
-    header('Location: javascript:history.go(-1)');
+if(!isset($_POST['nom']) || !isset($_POST['prenom']) || !isset($_POST['sujet']) || !isset($_POST['email']) || !isset($_POST['message'])){
+    echo 'Erreur : La syntaxe de la requête est erronée';
     return;
 }
 
 $lastname = strip_tags($_POST['nom']);
 $firstname = strip_tags($_POST['prenom']);
-$subject = strip_tags($_POST['objet']);
+$subject = strip_tags($_POST['sujet']);
 $email = strip_tags($_POST['email']);
 $message = strip_tags($_POST['message']);
 
 mail("digitelior.agence@gmail.com", $subject, "From : ". $firstname ." ". $lastname ." (". $email .")\r\n \r\n". $message);
-header( "Location: index.php?c=1&nl=1#contact" );
+echo 'Votre message a bien été envoyé !';

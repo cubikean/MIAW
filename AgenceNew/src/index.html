@@ -18,7 +18,8 @@
     <header>
         <nav class="main-menu">
             <a class="main-menu_logo" href="#home">
-            <img class="main-menu_logo_single" src="./assets/img/logo_white.svg">
+            <img class="main-menu_logo_single white" src="./assets/img/logo_white.svg">
+            <img class="main-menu_logo_single dark" src="./assets/img/logo_dark.svg">
         </a>
             <ul class="main-menu_list">
                 <li class="main-menu_list_item"><a class="main-menu_list_item_link" href="#agence">L'agence</a></li>
@@ -183,6 +184,37 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.1.1/swiper-bundle.min.js"></script>
     <script>
+        const form = document.querySelector('.idea-form form');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const nom = form.querySelector('input[type="text"][placeholder="Nom"]').value;
+            const prenom = form.querySelector('input[type="text"][placeholder="Prénom"]').value;
+            const email = form.querySelector('input[type="email"][placeholder="Email"]').value;
+            const sujet = form.querySelector('input[type="text"][placeholder="Sujet"]').value;
+            const message = form.querySelector('textarea').value;
+            
+            const xhr = new XMLHttpRequest();
+            
+            xhr.open('POST', 'sendMail.php', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                    // Retour requête
+                    console.log(xhr.responseText);
+                }
+            };
+            
+            xhr.send('nom=' + encodeURIComponent(nom) +
+                    '&prenom=' + encodeURIComponent(prenom) +
+                    '&email=' + encodeURIComponent(email) +
+                    '&sujet=' + encodeURIComponent(sujet) +
+                    '&message=' + encodeURIComponent(message));
+        });
+
+
         const swiper = new Swiper('.swiper', {
             // Optional parameters
             direction: 'horizontal',
