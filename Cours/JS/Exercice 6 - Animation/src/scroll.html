@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+    <script src="https://kit.fontawesome.com/1bb9241288.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js" defer></script>
+
+    
+    
+    <script src="js/scroll.js" defer></script>
+
+
+</head>
+
+<body>
+    <header class="header-principal">
+        <hgroup class="header-principal__titres">
+            <h1>Web Design & Intégration</h1>
+            <h2>Développement Javascript</h2>
+        </hgroup>
+    </header>
+    <nav class="menu-principal">
+        <ul>
+            <li><a href="index.html">Bases</a></li>
+            <li><a href="timeline.html">Time lines</a></li>
+            <li><a class="actif" href="scroll.html">Scroll</a></li>
+            <li><a href="accordeon.html">Accordéon</a></li>
+            <li><a href="accordeon-plus.html">Accordéon Plus</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="intro">
+            <p>Gsap permet de gérer le déclenchement des animations en fonction du <em>scroll</em>, ou plus précisément, en fonction de la visibilité d'éléments dans la page.</p>
+            <p>Consultez d'abord <a href="https://greensock.com/scrolltrigger/">cette vidéo</a>.</p>
+        </section>
+        <section class="consignes">
+            <h2>Episode 1 - Déclenchement simple</h2>
+            <article>
+                <h3>Travail à effectuer</h3>
+                <p>Dans le <em>head</em> de la page, pensez à placer un lien vers le CDN distribuant le plugin "Scrolltrigger".</p>
+                <p>Faites en sorte que l'image de l'épisode 1 arrive en roulant depuis la gauche lorsque l'image est totalement entrée dans la fenêtre d'affichage.</p>
+                <p>Bonus : pour calculer le décalage en <em>x</em> à donner à l'image, vous pouvez faire appel à <em>document.querySelector('main').offsetWidth</em>...</p>
+            </article>
+        </section>
+
+        <section class="episode1">
+
+            <div class="images center">
+                <img src="assets/img/teammembers/tm1.png" alt="">
+            </div>
+
+        </section>
+
+        <section class="episode2">
+            <h2>Episode 2 - Gestion du header</h2>
+            <section class="consignes">
+                <article>
+                    <p>On veut que lors du scroll (plus précisément, lorsque le milieu du <em>.header-principal</em> sort de la fenêtre), le <em>.menu-principal</em> prenne une forme différente. On appliquera au menu la classe de modification "menu-principal--scrolled".
+                    </p>
+                    <p>Ici, aucune animation n'est nécessaire car les transitions css suffisent.</p>
+                    <p>Créez le <em>ScrollTrigger</em> permettant de modifier la classe du menu ; vous utiliserez l'option <em>toggleClass</em>. </p>
+                </article>
+
+            </section>
+
+        </section>
+        <section class="episode3">
+            <h2>Episode 3 - Création d'un bouton "scroll to top"</h2>
+            <section class="consignes">
+                <article>
+
+
+                    <p>On veut que le bouton <em>.top-scroller</em> soit masqué à l'arrivée sur la page, et qu'il apparaisse avec une animation lorsque l'internaute scrolle vers le bas.</p>
+                    <p>Ce bouton devra disparaître losrque l'internaute verra le haut de la page.</p>
+                </article>
+
+            </section>
+
+        </section>
+    </main>
+
+
+    <footer class="footer-principal">
+        <p>LP MIAW - WDI</p>
+        <div class="top-scroller"><i class="fas fa-angle-up" aria-hidden="true"></i></div>
+    </footer>
+
+</body>
+
+</html>

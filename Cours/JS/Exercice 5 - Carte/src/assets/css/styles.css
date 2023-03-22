@@ -1,0 +1,396 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/******** Mon reset **********/
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+/**** Général *********************/
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #666;
+  padding: 0 0rem;
+  background-color: #DDD;
+}
+
+/******** HEADER ****************/
+body > header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.98);
+  /*  box-shadow: 0 -3px 20px rgba(255, 255, 255, 0.55);
+  */
+  z-index: 10;
+}
+
+body > header hgroup {
+  padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
+body > header h1 {
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+body > header h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+/**** MENU **************************************/
+#menu_principal {
+  padding-left: 1rem;
+}
+#menu_principal ul {
+  display: flex;
+  flex-direction: row;
+}
+#menu_principal li {
+  margin-right: 0.5rem;
+}
+#menu_principal a.actif {
+  background-color: #444;
+  color: #DDD;
+}
+#menu_principal a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  padding: 10px;
+  -webkit-transition: 0.5s ease background;
+  transition: 0.5s ease background;
+  border-radius: 3px 3px 0 0;
+}
+#menu_principal a:hover {
+  background-color: #111;
+  color: #DDD;
+}
+
+#menu_principal.sombre {
+  color: #DDD;
+  background-color: #111;
+}
+#menu_principal.sombre a.actif {
+  background-color: #DDD;
+  color: #444;
+}
+#menu_principal.sombre a:hover {
+  background-color: #DDD;
+  color: #111;
+}
+
+/********* Contenu principal ***/
+main {
+  padding: 10rem 2rem 3rem 2rem;
+  background-color: #111;
+  color: #FFF;
+  background-image: url("../img/bg.svg");
+  background-position: center;
+  background-size: cover;
+}
+
+main h2,
+aside h2 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+main a,
+aside a {
+  color: #FFF;
+}
+
+/*********** Sections et Articles **************************************************/
+aside {
+  background-color: #111;
+  color: #FFF;
+  padding: 3rem;
+}
+
+aside section {
+  margin-bottom: 2rem;
+}
+
+aside article {
+  padding: 0;
+  text-align: justify;
+  line-height: 1.5rem;
+}
+
+aside article h3 {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+aside article ul,
+aside article ol {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+aside article ul {
+  list-style-type: circle;
+}
+
+aside article ol {
+  list-style-type: decimal;
+}
+
+aside article li {
+  padding-bottom: 2px;
+}
+
+aside p {
+  margin-bottom: 1rem;
+}
+
+/**************** Footer ************************************/
+body > footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 1rem 2rem;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+}
+
+body > footer p {
+  padding: 0 0 0 0;
+}
+
+.set-of-miaw-pcard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.miaw-pcard {
+  border-radius: 8px;
+  box-shadow: 20px 20px 22px rgba(0, 0, 0, 0.2);
+  font-family: "Poppins", sans-serif;
+  max-width: 20rem;
+  min-width: 15rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+  line-height: 1;
+  color: #FFF;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  margin-bottom: 2rem;
+  flex: 1 1 20rem;
+  overflow: hidden;
+  transition: opacity ease-in 0.5s;
+}
+.miaw-pcard.invisible {
+  opacity: 0;
+}
+
+.miaw-pcard__suppression {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0.5rem;
+  color: #cfcece;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color ease-in 0.2s, color ease-in 0.2s;
+  font-family: monospace;
+}
+.miaw-pcard__suppression:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.miaw-pcard__header {
+  margin-bottom: 1rem;
+  transform: scale(0.8);
+}
+
+.miaw-pcard__main {
+  margin-bottom: 3rem;
+}
+
+.miaw-pcard__cadre-portrait {
+  height: 8rem;
+  width: 8rem;
+  background-color: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  border-radius: 50%;
+  margin: 30px auto 20px auto;
+}
+
+.miaw-pcard__portrait {
+  height: 86%;
+  border-radius: 50%;
+  margin-top: 7%;
+}
+
+.miaw-pcard__nom {
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.7px;
+  font-weight: bold;
+}
+
+.miaw-pcard__fonction {
+  margin-bottom: 1rem;
+  letter-spacing: 1.5px;
+  color: #e6e6e6;
+  font-weight: normal;
+}
+
+.miaw-pcard__main {
+  width: 100%;
+}
+
+.miaw-pcard__more {
+  width: 80%;
+  margin: auto;
+  font-size: 1.2rem;
+  font-weight: normal;
+  letter-spacing: 1.5px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  padding: 1rem;
+}
+.miaw-pcard__more:hover {
+  letter-spacing: 5px;
+  background-color: rgba(59, 59, 59, 0.3);
+}
+
+/***** Footer *******/
+.miaw-pcard__footer {
+  background-color: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 0.3rem 0;
+}
+
+.miaw-pcard__resultat {
+  padding: 0.7rem 0.5rem;
+  text-align: center;
+  flex: 1 0 50%;
+}
+
+.miaw-pcard__resultat:first-of-type {
+  border-right: 2px solid rgba(255, 255, 255, 0.08);
+}
+
+.miaw-pcard__score {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.miaw-pcard__item {
+  letter-spacing: 1.5px;
+  color: #e6e6e6;
+  font-weight: normal;
+  font-size: 0.8rem;
+}
+
+.miaw-pcard__fonction,
+.miaw-pcard__more,
+.miaw-pcard__footer,
+.miaw-pcard__header {
+  transition: all ease-in-out 0.5s;
+}
+
+/**************** Version réduite ***********/
+.miaw-pcard--reduit .miaw-pcard__fonction {
+  transform: scaleY(0);
+}
+.miaw-pcard--reduit .miaw-pcard__more {
+  transform: scaleY(0);
+  transform-origin: bottom;
+}
+.miaw-pcard--reduit .miaw-pcard__footer {
+  transform: translateY(100%);
+}
+.miaw-pcard--reduit .miaw-pcard__header {
+  transform: scale(1) translateY(4rem);
+}

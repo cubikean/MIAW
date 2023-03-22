@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+    <script src="https://kit.fontawesome.com/1bb9241288.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="js/accordeon.js" defer></script>
+</head>
+
+<body>
+    <header class="header-principal">
+        <hgroup class="header-principal__titres">
+            <h1>Web Design & Intégration</h1>
+            <h2>Développement Javascript</h2>
+        </hgroup>
+    </header>
+    <nav class="menu-principal">
+        <ul>
+            <li><a href="index.html">Bases</a></li>
+            <li><a href="timeline.html">Time lines</a></li>
+            <li><a href="scroll.html">Scroll</a></li>
+            <li><a class="actif" href="accordeon.html">Accordéon</a></li>
+            <li><a href="accordeon-plus.html">Accordéon Plus</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="intro">
+            <p>Vous devez utiliser <em>gsap</em> pour donner un fonctionnement d'accordéon au composant proposé ci-dessous.</p>
+
+        </section>
+        <section class="consignes">
+            <article>
+                <p>Lorsque la souris entre dans un <em>.accordeon__item</em>, l'internaute doit voir apparaître les détails de cet élément.</p>
+                <p>Gsap fonctionne grâce aux transitions css.</p>
+                <p>Les navigateurs sont capables de faire évoluer les valeurs numériques des propriétées, par exemple passer de <em>height : 0</em> à <em>height : 10rem</em> est tout à fait classique.</p>
+                <p>Ici, c'est bien la hauteur des <em>.accordeon__details-item</em> qu'il va falloir animer.</p>
+                <p>Vous savez qu'il est dangereux de donner une hauteur à un conteneur html, puisque son contenu est susceptible d'évoluer (simplement lorsqu'on rétrécit la fenêtre), ce qui peut amener le contenu à dépasser de son conteneur. Et quand on
+                    voit ça sur une page web, on se dit : "pas pro".</p>
+                <p>Ici, on va réussir à faire évoluer la hauteur de <em>.accordeon__details-item</em> de 0 à <em>auto</em>.</p>
+                <p>Au "repos", les <em>.accordeon__details-item</em> ont un <em>height : 0</em>.</p>
+                <p>Le programme devra donc donner à <em>.accordeon__details-item</em> une taille <em>auto</em> avant d'animer cette taille à partir de la valeur 0 ... </p>
+            </article>
+
+        </section>
+        <section class="valeurs">
+            <h2>Nos valeurs</h2>
+            <ul class="accordeon">
+                <li class="accordeon__item">
+                    <h3 class="accordeon__titre-item">Produits sur mesure</h3>
+                    <div class="accordeon__details-item">
+                        <p>Connaissez-vous un <strong>artisan</strong> capable de produire une embouchure de qualité suivant les critères que vous définissez avec lui ?</p>
+                        <p>Cet homme existe pourtant bel et bien, il s'appelle <strong>Dimitri Donat</strong>.</p>
+                    </div>
+
+                </li>
+                <li class="accordeon__item">
+                    <h3 class="accordeon__titre-item">Fabrication artisanale</h3>
+                    <div class="accordeon__details-item">
+                        <p>C’est au <strong>cœur des Alpes françaises</strong> que Dimitri imagine et façonne les embouchures <a href="https://www.donat-mouthpiece.com/">Donat</a> dans son atelier.</p>
+                        <p>Pensées et dessinées pour les <strong>musiciens de tous niveaux</strong>, elles sont un gage de qualité et d’authenticité.</p>
+                    </div>
+                    <div class="accordeon__details-item-supp">
+                        <p>Retrouvez les 3 finitions :</p>
+                        <ul>
+                            <li>Plaqué or</li>
+                            <li>Plaqué argent</li>
+                            <li>Brut (pour les essais)</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="accordeon__item">
+                    <h3 class="accordeon__titre-item">Essai à domicile</h3>
+                    <div class="accordeon__details-item">
+                        <p>Choisissez dans notre catalogue <strong>plusieurs embouchures</strong> qui pourraient vous convenir.</p>
+                        <p>Nous vous les envoyons <strong>sous trois jours</strong> et vous avez deux semaine pour les essayer.</p>
+                        <p>Renvoyez-nous toutes les embouchures, et commandez celle qui vous plait !</p>
+
+                    </div>
+                    <div class="accordeon__details-item-supp">
+                        <p>Nous fabriquons des embouchures pour ...</p>
+                        <ul>
+                            <li>Trompette</li>
+                            <li>Bugle</li>
+                            <li>Cor d'harmonie</li>
+                        </ul>
+                    </div>
+                </li>
+
+            </ul>
+
+        </section>
+
+    </main>
+
+    <footer class="footer-principal">
+        <p>LP MIAW - WDI</p>
+        <div class="top-scroller"><i class="fas fa-angle-up" aria-hidden="true"></i></div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,255 @@
+/******** Mon reset **********/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+}
+
+em {
+    font-style: italic;
+}
+
+strong {
+    font-weight: bold;
+    /*color: lighten(inherit, 20%);*/
+}
+
+
+/**** Général *********************/
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0 0rem;
+    min-height: 100vw;
+}
+
+
+/******** HEADER ****************/
+
+.header-principal {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+}
+
+h1 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.header-principal h2 {
+    font-size: 1.3rem;
+}
+
+
+/**** MENU **************************************/
+
+.menu-principal {
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.97);
+    padding-bottom: 0;
+    transition: padding 0.5s ease;
+    padding-left: 1rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    ul {
+        display: flex;
+        flex-direction: row;
+    }
+    li {
+        margin-right: 0.5rem
+    }
+    a.actif {
+        background-color: $coul-background;
+        color: $coul-on-background;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        padding: 10px;
+        -webkit-transition: 0.5s ease background;
+        transition: 0.5s ease background;
+        border-radius: 3px 3px 0 0;
+    }
+    a:hover {
+        background-color: $coul-surface-1;
+        color: $coul-on-surface-1;
+    }
+}
+
+.menu-principal--scrolled {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    a {
+        border-radius: 5px;
+        background-color: lighten( $coul-primary, 10%);
+        color: $coul-on-primary;
+    }
+    a:hover {
+        background-color: $coul-primary;
+        color: $coul-on-primary;
+    }
+    a.actif {
+        background-color: darken( $coul-primary, 10%);
+        color: $coul-on-surface-1;
+    }
+}
+
+.menu-principal.sombre {
+    color: #DDD;
+    background-color: #111;
+    a.actif {
+        background-color: #DDD;
+        color: #444;
+    }
+    a:hover {
+        background-color: #DDD;
+        color: #111;
+    }
+}
+
+
+/********* Contenu principal ***/
+
+main {
+    padding: 2rem;
+    background-color: $coul-background;
+    color: $coul-on-background;
+    /*  background-image: url("../img/bg.svg");
+    background-position: center;
+    background-size: cover;*/
+}
+
+main h2,
+aside h2 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    padding: 0.8rem 1.5rem;
+    /* border: 1px solid #DDD;*/
+    background-color: $coul-surface-1;
+    color: $coul-on-surface-1;
+    border-radius: 5px;
+}
+
+main a,
+aside a {
+    color: #FFF;
+}
+
+.bouton {
+    margin-bottom: 1rem;
+}
+
+.accordeon-plus {
+    margin-bottom: 2rem;
+}
+
+
+/*********** Sections et Articles **************************************************/
+
+.intro {
+    line-height: 1.5;
+    font-size: 1.2rem;
+    background-color: $coul-surface-1;
+    color: $coul-on-surface-1;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-left: solid 2px $coul-primary;
+    border-radius: 0 5px 5px 0;
+}
+
+aside {
+    background-color: $coul-background;
+    color: $coul-on-background;
+    padding: 2rem;
+}
+
+article {
+    margin-bottom: 2rem;
+}
+
+.consignes {
+    margin-bottom: 2rem;
+}
+
+.consignes article {
+    padding: 0;
+    text-align: justify;
+    line-height: 1.5rem;
+}
+
+.consignes article h3 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+}
+
+.consignes article h3:before {
+    content: "\02022";
+    padding-right: 0.5rem;
+}
+
+.consignes article ul,
+.consignes article ol {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.consignes article ul {
+    list-style-type: circle;
+}
+
+.consignes article ol {
+    list-style-type: decimal;
+}
+
+.consignes article li {
+    padding-bottom: 2px;
+}
+
+.consignes p {
+    margin-bottom: 0.5rem;
+}
+
+
+/**************** Footer ************************************/
+
+.footer-principal {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    padding: 1rem 2rem;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.25);
+    z-index: 100;
+}
+
+.footer-principal p {
+    padding: 0 0 0 0;
+}
+
+
+/**** topScroller ***/
+
+.top-scroller {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: $coul-primary;
+    position: absolute;
+    top: -1.25rem;
+    right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}

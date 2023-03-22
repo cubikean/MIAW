@@ -1,0 +1,189 @@
+/******** Mon reset **********/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+}
+
+em {
+    font-style: italic;
+}
+
+strong {
+    font-weight: bold;
+}
+
+
+/**** Général *********************/
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #666;
+    padding: 0 0rem;
+    background-color: #DDD;
+}
+
+
+/******** HEADER ****************/
+
+body>header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.98);
+    /*  box-shadow: 0 -3px 20px rgba(255, 255, 255, 0.55);
+*/
+    z-index: 10;
+}
+
+body>header hgroup {
+    padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
+body>header h1 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+body>header h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+
+/**** MENU **************************************/
+
+#menu_principal {
+    padding-left: 1rem;
+    ul {
+        display: flex;
+        flex-direction: row;
+    }
+    li {
+        margin-right: 0.5rem
+    }
+    a.actif {
+        background-color: #444;
+        color: #DDD;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        padding: 10px;
+        -webkit-transition: 0.5s ease background;
+        transition: 0.5s ease background;
+        border-radius: 3px 3px 0 0;
+    }
+    a:hover {
+        background-color: #111;
+        color: #DDD;
+    }
+}
+
+#menu_principal.sombre {
+    color: #DDD;
+    background-color: #111;
+    a.actif {
+        background-color: #DDD;
+        color: #444;
+    }
+    a:hover {
+        background-color: #DDD;
+        color: #111;
+    }
+}
+
+
+/********* Contenu principal ***/
+
+main {
+    padding: 10rem 2rem 3rem 2rem;
+    background-color: #111;
+    color: #FFF;
+    background-image: url("../img/bg.svg");
+    background-position: center;
+    background-size: cover;
+}
+
+main h2,
+aside h2 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+main a,
+aside a {
+    color: #FFF;
+}
+
+
+/*********** Sections et Articles **************************************************/
+
+aside {
+    background-color: #111;
+    color: #FFF;
+    padding: 3rem;
+}
+
+aside section {
+    margin-bottom: 2rem;
+}
+
+aside article {
+    padding: 0;
+    text-align: justify;
+    line-height: 1.5rem;
+}
+
+aside article h3 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+aside article ul,
+aside article ol {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+aside article ul {
+    list-style-type: circle;
+}
+
+aside article ol {
+    list-style-type: decimal;
+}
+
+aside article li {
+    padding-bottom: 2px;
+}
+
+aside p {
+    margin-bottom: 1rem;
+}
+
+
+/**************** Footer ************************************/
+
+body>footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 1rem 2rem;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+}
+
+body>footer p {
+    padding: 0 0 0 0;
+}

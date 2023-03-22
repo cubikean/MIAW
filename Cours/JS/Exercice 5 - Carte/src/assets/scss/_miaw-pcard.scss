@@ -1,0 +1,170 @@
+.set-of-miaw-pcard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.miaw-pcard {
+    border-radius: 8px;
+    box-shadow: 20px 20px 22px rgba(0, 0, 0, 0.2);
+    font-family: 'Poppins', sans-serif;
+    max-width: 20rem;
+    min-width: 15rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    line-height: 1;
+    color: #FFF;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    margin-bottom: 2rem;
+    flex: 1 1 20rem;
+    overflow: hidden;
+    transition: opacity ease-in 0.5s;
+    &.invisible {
+        opacity: 0;
+    }
+}
+
+.miaw-pcard__suppression {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.5rem;
+    color: rgb(207, 206, 206);
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color ease-in 0.2s, color ease-in 0.2s;
+    font-family: monospace;
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #fff;
+    }
+}
+
+.miaw-pcard__header {
+    margin-bottom: 1rem;
+    transform: scale(0.8);
+}
+
+.miaw-pcard__main {
+    margin-bottom: 3rem;
+}
+
+.miaw-pcard__cadre-portrait {
+    height: 8rem;
+    width: 8rem;
+    background-color: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(20px);
+    border-radius: 50%;
+    margin: 30px auto 20px auto;
+}
+
+.miaw-pcard__portrait {
+    height: 86%;
+    border-radius: 50%;
+    margin-top: 7%;
+}
+
+.miaw-pcard__nom {
+    margin-bottom: 0.6rem;
+    letter-spacing: 0.7px;
+    font-weight: bold;
+}
+
+.miaw-pcard__fonction {
+    margin-bottom: 1rem;
+    letter-spacing: 1.5px;
+    color: rgb(230, 230, 230);
+    font-weight: normal;
+}
+
+.miaw-pcard__main {
+    width: 100%;
+}
+
+.miaw-pcard__more {
+    width: 80%;
+    margin: auto;
+    font-size: 1.2rem;
+    font-weight: normal;
+    letter-spacing: 1.5px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(20px);
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 1rem;
+    &:hover {
+        letter-spacing: 5px;
+        background-color: rgba(59, 59, 59, 0.3);
+    }
+}
+
+
+/***** Footer *******/
+
+.miaw-pcard__footer {
+    background-color: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 0.3rem 0;
+}
+
+.miaw-pcard__resultat {
+    padding: 0.7rem 0.5rem;
+    text-align: center;
+    flex: 1 0 50%;
+}
+
+.miaw-pcard__resultat:first-of-type {
+    border-right: 2px solid rgba(255, 255, 255, 0.08);
+}
+
+.miaw-pcard__score {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+.miaw-pcard__item {
+    letter-spacing: 1.5px;
+    color: rgb(230, 230, 230);
+    font-weight: normal;
+    font-size: 0.8rem;
+}
+
+.miaw-pcard__fonction,
+.miaw-pcard__more,
+.miaw-pcard__footer,
+.miaw-pcard__header {
+    transition: all ease-in-out 0.5s;
+}
+
+
+/**************** Version réduite ***********/
+
+.miaw-pcard--reduit {
+    .miaw-pcard__fonction {
+        transform: scaleY(0);
+    }
+    .miaw-pcard__more {
+        transform: scaleY(0);
+        transform-origin: bottom;
+    }
+    .miaw-pcard__footer {
+        transform: translateY(100%);
+    }
+    .miaw-pcard__header {
+        transform: scale(1) translateY(4rem);
+    }
+}

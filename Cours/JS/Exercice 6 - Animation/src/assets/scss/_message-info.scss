@@ -1,0 +1,33 @@
+.message-info {
+    color: $coul-on-surface-1;
+    margin-bottom: 1rem;
+    height: 2rem;
+    position: relative;
+    overflow: hidden;
+    &__recto,
+    &__verso {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $coul-surface-1;
+        white-space: nowrap;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        width: 10rem;
+        text-align: center;
+    }
+    &__recto {
+        z-index: 20;
+        /* transition: opacity 0.5s ease;*/
+    }
+    &__verso {
+        z-index: 30;
+    }
+}
+
+.message-info--voir-verso {
+    .message-info__recto {
+        opacity: 0;
+    }
+}

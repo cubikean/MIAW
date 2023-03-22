@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="js/timeline.js" defer></script>
+
+
+
+</head>
+
+<body>
+    <header class="header-principal">
+        <hgroup class="header-principal__titres">
+            <h1>Web Design & Intégration</h1>
+            <h2>Développement Javascript</h2>
+        </hgroup>
+    </header>
+    <nav class="menu-principal">
+        <ul>
+            <li><a href="index.html">Bases</a></li>
+            <li><a class="actif" href="timeline.html">Time lines</a></li>
+            <li><a href="scroll.html">Scroll</a></li>
+            <li><a href="accordeon.html">Accordéon</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="intro">
+            <p>Vous allez à présent organiser les animations des différents éléments en utilisant le concept de <a href="https://greensock.com/docs/v3/GSAP/Timeline">timeline</a>.</p>
+        </section>
+
+
+        <section class="episode1">
+            <h2>Timeline</h2>
+            <div class="images">
+                <img src="assets/img/teammembers/tm1.png" alt="">
+                <img src="assets/img/teammembers/tm2.png" alt="">
+                <img src="assets/img/teammembers/tm3.png" alt="">
+                <img src="assets/img/teammembers/tm4.png" alt="">
+            </div>
+            <div class="message-info">
+                <div class="message-info__recto">Nous arrivons ...</div>
+                <div class="message-info__verso">Et Voilà !</div>
+            </div>
+        </section>
+        <section class="consignes">
+            <article>
+                <h3>Travail à effectuer</h3>
+                <p>On cherche à animer successivement chacune des images, avec des animations différentes.</p>
+                <p>L'option <em>stagger</em> n'est plus suffisante ; il va falloir créer un <em>tween</em> pour chaque image, et placer les <em>tweens</em> dans une <em>timeline</em> afin de déclencher les animations les unes après les autres.</p>
+                <ul>
+                    <li>Créez une <em>animationsEx2.js</em> qui accueillera le programme d'animation de cette page.</li>
+                    <li>Créez une <em>timeline</em> nommée <em>episode1</em>.</li>
+                    <li>Dans <em>episode1</em>, placez les <em>tweens</em> permettant d'animer chacune des 4 images l'une après l'autre.</li>
+                    <li>Lorsque l'animation est terminée, le programme remplace "Nous arrivons ..." par "Et voilà !". Vous ferez glisser le verso du <em>.message-info</em> de la gauche vers la droite</li>
+                </ul>
+
+            </article>
+        </section>
+        <section class="episode2">
+            <h2>Timeline déclenchée</h2>
+            <div class="images">
+                <img src="assets/img/teammembers/tm1.png" alt="">
+                <img src="assets/img/teammembers/tm2.png" alt="">
+                <img src="assets/img/teammembers/tm3.png" alt="">
+                <img src="assets/img/teammembers/tm4.png" alt="">
+            </div>
+            <p class="bouton lancement">Go !</p>
+            <p class="bouton retour">Rewind</p>
+        </section>
+        <section class="consignes">
+            <article>
+                <h3>Travail à effectuer</h3>
+                <p>Créez une <em>timeline</em> nommée <em>episode2</em>. Dans <em>episode1</em>, placez les <em>tweens</em> permettant d'animer les 4 images. </p>
+                <p>Faites en sorte que l'animation débute à l'appui sur le bouton "Go !"</p>
+                <p>Le bouton "Rewind" permettra de jouer l'animation en marche arrière.</p>
+            </article>
+        </section>
+        <section class="episode3">
+            <h2>Gestion de plusieurs timelines</h2>
+
+            <article class="direction">
+                <div class="message-info">
+                    <div class="message-info__recto">La direction</div>
+                </div>
+                <div class="images">
+                    <img src="assets/img/teammembers/tm5.png" alt="">
+                    <img src="assets/img/teammembers/tm6.png" alt="">
+                    <img src="assets/img/teammembers/tm7.png" alt="">
+                </div>
+            </article>
+            <article class="equipe-technique">
+                <div class="message-info">
+                    <div class="message-info__recto">L'équipe tech'</div>
+                </div>
+                <div class="images">
+                    <img src="assets/img/teammembers/tm1.png" alt="">
+                    <img src="assets/img/teammembers/tm2.png" alt="">
+                    <img src="assets/img/teammembers/tm3.png" alt="">
+                    <img src="assets/img/teammembers/tm4.png" alt="">
+                </div>
+            </article>
+
+
+
+        </section>
+        <section class="consignes">
+            <article>
+                <h3>Travail à effectuer</h3>
+                <p>On veut présenter les équipes "Direction" et "Tech" avec des animations.</p>
+                <p>Créez une time line par équipe (avec animation de la zone info et des images), puis une time line permettant de lancer successivement les deux time lines ...</p>
+                <p>Vous créerez la time line globale en état <em>paused</em> et vous déclencherez son exécution lorsque tous les éléments de l'animation seront configurés.</p>
+                <p>Anticipez l'animation du dernier membre de l'équipe technique afin qu'il arrive en même temps que le précédent.</p>
+                <p>Quelle modification faut-il apporter au programme pour que les deux équipes s'animent en même temps ?</p>
+            </article>
+        </section>
+    </main>
+
+
+    <footer class="footer-principal">
+        <p>LP MIAW - WDI</p>
+    </footer>
+
+</body>
+
+</html>

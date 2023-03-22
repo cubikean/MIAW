@@ -1,0 +1,22 @@
+.bouton {
+    $couleur-fond: $coul-primary;
+    color: $coul-on-primary;
+    background-color: $couleur-fond;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    &:hover {
+        background-color: lighten($couleur-fond, 5%);
+    }
+    &:active {
+        background-color: lighten($couleur-fond, 10%);
+        ;
+        transform: translate(1px, 1px);
+    }
+}

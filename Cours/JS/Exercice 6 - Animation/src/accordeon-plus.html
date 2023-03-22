@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>JS</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+    <script src="https://kit.fontawesome.com/1bb9241288.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="js/accordeon-plus.js" defer></script>
+</head>
+
+<body>
+    <header class="header-principal">
+        <hgroup class="header-principal__titres">
+            <h1>Web Design & Intégration</h1>
+            <h2>Développement Javascript</h2>
+        </hgroup>
+    </header>
+    <nav class="menu-principal">
+        <ul>
+            <li><a href="index.html">Bases</a></li>
+            <li><a href="timeline.html">Time lines</a></li>
+            <li><a href="scroll.html">Scroll</a></li>
+            <li><a href="accordeon.html">Accordéon</a></li>
+            <li><a class="actif" href="accordeon-plus.html">Accordéon Plus</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="intro">
+            <p>Vous devez utiliser vos compétences en javascript pour obtenir le comportement décrit par <a href="https://moodle.univ-lr.fr/2021/pluginfile.php/181306/mod_label/intro/demo%20accordeon%20plus.webm"> cette vidéo</a>... </p>
+        </section>
+
+        <section class="valeurs">
+            <h2>Nos valeurs</h2>
+            <div class="accordeon-plus">
+                <ul class="accordeon">
+                    <li class="accordeon__item">
+                        <h3 class="accordeon__titre-item">Produits sur mesure</h3>
+                        <div class="accordeon__details-item">
+                            <p>Connaissez-vous un <strong>artisan</strong> capable de produire une embouchure de qualité suivant les critères que vous définissez avec lui ?</p>
+                            <p>Cet homme existe pourtant bel et bien, il s'appelle <strong>Dimitri Donat</strong>.</p>
+                        </div>
+
+                    </li>
+                    <li class="accordeon__item">
+                        <h3 class="accordeon__titre-item">Fabrication artisanale</h3>
+                        <div class="accordeon__details-item">
+                            <p>C’est dans son atelier, situé au <strong>cœur des Alpes françaises</strong> que Dimitri imagine et façonne les embouchures <a href="https://www.donat-mouthpiece.com/">Donat</a>.</p>
+                            <p>Pensées et dessinées pour les <strong>musiciens de tous niveaux</strong>, elles sont un gage de qualité et d’authenticité.</p>
+                        </div>
+                        <div class="accordeon__details-item-supp">
+                            <p class="avant-liste">Retrouvez les 3 finitions :</p>
+                            <ul>
+                                <li>Plaqué or</li>
+                                <li>Plaqué argent</li>
+                                <li>Brut (pour les essais)</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="accordeon__item">
+                        <h3 class="accordeon__titre-item">Essai à domicile</h3>
+                        <div class="accordeon__details-item">
+                            <p>Choisissez dans notre catalogue <strong>plusieurs embouchures</strong> qui pourraient vous convenir.</p>
+                            <p>Nous vous les envoyons <strong>sous trois jours</strong> et vous avez deux semaine pour les essayer.</p>
+                            <p>Renvoyez-nous toutes les embouchures, et commandez celle qui vous plait !</p>
+
+                        </div>
+                        <div class="accordeon__details-item-supp">
+                            <p class="avant-liste">Nous fabriquons des embouchures pour ...</p>
+                            <ul>
+                                <li>Trompette</li>
+                                <li>Bugle</li>
+                                <li>Cor d'harmonie</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                </ul>
+                <ul class="accordeon__visualiseur">
+
+                </ul>
+            </div>
+            <!-- / .accordeon-plus -->
+        </section>
+        <section class="consignes">
+
+            <article>
+                <h2>Parlons qualité de programmation</h2>
+                <p>Un code est considéré comme <strong>"robuste"</strong> s'il continue à fonctionner correctement dans les conditions suivantes :</p>
+                <ul>
+                    <li>Lorsqu'on modifie le texte html</li>
+                    <li>Lorsqu'on allonge les textes html</li>
+                    <li>Lorsqu'on ajoute des éléments similaires aux éléments déjà présents</li>
+                </ul>
+
+                <p>La <strong>qualité de programmation</strong> consiste à suivre un ensemble de règles qui permettront à un codeur de reprendre un programme écrit par une autre personne (ou par lui-même quelques temps après) et d'en comprendre facilement
+                    la logique.</p>
+
+                <p>Citons par exemples ces règles fondamentales :</p>
+                <ul>
+                    <li><strong>DRY ≠ WET</strong> : Don't Repeat Yourself ≠ Write Everything Twice. Si vous avez besoin d'écrire plusieurs fois les mêmes instructions c'est que l'organisation du programme n'est pas optimale. Lorsque vous voudrez modifier
+                        le programme, vous risquez d'avoir à apporter des changement à plusieurs endroits, ce qui est une source de problèmes supplémentaires.</li>
+                    <li>Le <strong> choix des noms des variables, classes et fonctions</strong> est <strong>extrêmement important</strong>. Qui veut travailler sur un programme qui contient une fonction <em>suppression</em>, une fonction <em>suppElement</em>                        et une fonction <em>supprimer</em> ?</li>
+                </ul>
+                <p>Par ailleurs, il est bon de <strong>préserver le moral du développeur</strong>. Rien n'est pire que de se rendre compte que les 250 lignes de code que l'on vient d'écrire ne fonctionnent pas. <strong>La méthode à appliquer est simple</strong>                    : on écrit au maximum 5 instructions, et <strong>on teste le fonctionnement du programme</strong>.</p>
+                <p>Chaque test passé avec succès est un bonbon pour le programmeur ;-).</p>
+            </article>
+
+            <h2>Mise en oeuvre</h2>
+
+            <article>
+                <p>Vous disposez des fichiers sources scss, dont <em>_accordeon-plus.scss</em> qui se charge de la <strong>mise en forme de notre composant</strong> <em>accordeon-plus</em>.</p>
+                <p>Un <em>accordeon-plus</em> regroupe deux composants : un <em>accordeon</em> et un <em>accordeon__visualiseur</em> qui permet de révéler le détail des informations cachées dans l'accordéon.</p>
+                <p>Vous allez écrire le programme gérant le <strong> comportement de ce composant</strong>, dans un fichier <em>accordeon-plus.js</em></p>
+                <p>Dans ce fichier, vous pouvez recopier le programme que vous avez mis en place pour la première version de l'accordéon.</p>
+                <p>Vérifiez que ce programme fonctionne encore correctement.</p>
+                <h3>Initialisation - Recopie des données</h3>
+                <p>Dans la version mobile, on retrouve le comportement du composant <em> accordeon</em> : les titres des valeurs sont toujours apparents, et les textes qui détaillent ces valeurs sont présents (mais masqués) dans les <em>.accordeon__details-item</em>.
+                </p>
+                <p>Dans la version desktop, on voit l'accordéon à gauche, et le composant <em>.accordeon__visualiseur</em> à droite.</p>
+                <p>Comme nous tenons à respecter <strong>la règle DRY</strong>, il est hors de question de dupliquer à la main les infos de l'accordéon dans le visualiseur. <strong> C'est au programme de se charger de ce travail</strong>. Ainsi, si l'on
+                    modifie les textes côté
+                    <em>.accordeon</em>, ils seront également modifiés côté <em>.accordeon__visualiseur</em>.</p>
+
+                <p>Dans <em>accordeon-plus.js</em>, <strong>écrivez la fonction <em>recopierItemsDansVisualiseur</em></strong> qui prend chaque <em>.accordeon__item</em> de l'accordéon et l'insère dans le visualiseur.</p>
+                <p>Cela peut sembler inutile pour l'instant, mais il vaut mieux <strong>effectuer ce traitement à l'aide d'une boucle <em>forEach</em></strong>, cela facilitera l'amélioration du programme.</p>
+
+                <p>La boucle devra permettre de cloner les <em>.accordeon__details-item</em>, <strong> vous pourrez utiliser la méthode <em>clone()</em></strong>. Cherchez comment on paramètre cette méthode pour que tout le contenu de la balise soit dupliqué.</p>
+                <p>Ecrire une fonction ne suffit pas à déclencher son exécution. Pensez à <strong>faire appel à</strong> <em>recopierItemsDansVisualiseur()</em> et vérifiez que le résultat attendu est bien obtenu. </p>
+                <p>Donnez la classe de modification <em>accordeon__item--invisible</em> aux éléments que vous insérez dans le visualiseur.</p>
+                <p>On veut que le premier <em>.accordeon__item</em> soit visible dans le visualiseur. Trouvez comment la boucle <em>forEach</em> permet d'accéder au numéro de l'élément traité, utilisez ce numéro pour traiter différemment ce premier élément.
+                </p>
+                <p><strong>Pour préparer la suite</strong>, faites en sorte que la boucle de recopie permette de donner à chaque <em>.accordeon__item</em> un attribut <em>data-numero</em> qui contiendra 0 pour le premier élément, 1 pour le suivant ...
+                </p>
+                <p>Ces numéros doivent être attribués côté accordéon, et côté visualiseur. <strong> Pensez DRY ;-)</strong></p>
+            </article>
+            <article>
+                <h3>MVP - Comportement au clic</h3>
+                <p>Un clic sur un <em>.accordeon__item</em> de l'accordéon doit permettre de l'afficher complètement dans le visualiseur.</p>
+                <p><strong>Mettez en place l'écouteur d'événement</strong> sur chaque <em>.accordeon__item</em> de l'accordéon, et <strong>écrivez la fonction </strong><em>afficherDansVisualiseur</em> qui dans un premier temps affichera simplement "Je suis
+                    la fonction afficherDansVisualiseur".
+                </p>
+                <p>Améliorez la fonction pour qu'elle affiche le <em>data-numero</em> de l'élement cliqué.</p>
+                <p>Il s'agit à présent de <strong>masquer l'élément actuellement visible</strong> dans le visualiseur. Il faut donc donner la classe <em>accordeon__item--invisible</em> à l'élément du visualiseur qui ne la possède pas.</p>
+                <p>En css, savez-vous <strong>sélectionner un élément qui ne possède pas une classe ?</strong></p>
+                <p>Puis, côté visualiseur, vous devez <strong>rendre visible l'item correspondant à celui que a été cliqué</strong> dans l'accordéon. Pour cela, vous devez enlever la classe <em>accordeon__item--invisible</em> à un élément. </p>
+                <p>En css, savez-vous sélectionner un élément grâce à la valeur d'un de ses attributs ?</p>
+                <p>Vous pouvez le faire :-).</p>
+            </article>
+            <article>
+                <h3>Mise en valeur de l'élément cliqué</h3>
+                <p>Dans l'accordéon, on cherche à modifier la mise en forme de l'élément qui a été cliqué.</p>
+                <p>Vous disposez de la classe de modification <em>accordeon__item--selected</em>.</p>
+                <p>Complétez la fonction <em>recopierItemsDansVisualiseur</em> pour qu'elle gère ces changements de classe.</p>
+                <p>Pensez à l'état initial du composant ...</p>
+            </article>
+            <article>
+                <h3>Test de robustesse</h3>
+                <p>Vérifiez que votre programme fonctionne encore si l'on ajoute du contenu dans un <em>accordeon__item</em>, et si l'on crée un nouvel <em>accordeon__item</em>.</p>
+                <p>Soyez gentle(wo)man : savourez votre réussite sans démoraliser votre voisin.</p>
+                <p>L'accordéon fonctionne-t-il toujours lorsque l'écran est étroit ?</p>
+                <p>Remerciez l'intégrateur qui a écrit le css :-).</p>
+            </article>
+
+            <article>
+                <h3>Gestion de la hauteur</h3>
+                <p>Le point délicat de cet exercice est la gestion de la hauteur : on veut que l'accordéon et le visualiseur possèdent la même hauteur, et que le visualiseur garde la même hauteur quel que soit son contenu.</p>
+                <p>Il va de soi qu'il est hors de question de donner une hauteur fixe (via css) au visualiseur, nous sommes des professionnels.</p>
+                <p>Accordéon et visualiseur sont affichés en <em>flex</em>, avec la capacité <em>align-items : stretch</em> qui est le comportement par défaut.</p>
+                <p>Donc le plus haut des deux éléments donnera sa hauteur à l'autre.</p>
+                <p>Si l'accordéon est le plus haut, pas de problème, le visualiseur prendra la même hauteur;</p>
+                <p>Par contre, si le visualiseur est le plus haut, il risque de changer de taille en fonction de son contenu, et l'accordéon changera également de hauteur, et ce sera moche :-(.</p>
+                <p>La solution : donner au visualiseur la hauteur de son plus haut <em>accordeon__item</em>.</p>
+                <p>Ecrivez la fonction <em>hauteurMaxDetails</em> qui renvoie la hauteur du plus haut <em>.accordeon__item</em> du visualisateur.</p>
+                <p>Ne cherchez pas à obtenir tout de suite ce résultat ; pour commencer, dans la fonction <em>hauteurMaxDetails</em>, utilisez un <em>forEach</em> pour parcourrir l'ensemble des <em>.accordeon__item</em> et cherchez à afficher leur hauteur.</p>
+                <p>Vous pouvez connaître la hauteur d'un élément avec <em>élément.scrollHeight</em>. Le résultat est un nombre exprimant une taille en pixel.</p>
+                <p>Vous devez rendre visible un élément pour pouvoir utiliser <em>scrollHeight</em>.</p>
+                <p>Masquez l'élément juste après avoir mesuré sa hauteur.</p>
+                <p>Ne rendez pas invisible l'élément qui était déjà visible...</p>
+                <p>Utilisez un algorithme simple de recherche d'un maximum ...</p>
+            </article>
+            <article>
+                <h3>Gestion du redimensionnement de la fenêtre</h3>
+                <p>Si l'internaute redimensionne la fenêtre,il est possible que la hauteur du visualisateur change, dans ce cas, il faut recalculer la hauteur du plus haut <em>accordeon__item</em> et mettre à jour la hauteur du visualiseur ... </p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer-principal">
+        <p>LP MIAW - WDI</p>
+        <div class="top-scroller"><i class="fas fa-angle-up" aria-hidden="true"></i></div>
+    </footer>
+
+</body>
+
+</html>

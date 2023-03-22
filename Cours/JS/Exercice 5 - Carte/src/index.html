@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!--
+        <script src="js/comportements.js" defer></script>
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="js/miaw-pcard.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <hgroup>
+            <h1>Web Design & Intégration</h1>
+            <h2>Développement Javascript</h2>
+        </hgroup>
+        <nav id="menu_principal" class="">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="ex2.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Notre personnel</h2>
+        <section class="set-of-miaw-pcard">
+
+
+            <article class="miaw-pcard miaw-pcard--reduit">
+                <header class="miaw-pcard__header">
+                    <div class="miaw-pcard__cadre-portrait">
+                        <img class="miaw-pcard__portrait" src="assets/img/portrait1.JPG" alt="Maelle">
+                    </div>
+
+                    <h2 class="miaw-pcard__nom">Maëlle Paquereau</h2>
+                    <h3 class="miaw-pcard__fonction">Médiatrice Scientifique</h3>
+                </header>
+
+                <section class="miaw-pcard__main">
+                    <a href="#" class="miaw-pcard__more">Voir +</a>
+                </section>
+
+                <footer class="miaw-pcard__footer">
+                    <div class="miaw-pcard__resultat">
+                        <div class="miaw-pcard__score">78%</div>
+                        <div class="miaw-pcard__item">Satisfaction</div>
+                    </div>
+                    <div class="miaw-pcard__resultat">
+                        <div class="miaw-pcard__score">75%</div>
+                        <div class="miaw-pcard__item">Occupation</div>
+                    </div>
+                </footer>
+
+            </article>
+
+            <article class="miaw-pcard miaw-pcard--reduit">
+                <header class="miaw-pcard__header">
+                    <div class="miaw-pcard__cadre-portrait">
+                        <img class="miaw-pcard__portrait" src="assets/img/portrait2.JPG">
+                    </div>
+
+                    <h2 class="miaw-pcard__nom">Johnatan Trust</h2>
+                    <h3 class="miaw-pcard__fonction">Web Designer</h3>
+                </header>
+
+                <section class="miaw-pcard__main">
+                    <a href="#" class="miaw-pcard__more">Voir +</a>
+                </section>
+
+                <footer class="miaw-pcard__footer">
+                    <div class="miaw-pcard__resultat">
+                        <div class="miaw-pcard__score">87%</div>
+                        <div class="miaw-pcard__item">Satisfaction</div>
+                    </div>
+                    <div class="miaw-pcard__resultat">
+                        <div class="miaw-pcard__score">89%</div>
+                        <div class="miaw-pcard__item">Occupation</div>
+                    </div>
+                </footer>
+
+            </article>
+            <article class="miaw-pcard miaw-pcard--reduit">
+                <header class="miaw-pcard__header">
+                    <div class="miaw-pcard__cadre-portrait">
+                        <img class="miaw-pcard__portrait" src="assets/img/portrait3.JPG">
+                    </div>
+
+                    <h2 class="miaw-pcard__nom">Hérald Norton</h2>
+                    <h3 class="miaw-pcard__fonction">Coach Sportif</h3>
+                </header>
+
+                <section class="miaw-pcard__main">
+                    <a href="#" class="miaw-pcard__more">Voir +</a>
+                </section>
+
+                <footer class="miaw-pcard__footer">
+                    <div class="miaw-pcard__resultat">
+                        <div class="miaw-pcard__score">82%</div>
+                        <div class="miaw-pcard__item">Satisfaction</div>
+                    </div>
+                    <div class="miaw-pcard__resultat">
+                        <div class="miaw-pcard__score">95%</div>
+                        <div class="miaw-pcard__item">Occupation</div>
+                    </div>
+                </footer>
+
+            </article>
+
+        </section>
+    </main>
+    <aside>
+        <section>
+            <h2>Travail à effectuer</h2>
+            <article>
+                <h3>Comportements de base</h3>
+
+                <p>Les comportements que nous allons mettre en place concernent le composant <em>miaw-pcard</em>, vous complèterez donc le fichier <em>miaw-pcard.js</em> pour obtenir les réactions suivantes :</p>
+                <ul>
+                    <li>Au survol d'un <em>miaw-pcard</em> se trouvant dans l'état "réduit", celui-ci perd l'état "réduit". Vous devrez placer un écouteur d'événement sur chaque <em>pcard</em> et écrire la fonction <em>detailler</em> qui traite l'événement
+                        de survol. Testez ce comportement sur desktop et mobile.</li>
+                    <li>Lorsque la souris quitte un <em>pcard</em>, celui-ci reprend son état "réduit". Testez en desktop et mobile.</li>
+                    <li>L'appui sur un bouton x de <em>pcard</em> permet de supprimer le <em>pcard</em> concerné.</li>
+
+                </ul>
+            </article>
+            <article>
+                <h3>"Animation" de l'élément supprimé</h3>
+                <p>Pour l'instant, la suppression d'un pcard est visuellement assez brutale.</p>
+                <p>En terme d'UX, elle ne permet pas à l'utilisateur de bien voir que sa demande de suppression a été prise en compte.</p>
+                <p>Vous allez réaliser une suppression en deux temps :</p>
+                <ol>
+                    <li>On rend le pcard invisible, mais il occupe toujours sa place dans la page</li>
+                    <li>On supprime le pcard du DOM, il est remplacé par le pcard suivant</li>
+                </ol>
+                <p>Dans la fonction de suppression, donnez d'abord la classe "invisible" au pcard à supprimer.</p>
+                <p>Vous constatez que la classe "invisible" donne une opacité de 0 au pcard, et qu'une transition est utilisée.</p>
+                <p>Lorsqu'un élément est animé avec une transition, à la fin de la transition, le navigateur émet l'événement "transitionend".</p>
+                <p>Vous pouvez donc détecter cet événement afin qu'il déclenche le <em>remove</em> du pcard concerné.</p>
+                <p>Mettez en oeuvre cette technique.</p>
+            </article>
+            <article>
+                <h3>Utilisation de la délégation d'événement</h3>
+                <p>On veut éviter à l'intégrateur de créer les boutons <em>miaw-pcard__suppression</em>. Supprimez-les du html, et complétez <em>miaw-pcard.js</em> pour qu'il crée et insère un bouton suppression au début de chaque pcard.</p>
+                <p>La suppression d'un pcard par appui sur le bouton x fonctionne-t-elle ?</p>
+                <p>Le problème est le suivant : la mise en place des écouteurs d'événement a été faite <strong>avant</strong> que les boutons x ne soient placés dans la page.</p>
+                <p>Le problème perdure si vous déplacez les instructions qui créent les écouteurs d'événement.</p>
+                <p>Résolvez la problème en utilisant la <a href="https://javascript.developpez.com/actu/85848/Comprendre-la-delegation-d-evenement-en-JavaScript/">délégation d'événement</a> : vous détecterez les clics concernant les <em>pcard</em>. Dans
+                    la fonction de traitement de l'évenement, vous récupèrerez la cible de l'événement et testerez si elle possède la classe <em>miaw-pcard__suppression</em>, dans ce cas, vous supprimerez la pcard concernée.</p>
+            </article>
+
+        </section>
+    </aside>
+
+    </main>
+
+    <footer>
+        <p id="texte-footer">LP MIAW - WDI</p>
+    </footer>
+
+</body>
+
+</html>
