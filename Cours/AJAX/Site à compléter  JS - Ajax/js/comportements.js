@@ -10,7 +10,6 @@ const tab = document.querySelector('.resUl')
 function recupererUnObjet() {
     // Tentative de récupération d'une donnée externe 
     const promesseRecupUnePersonne = axios.get('https://prodrigu.lpmiaw.univ-lr.fr/miaw/js_wdi/api_personnes/recupererUnePersAuHasard/');
-
     // Si la promesse est tenue, exécuter la fonction afficherPersonneAuHazard
     promesseRecupUnePersonne.then(afficherPersonneAuHasard);
 

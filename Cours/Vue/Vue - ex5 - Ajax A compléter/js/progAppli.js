@@ -16,12 +16,13 @@ function principale() {
             concerts: null,
             artiste: null,
             date: null,
-            nom_artiste_recherche: ""
+            nom_artiste_recherche: "angele"
         }, // Fin des données
         mounted() {
             // fonction appelée au début du cycle de vie de l'objet Vue
             console.log("Je suis la fonction mounted, exécutée au début du cycle de vie de l'objet Vue");
             this.lancerRecherche();
+            this.concert();
         }, // fin mounted
         computed: {
             dateConvertie: function() {
@@ -31,15 +32,38 @@ function principale() {
 
         }, // computed
         methods: {
-            lancerRecherche: function() {
-                console.log("lancerRecherche ");
+            lancerRecherche: function(e) {
+                console.log("lancerRecherche");
                 axios
-                    .get("URL de l'api fournissant les données d'un artiste")
+                    .get("https://rest.bandsintown.com/artists/" + this.nom_artiste_recherche + "?app_id=fcc6811b004c9410f9c662f2dae507f7")
                     .then(donneeRecue => {
-                        console.log(donneeRecue); // Pour voir le contenu de la donnée reçue
+                        console.log(donneeRecue.data); // Pour voir le contenu de la donnée reçue
                         this.artiste = donneeRecue.data;
                     }); // fin then
             }, // Fin de lancerRecherche,
+
+            recherche: function(e) {
+                e.preventDefault();
+                console.log("lancerRecherche");
+                this.nom_artiste_recherche = document.querySelector('.recherche').value
+                axios
+                    .get("https://rest.bandsintown.com/artists/" + this.nom_artiste_recherche + "?app_id=fcc6811b004c9410f9c662f2dae507f7")
+                    .then(donneeRecue => {
+                        console.log(donneeRecue.data); // Pour voir le contenu de la donnée reçue
+                        this.artiste = donneeRecue.data;
+                    }); // fin then
+                    this.concert()
+            }, // Fin de lancerRecherche,
+
+            concert: function(){
+                console.log("concert");
+                axios
+                    .get("https://rest.bandsintown.com/artists/"+ this.nom_artiste_recherche+"/events?app_id=fcc6811b004c9410f9c662f2dae507f7")
+                    .then(donneeRecue => {
+                        console.log(donneeRecue.data); // Pour voir le contenu de la donnée reçue
+                        this.concerts = donneeRecue.data;
+                    }); // fin then
+            },        
 
 
             conversionDate: function(dateAConvertir) {
@@ -113,3 +137,4 @@ function principale() {
 
 
 } // Fin de la fonction principale
+
