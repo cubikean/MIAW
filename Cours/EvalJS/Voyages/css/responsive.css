@@ -1,0 +1,24 @@
+@media (width>=35rem) {
+    /*** liste-services ***/
+    .liste-voyages {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+    .voyage {
+        width: 15rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .voyage__image {
+        /*  display: none;*/
+        height: calc(15rem * 1.2);
+    }
+    .voyage__slogan {
+        flex-grow: 1;
+    }
+}
+
+
+/* fin de MQ */

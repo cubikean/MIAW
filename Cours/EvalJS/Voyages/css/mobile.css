@@ -1,0 +1,52 @@
+    body {
+        padding: 1rem;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    strong {
+        font-weight: bold;
+    }
+    
+    img {
+        max-width: 100%;
+    }
+    /*** header-principal ****/
+    
+    .header-principal {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    h1 {
+        font-weight: bold;
+        font-size: 2rem;
+    }
+    /*** contenu-principal ***/
+    
+    .contenu-principal .voyages__titre {
+        font-weight: bold;
+        border-bottom: 1px solid #333;
+        margin-bottom: 1rem;
+        padding-bottom: 0.3rem;
+    }
+    /*** voyages ***/
+    
+    .liste-voyages {
+        width: 100%;
+        display: grid;
+        gap: 2rem;
+        --largeur-mimimale-colonne: 15rem;
+        grid-template-columns: repeat(auto-fit, minmax(min(var(--largeur-mimimale-colonne), 100%), 1fr));
+        margin-bottom: 2rem;
+        overflow:hidden;
+    }
+    /*** footer-principal ****/
+    
+    .footer-principal {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 0.5rem 1rem;
+        z-index: -1;
+    }

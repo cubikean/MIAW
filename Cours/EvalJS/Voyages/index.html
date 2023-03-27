@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nom prénom</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bouton.css">
+    <link rel="stylesheet" href="css/voyage.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="js/axios.min.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/script.js"></script>
+
+</head>
+
+<body>
+    <header class="header-principal">
+        <h1>Tp noté</h1>
+        <h2>Chatigny Hugo</h2>
+    </header>
+    <main class="contenu-principal">
+
+        <section class="voyages">
+            <h2 class="voyages__titre">Nos Voyages <button class="bouton vider">Vider</button> </h2>
+            <div class="liste-voyages">
+                <article class="voyage" data-reference="3238">
+                    <div class="voyage__etoile"></div>
+                    <img src="images/VietNam.jpg" alt="" class="voyage__image">
+                    <footer class="voyage__cartouche">
+                        <h3 class="voyage__destination">Viêt Nam</h3>
+                        <p class="voyage__slogan">Rizières, temples et pagodes </p>
+                    </footer>
+                </article>
+                <article class="voyage voyage--favori" data-reference="3421">
+                    <div class="voyage__etoile"></div>
+                    <img src="images/cambodge.jpg" alt="" class="voyage__image">
+                    <footer class="voyage__cartouche">
+                        <h3 class="voyage__destination">Cambodge</h3>
+                        <p class="voyage__slogan">D'Along aux temples d'Angkor</p>
+                    </footer>
+                </article>
+                <article class="voyage" data-reference="2389">
+                    <div class="voyage__etoile"></div>
+                    <img src="images/laos.jpg" alt="" class="voyage__image">
+                    <footer class="voyage__cartouche">
+                        <h3 class="voyage__destination">Laos</h3>
+                        <p class="voyage__slogan">Autour du Mékong</p>
+                    </footer>
+                </article>
+
+                <article class="voyage" data-reference="143">
+                    <div class="voyage__etoile"></div>
+                    <img src="images/thailande.jpg" alt="" class="voyage__image">
+                    <footer class="voyage__cartouche">
+                        <h3 class="voyage__destination">Thailande</h3>
+                        <p class="voyage__slogan">Voyage au royaume du Siam</p>
+                    </footer>
+                </article>
+                <article class="voyage" data-reference="500">
+                    <div class="voyage__etoile"></div>
+                    <img src="images/bali.jpg" alt="" class="voyage__image">
+                    <footer class="voyage__cartouche">
+                        <h3 class="voyage__destination">Bali</h3>
+                        <p class="voyage__slogan">La perle de l'Indonésie</p>
+                    </footer>
+                </article>
+                <article class="voyage" data-reference="212">
+                    <div class="voyage__etoile"></div>
+                    <img src="images/malaisie.jpg" alt="" class="voyage__image">
+                    <footer class="voyage__cartouche">
+                        <h3 class="voyage__destination">Malaisie</h3>
+                        <p class="voyage__slogan">La beauté naturelle de Sabah</p>
+                    </footer>
+                </article>
+                
+            </div>
+        </section>
+    </main>
+    <footer class="footer-principal">
+        <p>Sujet n°1</p>
+    </footer>
+</body>
+
+</html>
