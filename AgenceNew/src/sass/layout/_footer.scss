@@ -13,18 +13,34 @@
   background-image: url(../../assets/img/lines.svg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 1300px; 
+  background-size: 80vw; 
   margin-inline:auto;
+
+  flex-wrap: wrap;
+    gap: 30px;
+
+  @media screen and (min-width:768px) {
+    padding: 26px 10.6vw;
+    justify-content: space-between;
+    
+  }
  
   &_logo {
     display: flex;
     align-items: center;
     flex-direction: column;
-    flex: 1 1 40%;
+    flex: 1 1 50%;
+
+    @media screen and (min-width:768px) {
+      max-width: calc(100vw / 6);
+    }
 
     &_single{
-      width: 80%;
+      width: 50%;
       height: auto;
+      @media screen and (min-width:768px) {
+        width: 80%;
+      }
     }
 
     &_infos{
@@ -38,7 +54,10 @@
 
 
   &_nav {
-    flex: 1 1 60%;
+    flex: 1 1 50%;
+    @media screen and (min-width:768px) {
+      max-width: calc(100vw / 6);
+    }
     &_list {
         
     display: flex;
@@ -49,14 +68,50 @@
     
 
       &_item {
+        width: 100%;
         &_link {
           @include text(18px);
           color: $white;
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+          @media screen and (min-width:768px) {
+            justify-content: flex-start;
+          
+          }
+
          
         }
         &:last-of-type &_link{
           margin-bottom: 0;
         }
+      }
+    }
+  }
+
+  &_copyright{
+    flex: 1 1 100%;
+
+    &_infos{
+      @include text(16px);
+      color: $white;
+      margin-bottom: 12px;
+      text-align: center;
+      width: initial;
+    }
+
+    &_nav{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+
+      &_item{
+        @include text(16px);
+        color: $white;
+        text-align: center;
+        width: initial;
+        text-decoration: underline;
       }
     }
   }
