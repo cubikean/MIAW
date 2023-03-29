@@ -88,6 +88,11 @@ main{
         display: flex;
         transform: translateX(20%);
       } 
+      & img{
+        @media screen and (min-width:768px) {
+          width: 80%;
+        } 
+      }
     }
   }
 
@@ -154,13 +159,11 @@ main{
           align-items: center;
           justify-content: center;
           flex-direction: column;
+          background-color: $white;
 
           &_image{
-            max-height: 170px;
             object-fit: cover;
-            @media screen and (min-width:768px) {
-              max-height: 300px;
-            } 
+            aspect-ratio: 1/1;
           }
 
             &_name{
@@ -308,7 +311,7 @@ main{
       padding-bottom: 60px;
       @media screen and (min-width:768px) {
         flex: 1 1 50%;
-        height: 500px;
+        height: 100%;
 
       } 
         &-wrapper{
@@ -319,7 +322,7 @@ main{
               object-fit: cover;
 
               @media screen and (min-width:768px) {
-                max-height: 400px;
+                max-height: 100%;
         
               } 
             }
