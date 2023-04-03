@@ -13,7 +13,6 @@
   background-image: url(../../assets/img/lines.svg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 80vw; 
   margin-inline:auto;
 
   flex-wrap: wrap;
@@ -22,6 +21,7 @@
   @media screen and (min-width:768px) {
     padding: 26px 10.6vw;
     justify-content: space-between;
+    background-size: 80vw; 
     
   }
  

@@ -1,0 +1,45 @@
+@use '../helpers/colors'as *;
+@use '../helpers/breakpoints' as *;
+@use '../base/typography' as *;
+
+.loader {
+    width: 100%;
+    height: 100vh;
+    background-color: $white;
+    background-image: url(../../assets/img/lines.svg);
+    background-position: center;
+    background-size: 80vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+  }
+  @keyframes loaderGoTop {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-300%);
+    }
+  }
+  .loader img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30%;
+    transform: translate(-50%, -50%);
+  }
+  @keyframes loader {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .loader img {
+      width: 100%;
+      transform: translate(0%, -50%);
+    }
+  }

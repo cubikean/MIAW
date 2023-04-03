@@ -5,9 +5,11 @@
 @use 'helpers/breakpoints';
 @use 'components/menu';
 @use 'components/button';
+@use 'components/loader';
 @use 'layout/header';
 @use 'layout/main-content';
 @use 'layout/aside';
 @use 'layout/footer';
 @use 'layout/commun';
 @use 'pages/home';
+@use 'pages/mentions';

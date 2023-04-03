@@ -28,6 +28,16 @@
     margin-bottom: 60px;
 }
 
+@mixin subtitle ($size){
+    font-size: $size;
+    font-family: $Bold;
+    line-height: 1.2;
+    color: $black;
+    width: fit-content;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
 @mixin text($size){
     font-size: $size;
     font-family: $Regular;

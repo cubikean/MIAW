@@ -8,27 +8,28 @@
     <title>Agence - Digitélior</title>
     <meta name="title" content="Agence - Digitélior">
     <meta name="description" content="Nous sommes une equipe de 4 personnes, dont 2 webdesigners et 2 developpeurs. Nous sommes à votre disposition pour touts types de projets, que ce soit la refonte de votre site ou la creation depuis zero.">
-    <link rel="icon" href="https://cdn.digitelior.miaw.trempe.ovh/logoBlack.jpg" type="image/icon type">
+    <link rel="icon" href="./digitelior_white.ico" type="image/icon type">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://digitelior.miaw.trempe.ovh/">
     <meta property="og:title" content="Agence - Digitélior">
     <meta property="og:description" content="Nous sommes une equipe de 4 personnes, dont 2 webdesigners et 2 developpeurs. Nous sommes à votre disposition pour touts types de projets, que ce soit la refonte de votre site ou la creation depuis zero.">
-    <meta property="og:image" content="https://cdn.digitelior.miaw.trempe.ovh/logoBlack.jpg">
+    <meta property="og:image" content="./digitelior_white.ico">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="Agence - Digitélior">
     <meta property="twitter:url" content="https://digitelior.miaw.trempe.ovh/">
     <meta property="twitter:title" content="Agence - Digitélior">
     <meta property="twitter:description" content="Nous sommes une equipe de 4 personnes, dont 2 webdesigners et 2 developpeurs. Nous sommes à votre disposition pour touts types de projets, que ce soit la refonte de votre site ou la creation depuis zero.">
-    <meta property="twitter:image" content="https://cdn.digitelior.miaw.trempe.ovh/logoBlack.jpg">
+    <meta property="twitter:image" content="./digitelior_white.ico">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
     <script src="./assets/js/menu.js" defer></script>
     <script src="./assets/js/draggable.js" defer></script>
+    <script src="./assets/js/loader.js" defer></script>
   
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -55,7 +56,9 @@
         </nav>
     </header>
 
-    
+    <div class="loader">
+        <img src="./assets/img/digitelior_black.svg" alt="Logo du site">
+    </div>
 
     <main>
         <section id="home" class="hero">
@@ -79,22 +82,22 @@
             </div>
             <div class="agency-draggable">
                 <div class="agency-draggable_card draggable">
-                    <img class="agency-draggable_card_image" src="assets/img/clement.png" alt="">
+                    <img class="agency-draggable_card_image" src="assets/img/clement.webp" alt="">
                     <h3 class="agency-draggable_card_name">Clément</h3>
                     <p class="agency-draggable_card_status">Développeur</p>
                 </div>
                 <div class="agency-draggable_card draggable">
-                    <img class="agency-draggable_card_image" src="assets/img/margaux.png" alt="">
+                    <img class="agency-draggable_card_image" src="assets/img/margaux.webp" alt="">
                     <h3 class="agency-draggable_card_name">Margaux</h3>
                     <p class="agency-draggable_card_status">Graphiste</p>
                 </div>
                 <div class="agency-draggable_card draggable">
-                    <img class="agency-draggable_card_image" src="assets/img/valentin.png" alt="">
+                    <img class="agency-draggable_card_image" src="assets/img/valentin.webp" alt="">
                     <h3 class="agency-draggable_card_name">Valentin</h3>
                     <p class="agency-draggable_card_status">Développeur</p>
                 </div>
                 <div class="agency-draggable_card draggable">
-                    <img class="agency-draggable_card_image" src="assets/img/hugo.png" alt="">
+                    <img class="agency-draggable_card_image" src="assets/img/hugo.webp" alt="">
                     <h3 class="agency-draggable_card_name">Hugo</h3>
                     <p class="agency-draggable_card_status">Graphiste</p>
                 </div>
@@ -142,13 +145,16 @@
             <div class="realisations-swiper swiper">
                 <div class="realisations-swiper-wrapper swiper-wrapper">
                     <div class="realisations-swiper-wrapper_slide swiper-slide">
-                        <img src="assets/img/mockup_artechaux.png" alt="">
+                        <img src="assets/img/mockup_artechaux.webp" alt="">
                     </div>
                     <div class="swiper-slide">
-                        <img src="assets/img/mockup_spacecake.png" alt="">
+                        <img src="assets/img/mockup_spacecake.webp" alt="">
                     </div>
                     <div class="swiper-slide">
-                        <img src="assets/img/mockup_celine.png" alt="">
+                        <img src="assets/img/mockup_celine.webp" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/mockup_sailsea.webp" alt="">
                     </div>
                    
                 </div>
@@ -201,8 +207,8 @@
         <div class="main-footer_copyright">
             <p class="main-footer_copyright_infos"><span class="year-date"></span> Digitélior - La Rochelle</p>
             <ul class="main-footer_copyright_nav">
-                <li><a href="#" class="main-footer_copyright_nav_item">Politique de confidentialité</a></li>
-                <li><a href="#" class="main-footer_copyright_nav_item">Mentions Légales</a></li>
+                <li><a href="./politique_conf.html" class="main-footer_copyright_nav_item">Politique de confidentialité</a></li>
+                <li><a href="./mentions_legales.html" class="main-footer_copyright_nav_item">Mentions Légales</a></li>
             </ul>
         </div>
     
