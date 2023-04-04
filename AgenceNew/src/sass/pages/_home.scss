@@ -3,6 +3,7 @@
 @use '../components/button' as *;
 @use '../components/spacer' as *;
 @use '../components/content' as *;
+@use '../components/loader' as *;
 @use '../base/typography' as *;
 @use '../layout/footer' as *;
 
@@ -19,9 +20,8 @@
 main{
 
   background-image: url(../../assets/img/lines.svg);
-  background-repeat: no-repeat;
   background-position: center;
-  background-size: calc(100vw);
+  background-size: cover;
 
   max-width: 100vw;
   margin-inline: auto;
@@ -73,9 +73,10 @@ main{
         @include btn();
         & a{
           color: $white;
-          &:hover{
-            color: $yellow;
-          }
+          
+        }
+        &:hover a{
+          color: $yellow;
         }
       }
     }
@@ -180,7 +181,7 @@ main{
   }
 
   .stack {
-    
+    overflow: hidden;
     padding: 35px 25px;
     display: flex;
     align-items: flex-start;
@@ -315,8 +316,27 @@ main{
 
       } 
         &-wrapper{
-         
           .swiper-slide {
+          display: flex;
+          flex-direction: column;
+
+           p{
+            @include text(18px);
+            @media screen and (min-width:768px) {
+              @include text(22px);
+            margin-bottom: 60px;
+          }
+           }
+           h3{
+              position: relative;
+              @include subtitle(26px);
+              @media screen and (min-width:768px) {
+                @include subtitle(32px);
+                margin: 16px 0;
+              }
+              align-self: center;
+           }
+
             img{
               max-height: 300px;
               object-fit: cover;

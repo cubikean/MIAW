@@ -8,27 +8,30 @@
     <title>Agence - Digitélior</title>
     <meta name="title" content="Agence - Digitélior">
     <meta name="description" content="Nous sommes une equipe de 4 personnes, dont 2 webdesigners et 2 developpeurs. Nous sommes à votre disposition pour touts types de projets, que ce soit la refonte de votre site ou la creation depuis zero.">
-    <link rel="icon" href="https://cdn.digitelior.miaw.trempe.ovh/logoBlack.jpg" type="image/icon type">
+    <link rel="icon" href="./digitelior_white.ico" type="image/icon type">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://digitelior.miaw.trempe.ovh/">
     <meta property="og:title" content="Agence - Digitélior">
     <meta property="og:description" content="Nous sommes une equipe de 4 personnes, dont 2 webdesigners et 2 developpeurs. Nous sommes à votre disposition pour touts types de projets, que ce soit la refonte de votre site ou la creation depuis zero.">
-    <meta property="og:image" content="https://cdn.digitelior.miaw.trempe.ovh/logoBlack.jpg">
+    <meta property="og:image" content="https://digitelior.miaw.trempe.ovh/assets/img/digitelior_white.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="Agence - Digitélior">
     <meta property="twitter:url" content="https://digitelior.miaw.trempe.ovh/">
     <meta property="twitter:title" content="Agence - Digitélior">
     <meta property="twitter:description" content="Nous sommes une equipe de 4 personnes, dont 2 webdesigners et 2 developpeurs. Nous sommes à votre disposition pour touts types de projets, que ce soit la refonte de votre site ou la creation depuis zero.">
-    <meta property="twitter:image" content="https://cdn.digitelior.miaw.trempe.ovh/logoBlack.jpg">
+    <meta property="twitter:image" content="https://digitelior.miaw.trempe.ovh/assets/img/digitelior_white.png">
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./assets/js/menu.js" defer></script>
     <script src="./assets/js/draggable.js" defer></script>
+    <script src="./assets/js/loader.js" defer></script>
   
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -55,13 +58,15 @@
         </nav>
     </header>
 
-    
+    <div class="loader">
+        <img src="./assets/img/digitelior_black.svg" alt="Logo du site">
+    </div>
 
     <main>
-        <section id="home" class="hero">
+        <section data-aos="fade-up" id="home" class="hero">
             <div class="hero-content">
-                <h1 class="hero-content_title" data-letter="U">Une agence <br> digitale & créative</h1>
-                <p class="hero-content_text">Notre agence spécialisée dans la communication visuelle pour le web. Composée de quatre passionnés du web, Digitélior est là pour accompagner toute demande de création de site.</p>
+                <h1 class="hero-content_title" data-letter="U">Une agence <br> <strong>digitale</strong> & <strong>créative</strong></h1>
+                <p class="hero-content_text">Notre agence spécialisée dans la <strong>communication</strong> visuelle pour le <strong>web</strong>. Composée de quatre passionnés du web, Digitélior est là pour accompagner toute demande de création de site.</p>
                 <button class="btn"> <a href="#contact">Devis</a></button>
             </div>
             <div class="hero-image">
@@ -71,30 +76,30 @@
 
         <div class="spacer"></div>
 
-        <section id="agence" class="agency">
-            <div class="agency-content">
+        <section data-aos="fade-up" id="agence" class="agency">
+            <div data-aos="fade-right" class="agency-content">
                 <h2 class="agency-content_title" data-letter="A" >l'agence</h2>
-                <p class="agency-content_text">Créée en Septembre 2021, l'agence Digitélior s'est installée à La Rochelle. Suivre les tendances, rester créatifs et à l'écoute du monde qui l'entoure, c'est le fonctionnement de notre agence.</p>
+                <p class="agency-content_text">Créée en Septembre 2021, l'agence Digitélior s'est installée à La Rochelle. Suivre les tendances, rester créatifs et à l'écoute du monde qui l'entoure, c'est le fonctionnement de notre <strong>agence</strong>.</p>
                 <p class="agency-content_text">Notre équipe de passionnées est là pour répondre à vos besoins, et vous accompagnera dans toutes vos aventures digitales.</p>
             </div>
-            <div class="agency-draggable">
-                <div class="agency-draggable_card draggable">
-                    <img class="agency-draggable_card_image" src="assets/img/clement.png" alt="">
+            <div data-aos="fade-up" class="agency-draggable">
+                <div  class="agency-draggable_card draggable">
+                    <img class="agency-draggable_card_image" src="assets/img/clement.webp" alt="">
                     <h3 class="agency-draggable_card_name">Clément</h3>
                     <p class="agency-draggable_card_status">Développeur</p>
                 </div>
                 <div class="agency-draggable_card draggable">
-                    <img class="agency-draggable_card_image" src="assets/img/margaux.png" alt="">
+                    <img class="agency-draggable_card_image" src="assets/img/margaux.webp" alt="">
                     <h3 class="agency-draggable_card_name">Margaux</h3>
                     <p class="agency-draggable_card_status">Graphiste</p>
                 </div>
                 <div class="agency-draggable_card draggable">
-                    <img class="agency-draggable_card_image" src="assets/img/valentin.png" alt="">
+                    <img class="agency-draggable_card_image" src="assets/img/valentin.webp" alt="">
                     <h3 class="agency-draggable_card_name">Valentin</h3>
                     <p class="agency-draggable_card_status">Développeur</p>
                 </div>
                 <div class="agency-draggable_card draggable">
-                    <img class="agency-draggable_card_image" src="assets/img/hugo.png" alt="">
+                    <img class="agency-draggable_card_image" src="assets/img/hugo.webp" alt="">
                     <h3 class="agency-draggable_card_name">Hugo</h3>
                     <p class="agency-draggable_card_status">Graphiste</p>
                 </div>
@@ -104,12 +109,12 @@
         <div class="spacer"></div>
 
         <section id="stack" class="stack">
-            <div class="stack-content">
+            <div data-aos="fade-right" class="stack-content">
                 <h2 class="stack-content_title" data-letter="S" >notre stack</h2>
-                <p class="stack-content_text">Digitélior saura jongler entre ses compétences et vos exigences, en s’appuyant sur son expérience dans le développement et la communication print et web.</p>
+                <p class="stack-content_text">Digitélior saura jongler entre ses compétences et vos exigences, en s’appuyant sur son expérience dans le <strong>développement</strong> et la communication print et web.</p>
                 <button class="btn">En savoir plus</button>
             </div>
-            <div class="stack-images">
+            <div data-aos="fade-left" class="stack-images">
                 <div class="stack-images_single draggable" >
                     <img src="assets/img/logo_react.svg" alt="">
                 </div>
@@ -134,21 +139,32 @@
         <div class="spacer"></div>
 
 
-        <section id="realisation" class="realisations">
+        <section data-aos="fade-up" id="realisation" class="realisations">
             <div class="realisations-content">
                 <h2 class="realisations-content_title" data-letter="R" >nos réalisations</h2>
-                <p class="realisations-content_text">Digitélior, c’est une agence de communication pleine d’idées portée par des professionnels du design graphique et du développement web, passionnés par leur métier</p>
+                <p class="realisations-content_text">Digitélior, c’est une agence de communication pleine d’idées portée par des professionnels du <strong>design graphique</strong> et du développement web, passionnés par leur métier</p>
             </div>
             <div class="realisations-swiper swiper">
                 <div class="realisations-swiper-wrapper swiper-wrapper">
                     <div class="realisations-swiper-wrapper_slide swiper-slide">
-                        <img src="assets/img/mockup_artechaux.png" alt="">
+                        <h3>ArtEchaux</h3>
+                        <img src="assets/img/mockup_artechaux.webp" alt="">
+                        <p>ArtEchaux est une application web pour la gestion de projets à destination des artisans.</p>
                     </div>
                     <div class="swiper-slide">
-                        <img src="assets/img/mockup_spacecake.png" alt="">
+                        <h3>SpaceCake</h3>
+                        <img src="assets/img/mockup_spacecake.webp" alt="">
+                        <p>SpaceCake est une application web qui permet la livraison des plats provenant de différentes planètes, instantanément.</p>
                     </div>
                     <div class="swiper-slide">
-                        <img src="assets/img/mockup_celine.png" alt="">
+                        <h3>Céline Greffin </h3>
+                        <img src="assets/img/mockup_celine.webp" alt="">
+                        <p>Site web qui présente l’activité de secrétaire freelance dans le domaine de la logistique.</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <h3>SailSea</h3>
+                        <img src="assets/img/mockup_sailsea.webp" alt="">
+                        <p>SailSea est le pimp my ride des voiliers. De la customisation de voiliers, jusqu’à l’achat d’accessoires pour pimper son bateau. </p>
                     </div>
                    
                 </div>
@@ -165,7 +181,7 @@
 
         <div class="spacer"></div>
 
-        <section id="contact" class="idea">
+        <section data-aos="fade-up" id="contact" class="idea">
             <div class="idea-content">
                 <h2 class="idea-content_title" data-letter="V" >Vous avez une idée ?</h2>
                 <p class="idea-content_text">Vous avez déjà une idée pour votre site web, n’hésitez pas à nous contacter en nous donnant le plus d’information possible</p>
@@ -201,8 +217,8 @@
         <div class="main-footer_copyright">
             <p class="main-footer_copyright_infos"><span class="year-date"></span> Digitélior - La Rochelle</p>
             <ul class="main-footer_copyright_nav">
-                <li><a href="#" class="main-footer_copyright_nav_item">Politique de confidentialité</a></li>
-                <li><a href="#" class="main-footer_copyright_nav_item">Mentions Légales</a></li>
+                <li><a href="./politique_conf.html" class="main-footer_copyright_nav_item">Politique de confidentialité</a></li>
+                <li><a href="./mentions_legales.html" class="main-footer_copyright_nav_item">Mentions Légales</a></li>
             </ul>
         </div>
     
@@ -211,6 +227,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.1.1/swiper-bundle.min.js"></script>
     <script>
+          AOS.init();
         const form = document.querySelector('.idea-form form');
 
         form.addEventListener('submit', function(event) {
