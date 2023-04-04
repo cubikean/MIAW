@@ -77,10 +77,7 @@
           justify-content: center;
           @media screen and (min-width:768px) {
             justify-content: flex-start;
-          
           }
-
-         
         }
         &:last-of-type &_link{
           margin-bottom: 0;

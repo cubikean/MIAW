@@ -93,6 +93,7 @@ main{
         }
       }
     }
+<<<<<<< HEAD
     .spacer{
       @include spacer(70px);
       @media screen and (min-width:768px) {
@@ -104,5 +105,32 @@ main{
 
 
   
+=======
+    &-image{
+      padding: 0 26px;
+      width: 100%;
+      
+      @media screen and (min-width:768px) {
+        flex: 1 1 55%;
+        display: flex;
+        transform: translateX(20%);
+      } 
+      & img{
+        @media screen and (min-width:768px) {
+          width: 80%;
+        } 
+      }
+    }
+  }
+
+
+  .spacer{
+    @include spacer(70px);
+    @media screen and (min-width:768px) {
+      @include spacer(100px);
+    }
+    margin: 20px 0;
+  }   
+>>>>>>> 559524a4d89b160609387bf5995bf37f74a0ffc9
   
 }

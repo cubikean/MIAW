@@ -39,8 +39,13 @@
   }
   @media screen and (max-width: 768px) {
     .loader img {
+<<<<<<< HEAD
       width: 50%;
       transform: translate(-50%, -50%);
       left: 50%;
+=======
+      width: 100%;
+      transform: translate(0%, -50%);
+>>>>>>> 559524a4d89b160609387bf5995bf37f74a0ffc9
     }
   }
